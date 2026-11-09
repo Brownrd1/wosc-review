@@ -1,0 +1,589 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Café Supplier Membership Program | World of Speciality Coffee Cape Town</title>
+  <style>
+    :root {
+      --navy: #142b45;
+      --navy-light: #1e3d61;
+      --navy-dark: #0d1e31;
+      --espresso: #403026;
+      --espresso-dark: #2c2018;
+      --cream-bg: #fbf8f3;
+      --cream-card: #f5eee6;
+      --cream-subtle: #ede2d5;
+      --copper: #8b684e;
+      --copper-light: #c29a77;
+      --text-muted: #6a5a4f;
+      --border-warm: #ded2c4;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--cream-bg);
+      color: var(--espresso);
+      font: 16px/1.65 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    /* Header */
+    header {
+      padding: 18px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      border-bottom: 1px solid var(--border-warm);
+      background: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .logo-wrap { display: flex; align-items: center; gap: 12px; }
+    .logo { font: bold 26px/1 Georgia, serif; letter-spacing: 1px; color: var(--navy); }
+    .logo-badge {
+      font: 600 11px/1 sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--copper);
+      padding: 4px 8px;
+      background: var(--cream-card);
+      border-radius: 3px;
+    }
+    nav { display: flex; gap: 22px; align-items: center; flex-wrap: wrap; font-size: 13.5px; font-weight: 500; }
+    nav a:hover { color: var(--copper); }
+    nav a.active { color: var(--navy); font-weight: 700; border-bottom: 2px solid var(--navy); padding-bottom: 2px; }
+    .btn-nav {
+      background: var(--navy);
+      color: #fff !important;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-size: 12.5px;
+      font-weight: 600;
+    }
+
+    /* Layout */
+    .wrap { max-width: 1240px; margin: auto; padding: 0 24px; }
+    .section { padding: 80px 0; }
+    .section-soft { background: var(--cream-card); border-top: 1px solid var(--border-warm); border-bottom: 1px solid var(--border-warm); }
+    .section-dark { background: var(--navy); color: #ffffff; }
+
+    /* Typography */
+    .kicker {
+      font: 700 11px/1.4 sans-serif;
+      letter-spacing: 2.2px;
+      text-transform: uppercase;
+      color: var(--copper);
+      margin-bottom: 12px;
+      display: block;
+    }
+    .section-dark .kicker { color: var(--copper-light); }
+    h1, h2, h3, h4 { font-family: Georgia, serif; font-weight: 400; line-height: 1.2; }
+    h1 { font-size: clamp(38px, 4.5vw, 62px); margin-bottom: 20px; color: var(--navy-dark); }
+    h2 { font-size: clamp(30px, 3.5vw, 42px); margin-bottom: 16px; color: var(--navy-dark); }
+    .section-dark h2 { color: #ffffff; }
+    h3 { font-size: 22px; margin-bottom: 10px; color: var(--navy-dark); }
+    .section-dark h3 { color: #ffffff; }
+    p.lead { font-size: 18px; line-height: 1.6; color: var(--text-muted); max-width: 780px; margin-bottom: 28px; }
+    .section-dark p.lead { color: #d0dbe6; }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 90px 24px 70px;
+      background: linear-gradient(180deg, #f7f1e9 0%, var(--cream-bg) 100%);
+      border-bottom: 1px solid var(--border-warm);
+    }
+    .hero .lead { margin: 0 auto 30px; }
+
+    /* Toggle Billing */
+    .billing-toggle {
+      display: inline-flex;
+      background: var(--cream-subtle);
+      border-radius: 30px;
+      padding: 4px;
+      margin: 10px auto 30px;
+      border: 1px solid var(--border-warm);
+    }
+    .billing-btn {
+      padding: 8px 22px;
+      border-radius: 24px;
+      font-size: 13.5px;
+      font-weight: 600;
+      border: none;
+      background: transparent;
+      color: var(--espresso);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .billing-btn.active {
+      background: var(--navy);
+      color: #ffffff;
+      box-shadow: 0 2px 8px rgba(20,43,69,0.2);
+    }
+    .save-badge {
+      font-size: 11px;
+      background: var(--copper);
+      color: #fff;
+      padding: 2px 7px;
+      border-radius: 12px;
+      margin-left: 6px;
+    }
+
+    /* Pricing Cards Grid */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+      margin-top: 20px;
+    }
+    .pricing-card {
+      background: #ffffff;
+      border: 1px solid var(--border-warm);
+      border-radius: 8px;
+      padding: 40px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .pricing-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(20, 43, 69, 0.08);
+    }
+    .pricing-card.featured {
+      border: 2px solid var(--copper);
+      background: linear-gradient(180deg, #ffffff 0%, #faf6f0 100%);
+    }
+    .featured-tag {
+      position: absolute;
+      top: -13px;
+      right: 32px;
+      background: var(--copper);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 4px 12px;
+      border-radius: 12px;
+    }
+    .tier-name { font-family: Georgia, serif; font-size: 26px; color: var(--navy); margin-bottom: 8px; }
+    .tier-target { font-size: 13.5px; color: var(--text-muted); margin-bottom: 24px; min-height: 40px; }
+    
+    .price-box {
+      margin-bottom: 24px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border-warm);
+    }
+    .price-num { font: bold 46px/1 Georgia, serif; color: var(--navy-dark); }
+    .price-period { font-size: 14px; color: var(--text-muted); }
+    .discount-callout {
+      display: inline-block;
+      margin-top: 10px;
+      background: #eef5eb;
+      color: #1a6b38;
+      font-weight: 700;
+      font-size: 13px;
+      padding: 5px 12px;
+      border-radius: 4px;
+    }
+
+    .features-list {
+      list-style: none;
+      margin-bottom: 32px;
+      flex-grow: 1;
+    }
+    .features-list li {
+      font-size: 14px;
+      color: var(--espresso);
+      margin-bottom: 12px;
+      padding-left: 24px;
+      position: relative;
+      line-height: 1.5;
+    }
+    .features-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--copper);
+      font-weight: bold;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      padding: 13px 26px;
+      border-radius: 4px;
+      font-size: 13.5px;
+      font-weight: 600;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s;
+    }
+    .btn-primary { background: var(--navy); color: #fff; }
+    .btn-primary:hover { background: var(--navy-light); }
+    .btn-secondary { background: transparent; color: var(--navy); border: 1.5px solid var(--navy); }
+    .btn-secondary:hover { background: var(--navy); color: #fff; }
+    .btn-copper { background: var(--copper); color: #fff; }
+    .btn-copper:hover { background: #73533c; }
+
+    /* Category Discount Eligibility Table */
+    .cat-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      margin-top: 40px;
+    }
+    .cat-box {
+      background: #ffffff;
+      border: 1px solid var(--border-warm);
+      border-radius: 8px;
+      padding: 30px;
+    }
+    .cat-box h3 { font-size: 20px; margin-bottom: 12px; color: var(--navy); }
+    .cat-box ul { padding-left: 20px; font-size: 14px; color: var(--text-muted); line-height: 1.8; }
+
+    /* Odoo Implementation Technical Architecture */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-top: 36px;
+    }
+    .step-card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 6px;
+      padding: 24px;
+      color: #fff;
+    }
+    .step-num { font: 700 12px Arial; color: var(--copper-light); letter-spacing: 1px; margin-bottom: 8px; display: block; }
+    .step-card h4 { font-size: 17px; margin-bottom: 8px; color: #ffffff; }
+    .step-card p { font-size: 13px; color: #c9d8e6; line-height: 1.5; }
+
+    /* FAQ */
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 36px;
+    }
+    .faq-card {
+      background: #ffffff;
+      border: 1px solid var(--border-warm);
+      border-radius: 6px;
+      padding: 26px;
+    }
+    .faq-card h4 { font-size: 17px; margin-bottom: 10px; color: var(--navy); }
+    .faq-card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+
+    /* Footer */
+    footer { background: var(--navy); color: #ffffff; padding: 60px 6% 30px; font-size: 14px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 40px; margin-bottom: 40px; }
+    .footer-col h4 { font-family: Georgia, serif; font-size: 17px; margin-bottom: 16px; color: #ffffff; }
+    .footer-col a { display: block; color: #b7cbdd; margin-bottom: 10px; font-size: 13.5px; }
+    .footer-col a:hover { color: #ffffff; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.12); padding-top: 24px; display: flex; justify-content: space-between; color: #8da4ba; font-size: 12.5px; flex-wrap: wrap; gap: 16px; }
+
+    @media (max-width: 980px) {
+      .pricing-grid, .cat-grid, .steps-grid, .faq-grid, .footer-grid { grid-template-columns: 1fr; }
+      .pricing-card { padding: 30px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo-wrap">
+      <a class="logo" href="wosc-homepage-concept.html">WOSC</a>
+      <span class="logo-badge">Memberships</span>
+    </div>
+    <nav>
+      <a href="wosc-homepage-concept.html">Home</a>
+      <a href="wosc-shop-concept.html">Shop</a>
+      <a href="wosc-machine-shop-concept.html">Commercial Machines</a>
+      <a href="wosc-our-roasts-notes.html">Our Roasts</a>
+      <a href="wosc-cafe-launch.html">Start a Café</a>
+      <a href="wosc-learning.html">eLearning & Modules</a>
+      <a href="wosc-membership.html" class="active">Supplier Membership</a>
+      <a href="wosc-business.html">B2B Wholesale</a>
+      <a href="wosc-contact-notes.html" class="btn-nav">Join Membership</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="wrap">
+        <span class="kicker">Turnkey Café Support & Recurring Supply</span>
+        <h1>Café Supplier Membership Program</h1>
+        <p class="lead">
+          Lock in 5% to 10% preferred pricing on freshly roasted speciality coffee, café pantry consumables, and commercial equipment with zero supply chain headaches.
+        </p>
+
+        <!-- Monthly / Annual Toggle -->
+        <div class="billing-toggle">
+          <button class="billing-btn active" id="btn-monthly" onclick="setBilling('monthly')">Monthly Billing</button>
+          <button class="billing-btn" id="btn-yearly" onclick="setBilling('yearly')">
+            Annual Billing <span class="save-badge">Save ~17%</span>
+          </button>
+        </div>
+
+        <!-- Pricing Cards -->
+        <div class="pricing-grid">
+
+          <!-- Retail Tier -->
+          <div class="pricing-card">
+            <h3 class="tier-name">Retail Member</h3>
+            <p class="tier-target">
+              Ideal for independent boutique cafés, micro-espresso bars, startup founders, and office coffee programs.
+            </p>
+            <div class="price-box">
+              <span class="price-num" id="retail-price">R299</span>
+              <span class="price-period" id="retail-period">/ month</span>
+              <div>
+                <span class="discount-callout">5% Discount on Consumables & Equipment</span>
+              </div>
+            </div>
+            <ul class="features-list">
+              <li><strong>5% Discount</strong> on all roasted coffee beans & pods</li>
+              <li><strong>5% Discount</strong> on commercial machinery & barista smallwares</li>
+              <li><strong>Full Access</strong> to the Café Launch eLearning curriculum & future modules</li>
+              <li>Automatic member pricelist applied in online shop upon login</li>
+              <li>Priority email technical support & dispatch queue</li>
+              <li>Monthly curated 250g seasonal microlot sample</li>
+            </ul>
+            <a class="btn btn-secondary" href="wosc-contact-notes.html">Join Retail Tier ↗</a>
+          </div>
+
+          <!-- Wholesale Tier -->
+          <div class="pricing-card featured">
+            <span class="featured-tag">Most Popular for Cafés</span>
+            <h3 class="tier-name">Wholesale Member</h3>
+            <p class="tier-target">
+              Built for commercial cafés, high-volume restaurants, hotel groups, and multi-site coffee operations.
+            </p>
+            <div class="price-box">
+              <span class="price-num" id="wholesale-price">R499</span>
+              <span class="price-period" id="wholesale-period">/ month</span>
+              <div>
+                <span class="discount-callout" style="background: #e1efe6; color: #156330;">10% Discount on Consumables & Equipment</span>
+              </div>
+            </div>
+            <ul class="features-list">
+              <li><strong>10% Discount</strong> on all roasted beans, pantry consumables & cups</li>
+              <li><strong>10% Discount</strong> on commercial espresso machines (Save R7,200+ on Wega Rover)</li>
+              <li><strong>Full Access</strong> to all eLearning modules + staff barista certifications</li>
+              <li><strong>Dedicated B2B Account Manager</strong> for custom roasts & profile dial-in</li>
+              <li><strong>Guaranteed Morning Delivery Slots</strong> across Cape Town Metro</li>
+              <li><strong>Free Semi-Annual Machine Health Check</strong> & water filtration audit</li>
+              <li><strong>Annual Business Review & Menu Costing</strong> session with head roaster</li>
+              <li>Option for 30-day on-account payment terms (post credit check)</li>
+            </ul>
+            <a class="btn btn-primary" href="wosc-contact-notes.html">Join Wholesale Tier ↗</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Eligible Categories Section -->
+    <section class="section wrap" id="categories">
+      <span class="kicker">Eligible Product Categories</span>
+      <h2>Where your 5% to 10% discount applies</h2>
+      <p class="lead">
+        Discounts are configured directly in our Odoo ERP pricelist rules, automatically deducting at checkout.
+      </p>
+
+      <div class="cat-grid">
+        <div class="cat-box">
+          <h3>1. Consumables & Pantry</h3>
+          <p style="font-size: 14.5px; color: var(--espresso); margin-bottom: 12px;">
+            The everyday essentials that keep your café flowing:
+          </p>
+          <ul>
+            <li><strong>Speciality Beans:</strong> Vreugde, Imani, Mi Amor, Gracia, Guatemala Natural, Swiss Water Decaf.</li>
+            <li><strong>Compostable Pods:</strong> WOSC signature blend pods.</li>
+            <li><strong>Milk Alternatives:</strong> Barista oat, almond, soy milks.</li>
+            <li><strong>Packaging:</strong> Double-wall takeaway cups, lids, and compostable straws.</li>
+            <li><strong>Barista Pantry:</strong> Gourmet syrups, artisanal hot chocolate, chai blends.</li>
+            <li><strong>Hygiene & Maintenance:</strong> Espresso machine backflush detergent, milk line cleaner, grinder burr crystals.</li>
+          </ul>
+        </div>
+
+        <div class="cat-box">
+          <h3>2. Commercial & Barista Equipment</h3>
+          <p style="font-size: 14.5px; color: var(--espresso); margin-bottom: 12px;">
+            Capital investments where 5–10% yields immediate substantial savings:
+          </p>
+          <ul>
+            <li><strong>Commercial Espresso Machines:</strong> Wega Rover 2-Group (Save up to R7,217).</li>
+            <li><strong>On-Demand Grinders:</strong> Mythos Iris Grinders (Save up to R1,975).</li>
+            <li><strong>Batch Brewers:</strong> Lebrew Brewmaster Thermo & decanters.</li>
+            <li><strong>Water Systems:</strong> Flojet Bottled Water Dispensing Systems & BWT water filters.</li>
+            <li><strong>Barista Smallwares:</strong> Precision scales, calibrated tampers, milk pitchers, knockboxes.</li>
+            <li><strong>Spare Parts:</strong> Group gaskets, shower screens, steam tips.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Odoo Implementation Architecture -->
+    <section class="section section-dark" id="odoo-implementation">
+      <div class="wrap">
+        <span class="kicker">Odoo ERP Architecture</span>
+        <h2>How WOSC Automates the Membership Experience</h2>
+        <p class="lead">
+          Designed natively inside Odoo with zero third-party sync connectors, avoiding inventory discrepancies or billing delays.
+        </p>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <span class="step-num">STEP 01</span>
+            <h4>Product Categories</h4>
+            <p>Configured in Odoo Inventory as distinct categories: <em>Consumables</em> and <em>Equipment</em>.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-num">STEP 02</span>
+            <h4>Pricelists</h4>
+            <p>Advanced Price Rules apply 5% discount (Retail Member) or 10% discount (Wholesale Member) strictly to eligible categories.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-num">STEP 03</span>
+            <h4>Odoo Subscriptions</h4>
+            <p>Recurring monthly and annual subscription products automatically trigger membership status upon confirmed payment.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-num">STEP 04</span>
+            <h4>Automated Assignment</h4>
+            <p>Odoo Automated Actions immediately update the partner's contact pricelist, making member discounts live in the portal & POS.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section wrap" id="faq">
+      <span class="kicker">Frequently Asked Questions</span>
+      <h2>Common questions about the program</h2>
+
+      <div class="faq-grid">
+        <div class="faq-card">
+          <h4>How do member discounts work when ordering online?</h4>
+          <p>
+            When you sign into your WOSC customer portal on our Odoo website, your Retail or Wholesale member pricelist is automatically active. All prices across our shop and machine catalog immediately display your discounted rate.
+          </p>
+        </div>
+        <div class="faq-card">
+          <h4>Can I switch from Monthly to Annual billing later?</h4>
+          <p>
+            Yes. You can switch to annual billing at any point from your customer account portal to take advantage of the ~17% annual discount (2 months free).
+          </p>
+        </div>
+        <div class="faq-card">
+          <h4>Are consulting or shopfitting services discounted?</h4>
+          <p>
+            Discounts apply strictly to Consumables and Equipment. Architectural design, turn-key shopfitting, and one-on-one custom consulting are priced separately per project scope.
+          </p>
+        </div>
+        <div class="faq-card">
+          <h4>What are the eligibility requirements for Wholesale?</h4>
+          <p>
+            Wholesale membership is open to registered businesses (CIPC registered) operating in hospitality, retail, food service, or offices with projected regular monthly coffee volume.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section section-soft" style="text-align: center;">
+      <div class="wrap">
+        <span class="kicker">Ready to Save?</span>
+        <h2>Start saving on your coffee supplies today</h2>
+        <p class="lead" style="margin: 0 auto 30px;">
+          Whether you are launching your first Cape Town espresso bar or scaling multiple locations, partner with WOSC for reliable supply and expert support.
+        </p>
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+          <a class="btn btn-primary" href="wosc-contact-notes.html">Speak to a Membership Advisor</a>
+          <a class="btn btn-secondary" href="wosc-shop-concept.html">Browse Shop Catalog</a>
+          <a class="btn btn-copper" href="wosc-cafe-launch.html">Explore Café Launch</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4 style="font-size: 22px; font-weight: bold;">WOSC</h4>
+          <p style="color: #b7cbdd; font-size: 13.5px; line-height: 1.6; max-width: 300px; margin-top: 10px;">
+            World of Speciality Coffee — Cape Town's premier roastery, commercial equipment showroom, and café launch partner.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Café Launch & Learn</h4>
+          <a href="wosc-cafe-launch.html">Café Launch Program</a>
+          <a href="wosc-learning.html">eLearning Curriculum</a>
+          <a href="wosc-membership.html">Supplier Membership</a>
+          <a href="wosc-contact-notes.html">Book Free Consultation</a>
+        </div>
+        <div class="footer-col">
+          <h4>Shop & Equipment</h4>
+          <a href="wosc-shop-concept.html">Speciality Roasts & Pods</a>
+          <a href="wosc-machine-shop-concept.html">Commercial Espresso Machines</a>
+          <a href="wosc-shop-concept.html?category=barista-tools">Barista Tools & Scales</a>
+          <a href="wosc-business.html">Wholesale Supply</a>
+        </div>
+        <div class="footer-col">
+          <h4>Cape Town Showroom</h4>
+          <p style="color: #b7cbdd; font-size: 13px; line-height: 1.5;">
+            Visit our working showroom and roastery to test commercial machines and discuss your launch.
+          </p>
+          <a class="btn btn-copper" style="margin-top: 14px; padding: 10px 18px; font-size: 12px;" href="wosc-contact-notes.html">Book Showroom Visit</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 World of Speciality Coffee (Pty) Ltd. Cape Town, South Africa.</span>
+        <div>
+          <a href="wosc-privacy-notes.html" style="color: inherit; margin-right: 18px;">Privacy Policy</a>
+          <a href="wosc-terms-notes.html" style="color: inherit; margin-right: 18px;">Terms & Conditions</a>
+          <a href="review-notes.html" style="color: inherit;">Review Dashboard</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function setBilling(mode) {
+      const btnM = document.getElementById('btn-monthly');
+      const btnY = document.getElementById('btn-yearly');
+      const retP = document.getElementById('retail-price');
+      const retPer = document.getElementById('retail-period');
+      const whoP = document.getElementById('wholesale-price');
+      const whoPer = document.getElementById('wholesale-period');
+
+      if (mode === 'yearly') {
+        btnM.classList.remove('active');
+        btnY.classList.add('active');
+        retP.textContent = 'R2,990';
+        retPer.textContent = '/ year (saves R598)';
+        whoP.textContent = 'R4,990';
+        whoPer.textContent = '/ year (saves R998)';
+      } else {
+        btnY.classList.remove('active');
+        btnM.classList.add('active');
+        retP.textContent = 'R299';
+        retPer.textContent = '/ month';
+        whoP.textContent = 'R499';
+        whoPer.textContent = '/ month';
+      }
+    }
+  </script>
+</body>
+</html>

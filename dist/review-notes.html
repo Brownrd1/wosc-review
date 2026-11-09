@@ -12,6 +12,7 @@
       --ink: #403026;
       --muted: #6a5e54;
       --navy: #142b45;
+      --navy-light: #1e3d61;
       --copper: #8b684e;
       --border: #e5dacf;
       --soft: #f5eee6;
@@ -24,13 +25,13 @@
       padding: 40px 24px;
     }
     .wrap {
-      max-width: 960px;
+      max-width: 1060px;
       margin: auto;
     }
     header.dash-head {
       border-bottom: 2px solid var(--border);
       padding-bottom: 28px;
-      margin-bottom: 36px;
+      margin-bottom: 32px;
     }
     .kicker {
       font: bold 11px/1.4 Arial, sans-serif;
@@ -41,35 +42,37 @@
     }
     h1 {
       font: 44px/1.12 Georgia, serif;
-      color: var(--ink);
+      color: var(--navy);
       margin-bottom: 12px;
     }
     header p {
       color: var(--muted);
       font-size: 16px;
-      max-width: 720px;
+      max-width: 800px;
     }
     .notice-box {
       background: var(--soft);
       border: 1px solid var(--border);
       border-left: 4px solid var(--navy);
-      padding: 16px 20px;
+      padding: 18px 24px;
       margin: 24px 0 36px;
-      border-radius: 2px;
-      font-size: 13px;
+      border-radius: 4px;
+      font-size: 14px;
       color: var(--ink);
+      line-height: 1.6;
     }
+    .notice-box strong { color: var(--navy); }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      gap: 22px;
       margin-bottom: 40px;
     }
     .card {
       background: var(--card-bg);
       border: 1px solid var(--border);
-      padding: 24px;
-      border-radius: 4px;
+      padding: 28px;
+      border-radius: 6px;
       display: flex;
       flex-direction: column;
       transition: transform 0.2s, box-shadow 0.2s;
@@ -79,7 +82,7 @@
       box-shadow: 0 12px 28px rgba(20, 43, 69, 0.08);
     }
     .card .badge {
-      font: 10px Arial;
+      font: 11px Arial;
       letter-spacing: 1.5px;
       color: var(--copper);
       font-weight: bold;
@@ -87,61 +90,64 @@
       margin-bottom: 10px;
     }
     .card h2 {
-      font: 24px/1.2 Georgia, serif;
-      color: var(--ink);
-      margin-bottom: 10px;
+      font: 23px/1.25 Georgia, serif;
+      color: var(--navy);
+      margin-bottom: 12px;
     }
     .card p {
-      font-size: 13px;
+      font-size: 13.5px;
       color: var(--muted);
-      margin-bottom: 20px;
+      margin-bottom: 22px;
       flex-grow: 1;
+      line-height: 1.55;
     }
     .card a.btn {
       display: inline-block;
       background: var(--navy);
       color: #fff;
       text-decoration: none;
-      padding: 11px 16px;
-      font-size: 12px;
+      padding: 12px 18px;
+      font-size: 12.5px;
       font-weight: bold;
-      border-radius: 3px;
+      border-radius: 4px;
       text-align: center;
       transition: background 0.2s;
     }
     .card a.btn:hover {
-      background: #79573b;
+      background: var(--copper);
     }
     h2.section-title {
       font: 28px Georgia, serif;
-      margin: 32px 0 16px;
-      color: var(--ink);
+      margin: 36px 0 18px;
+      color: var(--navy);
       border-bottom: 1px solid var(--border);
       padding-bottom: 10px;
     }
     .link-list {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 12px;
-      margin-bottom: 35px;
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      gap: 14px;
+      margin-bottom: 40px;
     }
     .link-list a {
       background: var(--card-bg);
       border: 1px solid var(--border);
-      padding: 12px 15px;
-      font-size: 13px;
+      padding: 14px 18px;
+      font-size: 13.5px;
       color: var(--navy);
       text-decoration: none;
-      border-radius: 3px;
+      border-radius: 4px;
+      font-weight: 500;
+      transition: border-color 0.2s;
     }
     .link-list a:hover {
       border-color: var(--navy);
-      text-decoration: underline;
+      background: #faf6f1;
     }
     footer {
       border-top: 1px solid var(--border);
-      padding-top: 20px;
-      font-size: 12px;
+      padding-top: 24px;
+      font-size: 12.5px;
       color: var(--muted);
       display: flex;
       justify-content: space-between;
@@ -153,78 +159,79 @@
 <body>
   <div class="wrap">
     <header class="dash-head">
-      <p class="kicker">WOSC · Cape Town</p>
+      <p class="kicker">World of Speciality Coffee · Cape Town</p>
       <h1>Concept Review Dashboard</h1>
-      <p>Interactive prototype review showcasing the refined warm coffee & navy brand direction, populated with WOSC’s real product catalog and commercial equipment.</p>
+      <p>Executive review environment reflecting the refined warm espresso and navy aesthetic, real 51-product Odoo catalog sync, turnkey café launch program, online eLearning curriculum, and supplier membership model.</p>
     </header>
 
     <div class="notice-box">
-      <strong>Real Catalog Sync:</strong> Loaded with 51 live products directly from WOSC’s Odoo catalog—including signature local roasts (<em>Vreugde, Imani, Mi Amor</em>), pods, Wega commercial espresso machines, Lebrew brewers, and wholesale pantry supplies.
+      <strong>Real Odoo System Alignment:</strong> The prototype incorporates WOSC's actual live catalog (51 products, exact ZAR pricing, real commercial machines like Wega Rover and Mythos Iris), alongside the strategic Cape Town <strong>Café Launch Education Program</strong> and <strong>Café Supplier Membership Tiers</strong>.
     </div>
 
-    <h2 class="section-title">Core Customer Experiences</h2>
+    <h2 class="section-title">New Strategic Initiatives (Turnkey & Membership)</h2>
+    <div class="grid">
+      <article class="card">
+        <span class="badge">Turnkey Solutions · Cape Town</span>
+        <h2>Turnkey Café Launch</h2>
+        <p>Complete Cape Town startup roadmap with the <strong>R620,000 – R1,780,000+ budget breakdown</strong> table, free Certificate of Acceptability (CoA under R638 via City e-Services), Category 1 Business Licence, and turnkey equipment & shopfitting.</p>
+        <a class="btn" href="wosc-cafe-launch.html">Open Café Launch Page ↗</a>
+      </article>
+
+      <article class="card">
+        <span class="badge">Odoo eLearning Lead Magnet</span>
+        <h2>Café Launch Education</h2>
+        <p>Interactive 11-module curriculum featuring <strong>Course A (Free 45-min Reality Check)</strong> and <strong>Course B (Full Operations Program)</strong> with expandable lesson scripts, Cape Town compliance guides, and interactive quizzes.</p>
+        <a class="btn" href="wosc-learning.html">Open eLearning Curriculum ↗</a>
+      </article>
+
+      <article class="card">
+        <span class="badge">Recurring B2B Revenue</span>
+        <h2>Supplier Membership</h2>
+        <p>Brand new membership landing page with monthly/annual billing toggles: <strong>Retail Member (R299/mo · 5% off)</strong> and <strong>Wholesale Member (R499/mo · 10% off)</strong> on consumables and commercial machinery.</p>
+        <a class="btn" href="wosc-membership.html">Open Membership Page ↗</a>
+      </article>
+    </div>
+
+    <h2 class="section-title">Live Storefront & Commercial Equipment</h2>
     <div class="grid">
       <article class="card">
         <span class="badge">Brand Flagship</span>
         <h2>Homepage Concept</h2>
-        <p>Hero experience with Cape Town roastery storytelling, real hero roasts (Vreugde, Imani), and clear pathways to café launch, commercial solutions, and showroom.</p>
+        <p>Roastery hero showcase featuring signature Cape Town roasts (<em>Vreugde, Imani, Mi Amor, Gracia</em>), commercial machine intro, and clear navigation paths to café launch and wholesale services.</p>
         <a class="btn" href="wosc-homepage-concept.html">Open Homepage ↗</a>
       </article>
 
       <article class="card">
-        <span class="badge">51 Real Products</span>
+        <span class="badge">51 Real Odoo Products</span>
         <h2>Retail Shop</h2>
-        <p>Full catalog across 6 real categories: Roasted Beans, Pods, Commercial Machines, Barista Tools, Café Pantry, and Flasks. Live filtering and sorting.</p>
+        <p>Complete live catalog across 6 real categories: Roasted Beans, Pods, Commercial Machines, Barista Tools, Café Pantry, and Flasks with dynamic filtering and real ZAR pricing.</p>
         <a class="btn" href="wosc-shop-concept.html">Open Retail Shop ↗</a>
       </article>
 
       <article class="card">
-        <span class="badge">Commercial Hardware</span>
+        <span class="badge">B2B Commercial Machines</span>
         <h2>Machine Shop</h2>
-        <p>Dedicated commercial & brewing equipment: Wega Rover, Mythos Iris, Lebrew Brewmaster Thermo, Flojet pumps, AeroPress, and precision barista accessories.</p>
-        <a class="btn" href="wosc-machine-shop-concept.html">Open Machine Shop ↗</a>
+        <p>Accurate commercial hardware: Wega Rover 2-Group (R72,170), Mythos Iris (R19,750), Flojet water pumps (R4,478), Lebrew batch brewers, and AeroPress systems.</p>
+        <a class="btn" href="wosc-machine-shop-concept.html">Open Commercial Machine Shop ↗</a>
       </article>
     </div>
 
-    <h2 class="section-title">New Strategic B2B & Education Pages</h2>
-    <div class="grid">
-      <article class="card">
-        <span class="badge">Café Entrepreneurs</span>
-        <h2>Start a Café</h2>
-        <p>Structured 3-step guidance ("Discover, Plan, Set Up") helping prospective café owners navigate premises, workflows, equipment, and opening realities.</p>
-        <a class="btn" href="wosc-cafe-launch.html">Open Café Launch ↗</a>
-      </article>
-
-      <article class="card">
-        <span class="badge">B2B Solutions</span>
-        <h2>Coffee for Business</h2>
-        <p>Targeted B2B proposition for hospitality and offices: wholesale bean supply, commercial machinery leasing, and dedicated technical support.</p>
-        <a class="btn" href="wosc-business.html">Open Business Solutions ↗</a>
-      </article>
-
-      <article class="card">
-        <span class="badge">Training & Academy</span>
-        <h2>Learn & Train</h2>
-        <p>Barista masterclasses and an 11-module café curriculum outline covering operations, menu engineering, sensory calibration, and customer service.</p>
-        <a class="btn" href="wosc-learning.html">Open Learning & Training ↗</a>
-      </article>
-    </div>
-
-    <h2 class="section-title">Product Detail Previews</h2>
+    <h2 class="section-title">Key Detail & Supporting Pages</h2>
     <div class="link-list">
+      <a href="wosc-business.html">B2B Wholesale Coffee ↗</a>
       <a href="wosc-retail-product-concept.html?product=vreugde-coffee">Vreugde Coffee (R118) ↗</a>
       <a href="wosc-retail-product-concept.html?product=imani-coffee">Imani Coffee (R118) ↗</a>
       <a href="wosc-retail-product-concept.html?product=mi-amor-coffee">Mi Amor Dark Roast (R145) ↗</a>
-      <a href="wosc-retail-product-concept.html?product=aeropress">AeroPress Maker (R1,038) ↗</a>
-      <a href="wosc-machine-product-concept.html?product=wega-rover">Wega Rover Commercial (R72,170) ↗</a>
-      <a href="wosc-machine-product-concept.html?product=mythos-iris">Mythos Iris Machine (R19,750) ↗</a>
-      <a href="wosc-basket-notes.html">Cart & Checkout Review ↗</a>
+      <a href="wosc-machine-product-concept.html?product=wega-rover">Wega Rover 2-Group (R72,170) ↗</a>
+      <a href="wosc-machine-product-concept.html?product=mythos-iris">Mythos Iris Grinder (R19,750) ↗</a>
+      <a href="wosc-basket-notes.html">Basket & Checkout Notes ↗</a>
       <a href="wosc-showroom-notes.html">Showroom & Venue Notes ↗</a>
+      <a href="wosc-contact-notes.html">Contact & Consultation Form ↗</a>
     </div>
 
     <footer>
-      <span>WOSC · World of Speciality Coffee · Private Concept Review</span>
-      <span>Cape Town, South Africa</span>
+      <span>World of Speciality Coffee · Concept Review Environment</span>
+      <span>Cape Town, South Africa · November 2026</span>
     </footer>
   </div>
 </body>
