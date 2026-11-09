@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <rect width="600" height="600" fill="#ffffff"/>
+  <ellipse cx="300" cy="515" rx="95" ry="14" fill="#e8e0d5" opacity="0.6"/>
+  <!-- Flask body -->
+  <rect x="220" y="175" width="160" height="330" rx="22" fill="#1e242b"/>
+  <rect x="228" y="175" width="35" height="330" rx="10" fill="#2c3540" opacity="0.7"/>
+  <!-- Stainless steel neck ring -->
+  <rect x="232" y="158" width="136" height="20" rx="4" fill="#d0d5dd"/>
+  <rect x="232" y="162" width="136" height="6" fill="#ffffff" opacity="0.6"/>
+  <!-- Screw lid with carry loop -->
+  <rect x="236" y="112" width="128" height="48" rx="10" fill="#14181d"/>
+  <path d="M265 112 C265 72, 335 72, 335 112" stroke="#14181d" stroke-width="16" fill="none" stroke-linecap="round"/>
+  <!-- Brand engraving -->
+  <text x="300" y="330" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#d8c3a5" text-anchor="middle" letter-spacing="4">LIZZARD</text>
+  <text x="300" y="355" font-family="Arial, sans-serif" font-size="11" fill="#9aa4b2" text-anchor="middle" letter-spacing="2">VACUUM INSULATED</text>
+</svg>

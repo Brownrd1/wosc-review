@@ -85,7 +85,7 @@ h1, h2, h3, h4, h5, h6 {
    1. Canonical Top Utility Bar
    ========================================================================== */
 .top-utility-bar {
-  background: #382a21;
+  background: #f4ede4; color: #403026;
   color: #f7f2eb;
   padding: 8px 6%;
   font-size: 11.5px;

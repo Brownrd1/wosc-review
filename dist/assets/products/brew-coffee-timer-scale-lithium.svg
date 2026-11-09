@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <rect width="600" height="600" fill="#ffffff"/>
+  <ellipse cx="300" cy="460" rx="185" ry="22" fill="#e8e0d5" opacity="0.6"/>
+  <!-- Scale base -->
+  <rect x="130" y="210" width="340" height="230" rx="28" fill="#181b20"/>
+  <rect x="142" y="220" width="316" height="155" rx="18" fill="#232830" stroke="#363d49" stroke-width="2"/>
+  <!-- Silicone mat ridges -->
+  <line x1="175" y1="255" x2="425" y2="255" stroke="#181b20" stroke-width="3" stroke-linecap="round"/>
+  <line x1="175" y1="295" x2="425" y2="295" stroke="#181b20" stroke-width="3" stroke-linecap="round"/>
+  <line x1="175" y1="335" x2="425" y2="335" stroke="#181b20" stroke-width="3" stroke-linecap="round"/>
+  <!-- LED display panel -->
+  <rect x="155" y="388" width="290" height="36" rx="6" fill="#0d0f12"/>
+  <text x="225" y="413" font-family="monospace" font-size="22" font-weight="bold" fill="#4ade80" text-anchor="middle">02:45</text>
+  <text x="365" y="413" font-family="monospace" font-size="22" font-weight="bold" fill="#f8fafc" text-anchor="middle">36.4 g</text>
+</svg>

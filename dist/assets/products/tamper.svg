@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <rect width="600" height="600" fill="#ffffff"/>
+  <ellipse cx="300" cy="485" rx="135" ry="20" fill="#e8e0d5" opacity="0.65"/>
+  <!-- Heavy flat stainless base -->
+  <rect x="180" y="415" width="240" height="48" rx="8" fill="#cbd5e1"/>
+  <rect x="190" y="415" width="60" height="48" fill="#f8fafc" opacity="0.6"/>
+  <ellipse cx="300" cy="415" rx="120" ry="22" fill="#94a3b8"/>
+  <!-- Collar -->
+  <path d="M235 412 L255 340 L345 340 L365 412 Z" fill="#64748b"/>
+  <!-- Ergonomic handle -->
+  <path d="M250 340 C220 250, 210 155, 300 155 C390 155, 380 250, 350 340 Z" fill="#382a21"/>
+  <ellipse cx="280" cy="230" rx="22" ry="55" fill="#523d30" opacity="0.5"/>
+  <text x="300" y="445" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#334155" text-anchor="middle" letter-spacing="2">58MM CALIBRATED</text>
+</svg>
