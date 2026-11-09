@@ -45,7 +45,7 @@
 @media(prefers-reduced-motion:reduce){.site .header-main-nav a:after,.site .header-main-nav button:after{transition:none}}
 
 
-/* A clear horizontal logo lockup and larger navigation. Crop the displayed asset only. */
+/* · clear horizontal logo lockup and larger navigation. Crop the displayed asset only. */
 .site .refined-header{grid-template-columns:190px minmax(0,1fr) auto;column-gap:27px;padding:20px 4.5%}.site .header-logo{width:auto;display:inline-flex;align-items:center;gap:15px;line-height:1;white-space:nowrap}.site .crest-crop{display:block;width:80px;aspect-ratio:297 / 274;overflow:hidden;flex-shrink:0}.site .header-logo .crest-crop .wosc-logo{width:100%;height:auto;max-width:none;display:block}.site .header-title{font:600 33px/1 Georgia,'Times New Roman',serif;letter-spacing:1.2px;color:#244536}.site .header-main-nav{gap:clamp(17px,1.65vw,25px)}.site .header-main-nav a,.site .header-main-nav button{font-size:16px;font-weight:500;letter-spacing:0}.site .header-account-nav{gap:20px;padding-left:23px}.site .header-account-nav a,.site .header-account-nav button{font-size:15px}.site .header-mobile-menu nav a,.site .header-mobile-menu nav button{font-size:17px;padding:14px 0}.site .header-mobile-menu summary{font-size:14px}.site .cart-count{height:23px;min-width:23px;font-size:11px}
 .mobile .site .refined-header{grid-template-columns:1fr auto;gap:0 14px;padding:17px 20px 0}.mobile .site .header-logo{width:auto;gap:11px}.mobile .site .crest-crop{width:57px}.mobile .site .header-title{font-size:28px}.mobile .site .header-account-nav{gap:15px;padding:0;border:0}.mobile .site .header-account-nav a,.mobile .site .header-account-nav button{font-size:13px}.mobile .site .header-main-nav{display:none}.mobile .site .header-mobile-menu{display:block;grid-column:1/-1;margin-top:17px;border-top:1px solid #ccd4c4}
 @container(max-width:1200px){.site .refined-header{grid-template-columns:1fr auto;gap:0 14px;padding:17px 20px 0}.site .header-logo{width:auto;gap:11px}.site .crest-crop{width:57px}.site .header-title{font-size:28px}.site .header-account-nav{gap:15px;padding:0;border:0}.site .header-account-nav a,.site .header-account-nav button{font-size:13px}.site .header-main-nav{display:none}.site .header-mobile-menu{display:block;grid-column:1/-1;margin-top:17px;border-top:1px solid #ccd4c4}}
@@ -69,8 +69,574 @@ body{margin:0;background:#eeebe3}.site{container-type:inline-size;max-width:none
 /* Image-led category navigation */
 .site .shop-categories{gap:14px;padding-top:10px;padding-bottom:45px}.site .shop-categories button,.site .shop-categories button:first-child{clip-path:none;min-height:240px;padding:0 0 20px;background:white;border:1px solid #dce1d5;box-shadow:none;align-items:center;text-align:center;transition:transform .2s,border-color .2s}.site .shop-categories button:before,.site .shop-categories button:after{display:none;content:none}.site .shop-categories button.active,.site .shop-categories button.active:hover{background:white;border:1px solid #244e40;box-shadow:inset 0 -4px #244e40}.site .shop-categories .category-art{display:block;width:100%;height:135px;margin-bottom:18px;background:#f4f5ef;overflow:hidden}.site .shop-categories .category-art img{display:block;width:100%;height:100%;object-fit:contain;transition:transform .35s}.site .shop-categories button[data-shop-category="coffee"] .category-art img{object-fit:contain;object-position:center}.site .shop-categories button.active .category-art{background:#e6ebdf}.site .shop-categories button:hover .category-art img{transform:scale(1.06)}.site .shop-categories button>span:not(.category-art){display:none}.site .shop-categories b,.site .shop-categories button.active b{font:23px/1.15 Georgia,serif;min-height:27px;margin:0 12px 9px;text-decoration:none;max-width:none}.site .shop-categories small{padding:0 12px;max-width:none;color:#72806b;font-size:10px}.site .shop-categories button:hover{background:white;transform:translateY(-3px)}@container(max-width:1050px){.site .shop-categories button{padding:0 0 18px}.site .shop-categories b{font-size:20px}.site .shop-categories .category-art{height:120px}}@container(max-width:650px){.site .shop-categories button{flex-basis:180px;min-height:230px;padding:0 0 20px}.site .shop-categories .category-art{height:135px}.site .shop-categories b{font-size:23px}}
 .site .shop-intro{position:relative;display:grid;grid-template-columns:1.25fr 1fr;column-gap:60px;align-items:center}.site .shop-intro>.brand-kicker,.site .shop-intro>h1,.site .shop-intro>p{grid-column:1}.site .shop-intro-coffee{grid-column:2;grid-row:1/4;margin:0;justify-self:center;width:280px;max-width:100%;transform:rotate(3deg)}.site .shop-intro-coffee img{display:block;width:100%;aspect-ratio:1;object-fit:cover;border-radius:50%;object-position:center;box-shadow:0 15px 30px #244e4014}.site .shop-intro-coffee figcaption{text-align:center;font:italic 14px/1.6 Georgia,serif;color:#6b7867;margin-top:17px}@container(max-width:850px){.site .shop-intro{column-gap:25px;grid-template-columns:1.4fr 1fr}.site .shop-intro-coffee{width:210px}.site .shop-intro h1{font-size:42px}}@container(max-width:600px){.site .shop-intro{display:block}.site .shop-intro-coffee{width:180px;margin:28px auto 0}.site .shop-intro h1{font-size:39px}}.site .shop-intro-coffee{width:300px;transform:none}.site .shop-intro-coffee img{border-radius:0;box-shadow:none;aspect-ratio:auto;object-fit:contain;max-height:330px;width:100%}.site .shop-intro-coffee figcaption{display:none}@container(max-width:600px){.site .shop-intro-coffee{width:190px}.site .shop-intro-coffee img{max-height:230px}}.site .shop-intro-coffee{width:300px;transform:none}.site .shop-intro-coffee img{border-radius:0;box-shadow:none;aspect-ratio:auto;object-fit:contain;max-height:330px;width:100%}.site .shop-intro-coffee figcaption{display:none}@container(max-width:600px){.site .shop-intro-coffee{width:190px}.site .shop-intro-coffee img{max-height:230px}}@media(max-width:600px){.site .shop-intro-coffee{display:none}}@container(max-width:600px){.site .shop-intro-coffee{display:none}}.mobile .site .shop-intro-coffee{display:none}.site .shop-category-shell{position:relative;background:#eeebe3;padding:0 6% 40px}.site .shop-category-shell .shop-categories{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:10px 2px 7px;gap:14px}.site .shop-category-shell .shop-categories::-webkit-scrollbar{display:none}.site .shop-category-shell .shop-categories button{flex:0 0 calc((100% - 56px)/5);scroll-snap-align:start;min-width:180px}.site .category-row-controls[hidden]{display:none}.site .category-row-controls{display:flex;justify-content:flex-end;align-items:center;gap:9px;padding-top:15px;color:#6b7867;font:10px Arial}.site .category-row-controls button{border:1px solid #aebb9f;background:white;color:#244e40;width:34px;height:34px;border-radius:50%;font:20px Georgia;cursor:pointer}.site .category-row-controls button:disabled{opacity:.3;cursor:default}.site .category-row-controls span{margin-right:10px}@container(max-width:650px){.site .shop-category-shell{padding:0 24px 25px}.site .shop-category-shell .shop-categories button{flex-basis:180px}.site .category-row-controls{padding-top:10px}}body{margin:0;background:#eeebe3}.site{container-type:inline-size;max-width:none}.machine-hero{display:grid;grid-template-columns:1.2fr 1fr;align-items:center;gap:40px;padding:45px 6%;background:#eeebe3;color:#244e40}.machine-hero h1{font:52px/1.1 Georgia,serif;letter-spacing:-1px;margin:18px 0 22px}.machine-hero p{font:15px/1.8 Arial;max-width:490px}.machine-hero img{width:100%;height:280px;object-fit:contain}.machine-catalogue{padding:0 6% 70px;background:#f8f7f2}.machine-tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:28px 0 42px}.machine-tabs button{background:#fff;border:1px solid #d4dbce;padding:23px;text-align:left;color:#244e40;font:27px Georgia,serif;cursor:pointer}.machine-tabs span{display:block;font:11px Arial;color:#6e7a67;margin-top:13px}.machine-tabs button[aria-pressed=true]{border-color:#244e40;box-shadow:inset 0 -4px #244e40}.machine-title{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #d5dbce;margin-bottom:30px;padding-bottom:22px}.machine-title h2{font:35px Georgia,serif;color:#244e40;margin:0}.machine-title p{font:11px Arial;color:#6e7a67}.machine-layout{display:grid;grid-template-columns:190px minmax(0,1fr);gap:35px}.machine-layout aside label{display:block;font:11px Arial;color:#244e40;margin-bottom:25px}.machine-layout aside input,.machine-layout aside select{display:block;width:100%;box-sizing:border-box;border:1px solid #ccd3c5;padding:12px 10px;background:white;margin-top:12px;font:11px Arial}.machine-layout aside button,.machine-advice a{font:11px Arial;color:#244e40;background:none;border:0;padding:0;text-decoration:underline;cursor:pointer}.machine-advice{border-top:1px solid #d5dbce;margin-top:35px;padding-top:25px}.machine-advice h3{font:25px Georgia,serif;color:#244e40}.machine-advice p{font:12px/1.8 Arial;color:#707b69}.machine-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}.machine-card{background:white;border:1px solid #dfe3d8;color:#244e40;display:flex;flex-direction:column}.machine-card-image{position:relative;aspect-ratio:1;background:#fff;overflow:hidden}.machine-card-image img{width:100%;height:100%;object-fit:contain;padding:24px;box-sizing:border-box;transition:transform .3s}.machine-card:hover img{transform:scale(1.035)}.machine-card-body{padding:22px 20px;display:flex;flex:1;flex-direction:column}.machine-card small{font:9px Arial;letter-spacing:1.1px;color:#7a8472}.machine-card h3{font:25px/1.15 Georgia,serif;margin:12px 0 15px}.machine-card p{font:12px/1.8 Arial;color:#6e7768;margin:0 0 20px}.machine-features{display:flex;gap:7px;flex-wrap:wrap;margin-top:auto;margin-bottom:22px}.machine-features span{border:1px solid #e0e5d8;padding:6px 7px;font:9px Arial;color:#68745f}.machine-card-bottom{border-top:1px solid #e0e5d8;padding-top:17px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.machine-card-bottom strong{font:19px Georgia,serif}.machine-card-bottom button{border:0;border-bottom:1px solid #244e40;background:none;color:#244e40;font:10px Arial;padding:0 0 4px;cursor:pointer}.machine-note{font:10px/1.8 Arial;color:#7b8474;margin-top:25px}dialog{max-width:850px;width:calc(100% - 70px);border:0;padding:35px;background:#fff;color:#244e40}dialog::backdrop{background:#122b22b8}.detail-close{float:right;border:0;background:none;font-size:28px;color:#244e40;cursor:pointer}.detail-summary{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}.detail-summary img{width:100%;height:280px;object-fit:contain}.detail-summary h2{font:34px Georgia}.detail-summary p,dialog>div>p{font:13px/1.8 Arial;color:#6b7664}.detail-price{font:26px Georgia!important;color:#244e40!important}.compatibility{background:#f0f3eb;padding:24px;margin-top:25px}.compatibility h3{font:24px Georgia;margin-top:0}.compatibility p{font:12px/1.8 Arial}.compatibility button{background:white;border:1px solid #bccaaf;padding:10px;color:#244e40;cursor:pointer}.detail-enquiry{display:inline-block;margin-top:15px;color:#244e40;font:12px Arial}@media(max-width:1000px){.machine-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.machine-layout{grid-template-columns:160px minmax(0,1fr);gap:22px}}@media(max-width:650px){.machine-hero{grid-template-columns:1fr;padding:35px 24px}.machine-hero h1{font-size:39px}.machine-hero img{height:210px}.machine-catalogue{padding:0 24px 45px}.machine-tabs{gap:8px}.machine-tabs button{font-size:18px;padding:17px 10px}.machine-tabs span{font-size:9px;line-height:1.5}.machine-layout{grid-template-columns:1fr}.machine-layout aside{display:grid;grid-template-columns:1fr 1fr;gap:15px}.machine-advice{display:none}.machine-grid{grid-template-columns:1fr}.machine-title h2{font-size:28px}.detail-summary{grid-template-columns:1fr}.detail-summary img{height:200px}dialog{padding:24px}}
-</style><meta name="robots" content="noindex,nofollow,noarchive"></head><body><div style="background:#172f27;color:#fff;padding:9px 20px;text-align:center;font:11px Arial;letter-spacing:.5px">PRIVATE CONCEPT REVIEW · Draft content and illustrative pricing · No live orders or enquiries</div><main class="site"><header class="site-header refined-header"><a class="header-logo" href="wosc-homepage-concept.html" aria-label="WOSC homepage"><span class="crest-crop"><img class="wosc-logo" src="assets/005d890fd06a3dedd20b.png" alt="WOSC World of Speciality Coffee" width="297" height="321"></span><span class="header-title">WOSC</span></a><nav class="header-main-nav" aria-label="Main navigation"><a href="wosc-shop-concept.html">Shop</a><a href="wosc-our-roasts-notes.html">Our Roasts</a><a href="wosc-machine-shop-concept.html">Coffee Machines</a><a href="wosc-wholesale-notes.html">Wholesale</a><a href="wosc-showroom-notes.html">Showroom</a><a href="wosc-events-notes.html">Events</a></nav><div class="header-account-nav" aria-label="Account and cart"><a href="wosc-account-notes.html">My Account</a><a class="cart-link" href="wosc-basket-notes.html">Cart <span class="cart-count">0</span></a></div><details class="header-mobile-menu"><summary><span class="menu-lines" aria-hidden="true"></span>Menu<span class="mobile-menu-note">Explore WOSC</span></summary><nav aria-label="Mobile navigation"><a href="wosc-shop-concept.html">Shop</a><a href="wosc-our-roasts-notes.html">Our Roasts</a><a href="wosc-machine-shop-concept.html">Coffee Machines</a><a href="wosc-wholesale-notes.html">Wholesale</a><a href="wosc-showroom-notes.html">Showroom</a><a href="wosc-events-notes.html">Events</a></nav></details></header><section class="machine-hero"><div><p class="brand-kicker">THE WOSC MACHINE SHOP</p><h1>A Better Coffee Setup.<br>Every Day.</h1><p>Find a machine for home, equipment for your business, and the accessories that bring it together.</p></div><img src="assets/953cbfc128a0e8426d88.avif" alt="Espresso machine reference for home coffee setups"></section><section class="machine-catalogue"><nav class="machine-tabs" aria-label="Machine shop categories"><button data-category="Home" aria-pressed="true">Home<span>Your daily coffee ritual</span></button><button data-category="Commercial" aria-pressed="false">Commercial<span>Built around your business</span></button><button data-category="Accessories" aria-pressed="false">Accessories<span>Complete your setup</span></button></nav><div class="machine-title"><h2 id="machine-heading">Coffee Machines for Home</h2><p id="machine-count" aria-live="polite"></p></div><div class="machine-layout"><aside><label>Search products<input id="machine-search" type="search" placeholder="Search machines or accessories"></label><label>Sort by<select id="machine-sort"><option value="featured">Featured</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option><option value="az">Name A–Z</option></select></label><button id="machine-clear">Clear filters ↺</button><div class="machine-advice"><h3>Find your fit.</h3><p>Need help choosing a machine or checking an accessory?</p><a href="wosc-contact-notes.html">Talk to WOSC ↗</a></div></aside><div><div class="machine-grid" id="machine-grid"></div><p class="machine-note">Design examples only. All prices are illustrative South African rand amounts, not live offers. Images do not confirm WOSC stock. Product names, specifications, model versions, voltage, tax and compatibility require confirmation. Commercial examples reuse home-machine photographs to demonstrate the layout; they do not establish commercial suitability.</p></div></div></section><dialog id="machine-detail"><button class="detail-close" aria-label="Close product details">×</button><div id="machine-detail-body"></div></dialog><footer class="site-footer wosc-footer"><div class="footer-top"><div><p class="footer-kicker">A WORLD WORTH EXPLORING</p><h2>Good coffee.<br>Better connections.</h2></div><div class="footer-news"><h3>A little WOSC in your inbox.</h3><p>Coffee discoveries, upcoming experiences and the next chapter of our showroom.</p><a href="wosc-newsletter-notes.html">Keep Me in the Loop ↗</a></div></div><div class="footer-main"><div class="footer-brand"><a class="footer-wordmark" href="#">WOSC<span>World of Speciality Coffee</span></a><p>Coffee to enjoy. Machines to explore.<br>Experiences to share.</p><p class="footer-location">Cape Town, South Africa</p><a href="wosc-contact-notes.html">Let’s Talk Coffee ↗</a></div><nav aria-label="Shop & Discover"><h3>Shop & Discover</h3><a href="wosc-shop-concept.html">Shop</a><a href="wosc-our-roasts-notes.html">Our Roasts</a><a href="wosc-machine-shop-concept.html">Coffee Machines</a><a href="wosc-showroom-notes.html">Showroom</a><a href="wosc-events-notes.html">Events</a></nav><nav aria-label="Business & Services"><h3>Business & Services</h3><a href="wosc-wholesale-notes.html">Wholesale Coffee Supply</a><a href="wosc-training-notes.html">Barista Training</a><a href="wosc-partner-events-notes.html">Venue Hire & Partner Events</a><a href="wosc-about-notes.html">About WOSC</a><a href="wosc-contact-notes.html">Contact Us</a></nav><nav aria-label="Customer Care"><h3>Customer Care</h3><a href="wosc-delivery-notes.html">Delivery & Collection</a><a href="wosc-returns-notes.html">Returns & Refunds</a><a href="wosc-warranty-notes.html">Warranty & Servicing</a><a href="wosc-faq-notes.html">FAQs</a><a href="wosc-account-notes.html">My Account</a><a href="wosc-basket-notes.html">Cart</a></nav></div><div class="footer-bottom"><span>© 2026 WOSC · World of Speciality Coffee</span><nav aria-label="Legal and privacy"><a href="wosc-privacy-notes.html">Privacy Policy</a><a href="wosc-terms-notes.html">Terms & Conditions</a><a href="wosc-cookies-notes.html">Cookie Policy</a></nav><a href="#" class="footer-back">Back to top ↑</a></div></footer></main><script>const machineItems=[{"id": "barista", "name": "Barista Espresso Machine", "category": "Home", "image": "assets/953cbfc128a0e8426d88.avif", "price": 12999, "description": "A hands-on starting point for your daily espresso ritual.", "features": ["Integrated grinder", "Milk steaming"]}, {"id": "dual", "name": "Dual Boiler Espresso Machine", "category": "Home", "image": "assets/7d11b016ee9c7434d6e2.avif", "price": 24999, "description": "A dedicated espresso setup for the home coffee enthusiast.", "features": ["Espresso setup", "Separate grinder pairing"]}, {"id": "touch", "name": "Touchscreen Espresso Machine", "category": "Home", "image": "assets/2f96aff6faa88ff044e0.avif", "price": 29999, "description": "A guided coffee experience with a contemporary interface.", "features": ["Touchscreen controls", "Integrated grinder"]}, {"id": "pro", "name": "Precision Espresso Machine", "category": "Home", "image": "assets/3cb92ce9acb83f14d893.avif", "price": 18999, "description": "A refined machine for exploring your favourite coffee at home.", "features": ["Digital display", "Milk steaming"]}, {"id": "bundle", "name": "Espresso & Grinder Set", "category": "Home", "image": "assets/3c1f0a05c2abb09f2f0f.avif", "price": 32999, "description": "Build your home coffee station with a machine and separate grinder.", "features": ["Machine + grinder", "Home coffee station"]}, {"id": "compact", "name": "Compact Espresso & Grinder Set", "category": "Home", "image": "assets/d9884900712eb0c00130.png", "price": 15999, "description": "A compact pairing for freshly ground coffee and hands-on brewing.", "features": ["Compact setup", "Separate grinder"]}, {"id": "milk", "name": "Milk Frother", "category": "Accessories", "image": "assets/b887d333c1ad01646a8b.avif", "price": 2499, "description": "Add a dedicated milk preparation accessory to your coffee station.", "features": ["Standalone accessory", "Check requirements"]}, {"id": "commercial", "name": "Commercial Espresso Machine", "category": "Commercial", "image": "assets/7d11b016ee9c7434d6e2.avif", "price": 85000, "description": "A reference configuration for a working café. Final models and installation requirements to be confirmed.", "features": ["Business setup", "Installation enquiry"]}, {"id": "commercial-two", "name": "Two-Group Café Machine", "category": "Commercial", "image": "assets/3c1f0a05c2abb09f2f0f.avif", "price": 115000, "description": "An example layout for a café espresso station. Exact model and group configuration to be confirmed.", "features": ["Café setup", "Configuration to confirm"]}, {"id": "commercial-compact", "name": "Compact Commercial Machine", "category": "Commercial", "image": "assets/953cbfc128a0e8426d88.avif", "price": 68000, "description": "A smaller-footprint business setup concept. Capacity and suitability require assessment.", "features": ["Compact footprint", "Business enquiry"]}, {"id": "commercial-premium", "name": "Premium Commercial Setup", "category": "Commercial", "image": "assets/2f96aff6faa88ff044e0.avif", "price": 165000, "description": "A reference for a higher-specification coffee bar investment. Final equipment package to be confirmed.", "features": ["Premium setup", "Consultation recommended"]}, {"id": "burr-set", "name": "Replacement Grinder Burr Set", "category": "Accessories", "image": "assets/c8dafccb36373d12d6d0.svg", "price": 1299, "description": "An illustrative grinder cutting-burr replacement set. Diameter, mounting pattern and grinder model must match.", "features": ["Replacement part", "Model-specific fit"]}, {"id": "group-seal", "name": "Group Head Seal", "category": "Accessories", "image": "assets/4134009dd23eeec015da.svg", "price": 249, "description": "An illustrative replacement seal for an espresso machine group head. Check dimensions and model version before ordering.", "features": ["Spare seal", "Verify dimensions"]}];let activeCategory='Home';const q=s=>document.querySelector(s);const money=n=>'R'+n.toLocaleString('en-ZA').replace(/,/g,' ');const titles={Home:'Coffee Machines for Home',Commercial:'Commercial Coffee Machines',Accessories:'Accessories for Your Setup'};
-function render(){let list=machineItems.filter(x=>x.category===activeCategory&&x.name.toLowerCase().includes(q('#machine-search').value.toLowerCase()));let sort=q('#machine-sort').value;if(sort==='price-low')list.sort((a,b)=>a.price-b.price);if(sort==='price-high')list.sort((a,b)=>b.price-a.price);if(sort==='az')list.sort((a,b)=>a.name.localeCompare(b.name));q('#machine-heading').textContent=titles[activeCategory];q('#machine-count').textContent=list.length+' example product'+(list.length===1?'':'s');document.querySelectorAll('[data-category]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.category===activeCategory));q('#machine-grid').innerHTML=list.map(x=>`<article class="machine-card"><div class="machine-card-image"><img src="${x.image}" alt="${x.name} supplied reference image" loading="lazy"></div><div class="machine-card-body"><small>${x.category.toUpperCase()} · EXAMPLE PRODUCT</small><h3>${x.name}</h3><p>${x.description}</p><div class="machine-features">${x.features.map(f=>`<span>${f}</span>`).join('')}</div><div class="machine-card-bottom"><strong>From ${money(x.price)}</strong><button data-detail="${x.id}">Explore ${x.category==='Accessories'?'accessory':'machine'} ↗</button></div></div></article>`).join('')||'<p>No matching products. Try another search.</p>';document.querySelectorAll('[data-detail]').forEach(b=>b.onclick=()=>detail(b.dataset.detail));}
-function detail(id){location.href='wosc-machine-product-concept.html?product='+encodeURIComponent(id);return;let x=machineItems.find(x=>x.id===id);q('#machine-detail-body').innerHTML=`<div class="detail-summary"><img src="${x.image}" alt="${x.name}"><div><p>PRODUCT DETAIL CONCEPT</p><h2>${x.name}</h2><p>${x.description}</p><p class="detail-price">From ${money(x.price)}</p><p>Illustrative price. Final model, configuration, voltage, stock and tax details require confirmation.</p><a class="detail-enquiry" href="wosc-contact-notes.html">Enquire about this product ↗</a></div></div><section class="compatibility"><h3>${x.category==='Accessories'?'Compatible Machines':'Accessories for This Setup'}</h3><p>${x.category==='Accessories'?'No verified compatibility links have been supplied yet. Check exact model/version and relevant dimensions, mounting pattern or electrical requirements before ordering.':'Verified accessories will appear here, linked to the exact model and version. No universal compatibility is assumed.'}</p>${x.category==='Accessories'?'':'<button id="browse-accessories">Browse Accessories</button>'}</section>`;if(q('#browse-accessories'))q('#browse-accessories').onclick=()=>{q('#machine-detail').close();activeCategory='Accessories';q('#machine-search').value='';render()};if(!q('#machine-detail').open)q('#machine-detail').showModal();}
+
+/* WOSC Warm Coffee & Navy Palette Override */
+body {
+  background: #fbf8f3 !important;
+  color: #403026 !important;
+}
+.site {
+  --ink: #382a21;
+  --green: #142b45;
+  --paper: #faf6ef;
+  --line: #e2d4c6;
+  --soft: #f5eee6;
+  --muted: #6a5e54;
+  --accent: #8b684e;
+  --wosc-black: #f9f5ef;
+  --wosc-espresso: #38281f;
+  --wosc-roast: #684a34;
+  --wosc-cream: #fbf8f2;
+  --wosc-muted: #685b50;
+  --wosc-copper: #8b6544;
+  --wosc-green: #142b45;
+  background: #fcfaf7 !important;
+  color: #403026 !important;
+}
+.site .refined-header {
+  background: #fffdfa !important;
+  color: #403026 !important;
+  border-color: #e5dacf !important;
+}
+.site .header-title,
+.site .header-main-nav a,
+.site .header-account-nav a,
+.site .header-mobile-menu summary,
+.site .cart-link {
+  color: #142b45 !important;
+}
+.site .header-main-nav a:after {
+  background: #142b45 !important;
+}
+.site .header-main-nav a:hover,
+.site .header-account-nav a:hover {
+  color: #79573b !important;
+}
+.site .cart-count {
+  border-color: #d4c7b8 !important;
+  color: #142b45 !important;
+}
+
+/* Shop Intro & Category Filter Navigation */
+.site .shop-intro,
+.site .shop-category-shell {
+  background: #f5eee6 !important;
+  color: #403026 !important;
+}
+.site .brand-kicker {
+  color: #8b684e !important;
+}
+.site h1, .site h2, .site h3 {
+  color: #403026 !important;
+}
+.site .shop-intro > p {
+  color: #6a5e54 !important;
+}
+.site .shop-categories button {
+  background: #fffdfa !important;
+  border: 1px solid #e2d4c6 !important;
+  color: #513b2e !important;
+}
+.site .shop-categories button:hover {
+  background: #fff !important;
+  border-color: #8b684e !important;
+}
+.site .shop-categories button.active,
+.site .shop-categories button.active:hover {
+  background: #fffdfa !important;
+  border: 1px solid #142b45 !important;
+  box-shadow: inset 0 -4px #142b45 !important;
+  color: #142b45 !important;
+}
+.site .shop-categories .category-art {
+  background: #faf7f2 !important;
+}
+.site .shop-categories button.active .category-art {
+  background: #f5eee6 !important;
+}
+.site .category-row-controls {
+  color: #6a5e54 !important;
+}
+.site .category-row-controls button {
+  border: 1px solid #d8cbbe !important;
+  background: white !important;
+  color: #142b45 !important;
+}
+.site .category-row-controls button:disabled {
+  opacity: .3 !important;
+}
+
+/* Catalogue & Product Cards */
+.site .shop-catalogue {
+  background: #fffdfa !important;
+  color: #403026 !important;
+}
+.site .shop-catalogue-title {
+  border-bottom: 1px solid #e5dacf !important;
+}
+.site .shop-catalogue-title h2 {
+  color: #403026 !important;
+}
+.site .shop-catalogue-title > p,
+.site .shop-toolbar,
+.site .shop-catalogue-note {
+  color: #6a5e54 !important;
+}
+.site .shop-sidebar label {
+  color: #403026 !important;
+}
+.site .shop-sidebar input,
+.site .shop-sidebar select,
+.site .shop-toolbar select {
+  border: 1px solid #e2d4c6 !important;
+  color: #403026 !important;
+  background: #fff !important;
+}
+.site .shop-sidebar button,
+.site .shop-empty button {
+  color: #142b45 !important;
+}
+.site .shop-help {
+  border-top: 1px solid #e5dacf !important;
+  border-bottom: 1px solid #e5dacf !important;
+}
+.site .shop-help h3 {
+  color: #403026 !important;
+}
+.site .shop-help p {
+  color: #6a5e54 !important;
+}
+.site .shop-machine-route {
+  color: #6a5e54 !important;
+}
+.site .shop-machine-route b {
+  color: #142b45 !important;
+}
+.site .blend-card {
+  background: #fffdfa !important;
+  border: 1px solid #e4d8cb !important;
+  color: #403026 !important;
+}
+.site .blend-card:hover {
+  box-shadow: 0 15px 35px rgba(20,43,69,0.08) !important;
+  transform: translateY(-4px) !important;
+}
+.site .blend-image {
+  background: #faf7f2 !important;
+}
+.site .blend-origin,
+.site .blend-flavour {
+  color: #6a5e54 !important;
+}
+.site .blend-body h3 {
+  color: #403026 !important;
+}
+.site .blend-scale {
+  border-top: 1px solid #e5dacf !important;
+  color: #403026 !important;
+}
+.site .blend-scale i {
+  background: #e8dfd5 !important;
+}
+.site .blend-scale i.filled {
+  background: #8b6544 !important;
+  border-color: #8b6544 !important;
+}
+.site .blend-scale strong {
+  color: #403026 !important;
+}
+.site .blend-bottom {
+  border-top: 1px solid #e5dacf !important;
+}
+.site .blend-bottom > span {
+  color: #142b45 !important;
+}
+.site .blend-bottom b {
+  color: #142b45 !important;
+  border-bottom: 1px solid #142b45 !important;
+}
+.site .shop-empty {
+  background: #f5eee6 !important;
+  color: #403026 !important;
+}
+.site .shop-machines {
+  background: #f5eee6 !important;
+  color: #403026 !important;
+}
+.site .shop-machines h2 {
+  color: #403026 !important;
+}
+.site .shop-machines p {
+  color: #6a5e54 !important;
+}
+.site .shop-machines .shop-machines-kicker {
+  color: #8b684e !important;
+}
+.site .shop-machines a {
+  background: #142b45 !important;
+  color: white !important;
+  border-radius: 3px !important;
+}
+.site .shop-machines a:hover {
+  background: #79573b !important;
+}
+
+/* Machine Shop Hero, Tabs & Catalogue */
+.machine-hero {
+  background: #f5eee6 !important;
+  color: #403026 !important;
+}
+.machine-hero h1, .machine-hero h2 {
+  color: #403026 !important;
+}
+.machine-hero p {
+  color: #6a5e54 !important;
+}
+.machine-catalogue {
+  background: #fffdfa !important;
+  color: #403026 !important;
+}
+.machine-tabs button {
+  background: #fffdfa !important;
+  border: 1px solid #e1d4c6 !important;
+  color: #403026 !important;
+}
+.machine-tabs span {
+  color: #76685c !important;
+}
+.machine-tabs button:hover {
+  border-color: #8b684e !important;
+}
+.machine-tabs button[aria-pressed=true] {
+  border-color: #142b45 !important;
+  box-shadow: inset 0 -4px #142b45 !important;
+  color: #142b45 !important;
+}
+.machine-title {
+  border-bottom: 1px solid #e2d6c9 !important;
+}
+.machine-title h2 {
+  color: #403026 !important;
+}
+.machine-title p {
+  color: #76685c !important;
+}
+.machine-layout aside label {
+  color: #403026 !important;
+}
+.machine-layout aside input,
+.machine-layout aside select {
+  border: 1px solid #e2d4c6 !important;
+  color: #403026 !important;
+  background: white !important;
+}
+.machine-layout aside button,
+.machine-advice a {
+  color: #142b45 !important;
+}
+.machine-advice {
+  border-top: 1px solid #e2d6c9 !important;
+}
+.machine-advice h3 {
+  color: #403026 !important;
+}
+.machine-advice p {
+  color: #76685c !important;
+}
+.machine-card {
+  background: #fffdfa !important;
+  border: 1px solid #e8ddd1 !important;
+  color: #403026 !important;
+}
+.machine-card:hover {
+  box-shadow: 0 15px 35px rgba(20,43,69,0.08) !important;
+  transform: translateY(-4px) !important;
+}
+.machine-card-image {
+  background: #fff !important;
+}
+.machine-card small {
+  color: #8b684e !important;
+}
+.machine-card h3 {
+  color: #403026 !important;
+}
+.machine-card p {
+  color: #6a5e54 !important;
+}
+.machine-features span {
+  border: 1px solid #e4d9ce !important;
+  color: #6a5e54 !important;
+  background: #fbf9f6 !important;
+}
+.machine-card-bottom {
+  border-top: 1px solid #e4d9ce !important;
+}
+.machine-card-bottom strong {
+  color: #142b45 !important;
+}
+.machine-card-bottom button {
+  border: 0 !important;
+  border-bottom: 1px solid #142b45 !important;
+  background: none !important;
+  color: #142b45 !important;
+}
+.machine-card-bottom button:hover {
+  border-color: #79573b !important;
+  color: #79573b !important;
+}
+.machine-note {
+  color: #76685c !important;
+}
+
+/* Product Detail Pages (Coffee & Machines) */
+.retail-page .product-crumb,
+.retail-breadcrumb,
+.product-crumb {
+  background: #f5eee6 !important;
+  border-bottom: 1px solid #e5dacf !important;
+  color: #76685c !important;
+}
+.retail-page .product-crumb a,
+.retail-breadcrumb a,
+.product-crumb a {
+  color: #142b45 !important;
+}
+.retail-page .product-top,
+.product-top {
+  background: #fffdfa !important;
+  color: #403026 !important;
+}
+.retail-page .product-purchase h1,
+.product-purchase h1 {
+  color: #403026 !important;
+}
+.retail-page .product-price,
+.product-price,
+.detail-price {
+  color: #142b45 !important;
+}
+.retail-page .blend-scale {
+  border-top: 1px solid #e5dacf !important;
+}
+.retail-page .blend-scale i {
+  background: #e8dfd5 !important;
+}
+.retail-page .blend-scale i.filled {
+  background: #8b6544 !important;
+  border-color: #8b6544 !important;
+}
+.retail-page .blend-scale strong {
+  color: #403026 !important;
+}
+.retail-page .pack-options button,
+.product-choices button {
+  background: #fffdfa !important;
+  border: 1px solid #e2d4c6 !important;
+  color: #403026 !important;
+}
+.retail-page .pack-options button:hover,
+.product-choices button:hover {
+  border-color: #8b684e !important;
+}
+.retail-page .pack-options button[aria-pressed=true],
+.product-choices button[aria-pressed=true] {
+  background: #142b45 !important;
+  border-color: #142b45 !important;
+  color: #fff !important;
+}
+.product-thumbnails button {
+  background: #fff !important;
+  border: 1px solid #e2d4c6 !important;
+}
+.product-thumbnails button[aria-pressed=true] {
+  border: 2px solid #142b45 !important;
+}
+.retail-page .product-choices label,
+.product-choices label {
+  color: #403026 !important;
+}
+.retail-page .product-choices select,
+.retail-page .product-choices input,
+.product-choices select,
+.product-choices input {
+  border: 1px solid #e2d4c6 !important;
+  color: #403026 !important;
+  background: #fff !important;
+}
+.retail-page .cta,
+.retail-page .btn-cart,
+.product-purchase .cta {
+  background: #142b45 !important;
+  border-color: #142b45 !important;
+  color: #fff !important;
+  border-radius: 4px !important;
+}
+.retail-page .cta:hover,
+.retail-page .btn-cart:hover,
+.product-purchase .cta:hover {
+  background: #79573b !important;
+  border-color: #79573b !important;
+}
+.retail-page .retail-cart {
+  background: #f5eee6 !important;
+  border: 1px solid #e2d4c6 !important;
+  color: #403026 !important;
+}
+.retail-page .retail-cart a {
+  color: #142b45 !important;
+}
+.retail-page .retail-trade {
+  border-top: 1px solid #e5dacf !important;
+}
+.retail-page .retail-trade h3 {
+  color: #403026 !important;
+}
+.retail-page .retail-trade a {
+  color: #142b45 !important;
+}
+.retail-page .product-nav,
+.product-nav {
+  background: #f5eee6 !important;
+  border-top: 1px solid #e5dacf !important;
+  border-bottom: 1px solid #e5dacf !important;
+}
+.retail-page .product-nav a,
+.product-nav a {
+  color: #142b45 !important;
+}
+.retail-page .product-editorial,
+.product-editorial {
+  background: #fffdfa !important;
+  color: #403026 !important;
+}
+.retail-page .product-editorial.tint,
+.product-editorial.tint {
+  background: #f5eee6 !important;
+}
+.retail-page .product-editorial h2,
+.retail-page .product-editorial h3,
+.product-editorial h2,
+.product-editorial h3 {
+  color: #403026 !important;
+}
+.retail-page .product-editorial p,
+.product-editorial p {
+  color: #6a5e54 !important;
+}
+.retail-page .spec-table th,
+.spec-table th {
+  background: #f5eee6 !important;
+  color: #403026 !important;
+  border: 1px solid #e5dacf !important;
+}
+.retail-page .spec-table td,
+.spec-table td {
+  color: #403026 !important;
+  border: 1px solid #e5dacf !important;
+}
+.retail-page #retail-care,
+.site #ownership {
+  background: #f5eee6 !important;
+}
+.retail-page #retail-care details,
+.site #ownership details {
+  background: #fff !important;
+  border: 1px solid #e5dacf !important;
+}
+.retail-page #retail-care summary,
+.site #ownership summary {
+  color: #403026 !important;
+}
+.retail-page #retail-care summary:after,
+.site #ownership summary:after {
+  color: #8b684e !important;
+}
+.retail-page #retail-care details p,
+.site #ownership details p {
+  color: #6a5e54 !important;
+}
+.capacity-note {
+  border-left: 2px solid #8b6544 !important;
+}
+.service-trust strong {
+  color: #142b45 !important;
+}
+.model-examples span {
+  background: #f5eee6 !important;
+  border: 1px solid #e2d4c6 !important;
+  color: #403026 !important;
+}
+.compatible-model-list {
+  background: white !important;
+  border: 1px solid #e2d4c6 !important;
+}
+.compatible-model-list h3,
+.compatible-model-list p {
+  color: #403026 !important;
+}
+.coffee-tasting-note {
+  border-top: 1px solid #e5dacf !important;
+}
+.coffee-tasting-note h3 {
+  color: #8b684e !important;
+}
+.coffee-tasting-note p {
+  color: #403026 !important;
+}
+.retail-page .retail-recommendations {
+  background: #f5eee6 !important;
+}
+.retail-page .retail-recommendations .blend-card {
+  background: #fffdfa !important;
+  border: 1px solid #e4d8cb !important;
+  color: #403026 !important;
+}
+.retail-page .retail-recommendations .blend-bottom > span {
+  color: #142b45 !important;
+}
+.retail-page .retail-recommendations .blend-bottom b {
+  color: #142b45 !important;
+}
+
+/* WOSC Footer */
+.site .wosc-footer {
+  background: #142b45 !important;
+  color: #f8f5ef !important;
+  border-top: 0 !important;
+}
+.site .footer-top {
+  border-bottom: 1px solid #ffffff24 !important;
+}
+.site .footer-bottom {
+  border-top: 1px solid #ffffff24 !important;
+  color: #cdd7cc !important;
+}
+.site .footer-kicker {
+  color: #ddbf9d !important;
+}
+.site .wosc-footer h2,
+.site .wosc-footer h3,
+.site .wosc-footer p,
+.site .wosc-footer a,
+.site .wosc-footer span {
+  color: #f8f5ef !important;
+}
+.site .wosc-footer a:hover,
+.site .wosc-footer button:hover {
+  color: #fff !important;
+}
+.site .footer-news > a,
+.site .footer-news > button {
+  border-bottom: 1px solid #d8cbbe !important;
+  color: white !important;
+}
+.site .footer-brand span {
+  color: #ddbf9d !important;
+}
+
+</style><meta name="robots" content="noindex,nofollow,noarchive"></head><body><div style="background:#382a21;color:#fff;padding:9px 20px;text-align:center;font:11px Arial;letter-spacing:.5px">PRIVATE CONCEPT REVIEW · Draft content and illustrative pricing · No live orders or enquiries</div><main class="site"><header class="site-header refined-header"><a class="header-logo" href="wosc-homepage-concept.html" aria-label="WOSC homepage"><span class="crest-crop"><img class="wosc-logo" src="assets/005d890fd06a3dedd20b.png" alt="WOSC World of Speciality Coffee" width="297" height="321"></span><span class="header-title">WOSC</span></a><nav class="header-main-nav" aria-label="Main navigation"><a href="wosc-shop-concept.html">Shop</a><a href="wosc-our-roasts-notes.html">Our Roasts</a><a href="wosc-wholesale-notes.html">Wholesale</a><a href="wosc-showroom-notes.html">Showroom</a><a href="wosc-events-notes.html">Events</a></nav><div class="header-account-nav" aria-label="Account and cart"><a href="wosc-account-notes.html">My Account</a><a class="cart-link" href="wosc-basket-notes.html">Cart <span class="cart-count">0</span></a></div><details class="header-mobile-menu"><summary><span class="menu-lines" aria-hidden="true"></span>Menu<span class="mobile-menu-note">Explore WOSC</span></summary><nav aria-label="Mobile navigation"><a href="wosc-shop-concept.html">Shop</a><a href="wosc-our-roasts-notes.html">Our Roasts</a><a href="wosc-wholesale-notes.html">Wholesale</a><a href="wosc-showroom-notes.html">Showroom</a><a href="wosc-events-notes.html">Events</a></nav></details></header><section class="machine-hero"><div><p class="brand-kicker">THE WOSC MACHINE SHOP</p><h1>Commercial Machines<br>& Brewing Equipment.</h1><p>From Italian-built Wega commercial espresso stations to batch brew, Flojet pumps and precision barista gear.</p></div><img src="assets/953cbfc128a0e8426d88.avif" alt="Espresso machine reference for home coffee setups"></section><section class="machine-catalogue"><nav class="machine-tabs" aria-label="Machine shop categories"><button data-category="Home" aria-pressed="true">Home<span>Your daily coffee ritual</span></button><button data-category="Commercial" aria-pressed="false">Commercial<span>Built around your business</span></button><button data-category="Accessories" aria-pressed="false">Accessories<span>Complete your setup</span></button></nav><div class="machine-title"><h2 id="machine-heading">Coffee Machines for Home</h2><p id="machine-count" aria-live="polite"></p></div><div class="machine-layout"><aside><label>Search products<input id="machine-search" type="search" placeholder="Search machines or accessories"></label><label>Sort by<select id="machine-sort"><option value="featured">Featured</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option><option value="az">Name A–Z</option></select></label><button id="machine-clear">Clear filters ↺</button><div class="machine-advice"><h3>Find your fit.</h3><p>Need help choosing a machine or checking an accessory–</p><a href="wosc-contact-notes.html">Talk to WOSC ↗</a></div></aside><div><div class="machine-grid" id="machine-grid"></div><p class="machine-note">Design examples only. All prices are illustrative South African rand amounts, not live offers. Images do not confirm WOSC stock. Product names, specifications, model versions, voltage, tax and compatibility require confirmation. Commercial examples reuse home-machine photographs to demonstrate the layout; they do not establish commercial suitability.</p></div></div></section><dialog id="machine-detail"><button class="detail-close" aria-label="Close product details">×</button><div id="machine-detail-body"></div></dialog><footer class="site-footer wosc-footer"><div class="footer-top"><div><p class="footer-kicker">A WORLD WORTH EXPLORING</p><h2>Good coffee.<br>Better connections.</h2></div><div class="footer-news"><h3>A little WOSC in your inbox.</h3><p>Coffee discoveries, upcoming experiences and the next chapter of our showroom.</p><a href="wosc-newsletter-notes.html">Keep Me in the Loop ↗</a></div></div><div class="footer-main"><div class="footer-brand"><a class="footer-wordmark" href="#">WOSC<span>World of Speciality Coffee</span></a><p>Coffee to enjoy. Machines to explore.<br>Experiences to share.</p><p class="footer-location">Cape Town, South Africa</p><a href="wosc-contact-notes.html">Let’s Talk Coffee ↗</a></div><nav aria-label="Shop & Discover"><h3>Shop & Discover</h3><a href="wosc-shop-concept.html">Shop</a><a href="wosc-our-roasts-notes.html">Our Roasts</a><a href="wosc-machine-shop-concept.html">Coffee Machines</a><a href="wosc-showroom-notes.html">Showroom</a><a href="wosc-events-notes.html">Events</a></nav><nav aria-label="Business & Services"><h3>Business & Services</h3><a href="wosc-wholesale-notes.html">Wholesale Coffee Supply</a><a href="wosc-training-notes.html">Barista Training</a><a href="wosc-partner-events-notes.html">Venue Hire & Partner Events</a><a href="wosc-about-notes.html">About WOSC</a><a href="wosc-contact-notes.html">Contact Us</a></nav><nav aria-label="Customer Care"><h3>Customer Care</h3><a href="wosc-delivery-notes.html">Delivery & Collection</a><a href="wosc-returns-notes.html">Returns & Refunds</a><a href="wosc-warranty-notes.html">Warranty & Servicing</a><a href="wosc-faq-notes.html">FAQs</a><a href="wosc-account-notes.html">My Account</a><a href="wosc-basket-notes.html">Cart</a></nav></div><div class="footer-bottom"><span>© 2026 WOSC · World of Speciality Coffee</span><nav aria-label="Legal and privacy"><a href="wosc-privacy-notes.html">Privacy Policy</a><a href="wosc-terms-notes.html">Terms & Conditions</a><a href="wosc-cookies-notes.html">Cookie Policy</a></nav><a href="#" class="footer-back">Back to top ↑</a></div></footer></main><script>const machineItems = [{"id": "wega-rover", "name": "Wega Rover Commercial Espresso Machine", "category": "Commercial", "image": "assets/7b71d8846d9e681b76a7.jpg", "price": 72170, "description": "Heavy-duty commercial Italian espresso machine engineered for busy cafés, roasteries, and restaurant service.", "features": ["Commercial Espresso", "Multi-Group Italian Build", "24/7 Service Backup"]}, {"id": "mythos-iris", "name": "Mythos Iris Commercial Machine", "category": "Commercial", "image": "assets/953cbfc128a0e8426d88.avif", "price": 19750, "description": "High-volume bean-to-cup commercial coffee system built for executive offices, showrooms, and boutique hospitality.", "features": ["Bean-to-Cup", "Touch Interface", "Commercial Capacity"]}, {"id": "lebrew-brewmaster", "name": "Lebrew Brewmaster Thermo", "category": "Commercial", "image": "assets/2f96aff6faa88ff044e0.avif", "price": 2364, "description": "Thermal carafe batch filter brewer providing consistent, high-yield drip coffee for catering, venues, and morning rush.", "features": ["Thermal Dispensing", "Batch Filter Brewing", "Low Energy Consumption"]}, {"id": "flojet-dispensing", "name": "Flojet Bottled Water Dispensing System", "category": "Commercial", "image": "assets/d9884900712eb0c00130.png", "price": 4478, "description": "Essential water supply pump system for mobile coffee trailers, event pop-ups, and premises without direct water mains.", "features": ["Mobile Coffee Rig", "Pressure Regulated", "Dry-Run Protection"]}, {"id": "aeropress", "name": "AeroPress Coffee Maker", "category": "Home", "image": "assets/3c1f0a05c2abb09f2f0f.avif", "price": 1038, "description": "Iconic rapid immersion coffee maker known for clean, sweet, grit-free extraction. Compact and durable.", "features": ["Rapid Immersion", "Travel-Friendly", "Micro-Filter Cleanliness"]}, {"id": "coffee-plunger", "name": "Coffee Plunger (French Press)", "category": "Home", "image": "assets/3cb92ce9acb83f14d893.avif", "price": 180, "description": "Classic immersion brewer delivering full-bodied, aromatic coffee for daily table service.", "features": ["Full Immersion", "Stainless Mesh", "Daily Home Brewing"]}, {"id": "vacuum-flask-2-2", "name": "Vacuum Pump Flask 2.2L S/Steel", "category": "Home", "image": "assets/b887d333c1ad01646a8b.avif", "price": 847, "description": "Double-wall insulated pump action airpot keeping coffee piping hot for boardroom meetings and functions.", "features": ["2.2L Capacity", "Stainless Steel Core", "Lever Pump Action"]}, {"id": "vacuum-flask-3-5", "name": "Vacuum Pump Flask 3.5L S/Steel", "category": "Home", "image": "assets/b887d333c1ad01646a8b.avif", "price": 981, "description": "High-capacity thermal airpot designed for high-traffic conference service and event hospitality.", "features": ["3.5L High Capacity", "Vacuum Insulated", "Carry Handle"]}, {"id": "brew-timer-scale", "name": "Brew Coffee Timer Scale Lithium", "category": "Accessories", "image": "assets/3cb92ce9acb83f14d893.avif", "price": 808, "description": "Rechargeable high-precision barista scale with built-in extraction timer accurate to 0.1g.", "features": ["0.1g Precision", "Integrated Timer", "Rechargeable Lithium"]}, {"id": "lebrew-burrs", "name": "Lebrew Grinder Replacement Burrs", "category": "Accessories", "image": "assets/c8dafccb36373d12d6d0.svg", "price": 2363, "description": "Factory replacement steel burr set to restore particle distribution, grind speed and extraction clarity.", "features": ["Hardened Steel", "Exact Calibration", "Genuine Spares"]}, {"id": "macaron-tamper", "name": "Macaron Tamper Distributor", "category": "Accessories", "image": "assets/4134009dd23eeec015da.svg", "price": 775, "description": "Dual-sided palm distributor and tamper ensuring level bed density and eliminating channeling.", "features": ["Depth Adjustable", "Palm Ergonomics", "58mm Standard"]}, {"id": "precision-tamper", "name": "Barista Precision Tamper", "category": "Accessories", "image": "assets/4134009dd23eeec015da.svg", "price": 459, "description": "Balanced stainless steel flat base tamper with ergonomic grip for consistent 15kg tamp pressure.", "features": ["Solid Stainless Base", "Balanced Grip", "Even Compression"]}, {"id": "puk-screen", "name": "Espresso Puck Screen", "category": "Accessories", "image": "assets/4134009dd23eeec015da.svg", "price": 141, "description": "Multi-layer sintered mesh screen improving water dispersion and keeping the group shower screen spotless.", "features": ["Even Dispersion", "Clean Shower Screen", "Less Channeling"]}, {"id": "milk-pitcher", "name": "Stainless Steel Milk Pitcher", "category": "Accessories", "image": "assets/b887d333c1ad01646a8b.avif", "price": 150, "description": "Pro-grade milk frothing jug with laser-aligned pouring spout for microfoam texturing and latte art.", "features": ["Precision Pour Spout", "Thermal Transfer", "Barista Standard"]}, {"id": "blind-filter", "name": "Stainless Steel Blind Filter", "category": "Accessories", "image": "assets/c8dafccb36373d12d6d0.svg", "price": 56, "description": "Solid backflushing disc for routine three-way solenoid and grouphead chemical cleaning.", "features": ["58mm Standard", "Routine Backflushing", "Chemical Resistant"]}, {"id": "caffenu-cleaner", "name": "Caffenu Commercial Detergents", "category": "Accessories", "image": "assets/b4d2e515136e6370a233.svg", "price": 213, "description": "Certified coffee oil remover and descaling detergent formulated for commercial machine backflushing.", "features": ["Eco-Safe Formula", "Removes Coffee Oils", "Food Grade"]}];let activeCategory='Home';const q=s=>document.querySelector(s);const money=n=>'R'+n.toLocaleString('en-ZA').replace(/,/g,' ');const titles={Home:'Coffee Machines for Home',Commercial:'Commercial Coffee Machines',Accessories:'Accessories for Your Setup'};
+function render(){let list=machineItems.filter(x=>x.category===activeCategory&&x.name.toLowerCase().includes(q('#machine-search').value.toLowerCase()));let sort=q('#machine-sort').value;if(sort==='price-low')list.sort((a,b)=>a.price-b.price);if(sort==='price-high')list.sort((a,b)=>b.price-a.price);if(sort==='az')list.sort((a,b)=>a.name.localeCompare(b.name));q('#machine-heading').textContent=titles[activeCategory];q('#machine-count').textContent=list.length+' example product'+(list.length===1–'':'s');document.querySelectorAll('[data-category]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.category===activeCategory));q('#machine-grid').innerHTML=list.map(x=>`<article class="machine-card"><div class="machine-card-image"><img src="${x.image}" alt="${x.name} supplied reference image" loading="lazy"></div><div class="machine-card-body"><small>${x.category.toUpperCase()} · EXAMPLE PRODUCT</small><h3>${x.name}</h3><p>${x.description}</p><div class="machine-features">${x.features.map(f=>`<span>${f}</span>`).join('')}</div><div class="machine-card-bottom"><strong>From ${money(x.price)}</strong><button data-detail="${x.id}">Explore ${x.category==='Accessories'–'accessory':'machine'} ↗</button></div></div></article>`).join('')||'<p>No matching products. Try another search.</p>';document.querySelectorAll('[data-detail]').forEach(b=>b.onclick=()=>detail(b.dataset.detail));}
+function detail(id){location.href='wosc-machine-product-concept.html–product='+encodeURIComponent(id);}(x=>x.id===id);q('#machine-detail-body').innerHTML=`<div class="detail-summary"><img src="${x.image}" alt="${x.name}"><div><p>PRODUCT DETAIL CONCEPT</p><h2>${x.name}</h2><p>${x.description}</p><p class="detail-price">From ${money(x.price)}</p><p>Illustrative price. Final model, configuration, voltage, stock and tax details require confirmation.</p><a class="detail-enquiry" href="wosc-contact-notes.html">Enquire about this product ↗</a></div></div><section class="compatibility"><h3>${x.category==='Accessories'–'Compatible Machines':'Accessories for This Setup'}</h3><p>${x.category==='Accessories'–'No verified compatibility links have been supplied yet. Check exact model/version and relevant dimensions, mounting pattern or electrical requirements before ordering.':'Verified accessories will appear here, linked to the exact model and version. No universal compatibility is assumed.'}</p>${x.category==='Accessories'–'':'<button id="browse-accessories">Browse Accessories</button>'}</section>`;if(q('#browse-accessories'))q('#browse-accessories').onclick=()=>{q('#machine-detail').close();activeCategory='Accessories';q('#machine-search').value='';render()};if(!q('#machine-detail').open)q('#machine-detail').showModal();}
 document.querySelectorAll('[data-category]').forEach(b=>b.onclick=()=>{activeCategory=b.dataset.category;q('#machine-search').value='';render()});q('#machine-search').oninput=render;q('#machine-sort').onchange=render;q('#machine-clear').onclick=()=>{q('#machine-search').value='';q('#machine-sort').value='featured';render()};q('.detail-close').onclick=()=>q('#machine-detail').close();render();
 </script></body></html>
