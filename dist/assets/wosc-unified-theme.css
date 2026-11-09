@@ -1,0 +1,614 @@
+/* ==========================================================================
+   WOSC Unified Design System & Master Theme
+   World of Speciality Coffee — Cape Town
+   ========================================================================== */
+
+:root {
+  /* Surfaces */
+  --bg-paper: #fbf8f3;
+  --bg-elevated: #fffdfa;
+  --bg-soft: #f5eee6;
+  --bg-subtle: #ede2d5;
+  --bg-dark: #142b45;
+
+  /* Ink & Typography */
+  --ink-espresso: #382a21;
+  --ink-brown: #403026;
+  --ink-muted: #66584e;
+  --ink-light: #f8f5ef;
+
+  /* Brand Accents */
+  --navy: #142b45;
+  --navy-light: #1e3d61;
+  --navy-dark: #0d1e31;
+  --copper: #8b684e;
+  --copper-light: #c29a77;
+  --copper-kicker: #8b684e;
+  --copper-gold: #ddbf9d;
+
+  /* Semantic */
+  --verified-bg: #eef7f0;
+  --verified-ink: #176534;
+  --verified-border: #cce8d4;
+
+  /* Borders & Shadows */
+  --border-warm: #e4d9cc;
+  --border-subtle: #eee5dc;
+  --border-strong: #cfbda8;
+  --shadow-card: 0 4px 16px rgba(56, 42, 33, 0.05);
+  --shadow-hover: 0 10px 28px rgba(20, 43, 69, 0.09);
+}
+
+/* Global Reset & Base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-paper);
+  color: var(--ink-espresso);
+  font: 15.5px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  line-height: 1.18;
+  color: var(--ink-brown);
+  margin-top: 0;
+}
+
+.brand-kicker, .kicker {
+  font: 700 11px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--copper);
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* ==========================================================================
+   1. Canonical Top Utility Bar
+   ========================================================================== */
+.top-utility-bar {
+  background: #382a21;
+  color: #f7f2eb;
+  padding: 8px 6%;
+  font-size: 11.5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  letter-spacing: 0.4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.top-utility-bar .bar-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0.92;
+}
+
+.top-utility-bar .bar-links {
+  display: inline-flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.top-utility-bar .bar-links a {
+  color: #ddbf9d;
+  transition: color 0.15s;
+}
+
+.top-utility-bar .bar-links a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   2. Canonical Primary Header (.site-header.refined-header)
+   ========================================================================== */
+.site-header.refined-header {
+  background: var(--bg-elevated);
+  border-bottom: 1px solid var(--border-warm);
+  padding: 16px 6%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  box-shadow: 0 2px 10px rgba(56, 42, 33, 0.03);
+}
+
+.header-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.header-logo .crest-crop {
+  width: 38px;
+  height: 42px;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-logo .wosc-logo {
+  width: 44px;
+  height: auto;
+  display: block;
+}
+
+.header-logo .header-title {
+  font: bold 26px/1 Georgia, serif;
+  letter-spacing: 1px;
+  color: var(--navy);
+}
+
+.header-main-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(14px, 1.8vw, 24px);
+  flex-wrap: wrap;
+}
+
+.header-main-nav a {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--ink-brown);
+  padding: 6px 0;
+  position: relative;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.header-main-nav a:hover {
+  color: var(--copper);
+}
+
+.header-main-nav a.active,
+.header-main-nav a[aria-current="page"] {
+  color: var(--navy);
+  font-weight: 700;
+}
+
+.header-main-nav a.active::after,
+.header-main-nav a[aria-current="page"]::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--copper);
+  border-radius: 2px;
+}
+
+.header-account-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.header-account-nav a {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-brown);
+}
+
+.header-account-nav .cart-link {
+  background: var(--bg-soft);
+  border: 1px solid var(--border-warm);
+  padding: 6px 12px;
+  border-radius: 4px;
+  color: var(--navy);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.header-account-nav .cart-count {
+  background: var(--navy);
+  color: #fff;
+  font-size: 11px;
+  padding: 1px 6px;
+  border-radius: 10px;
+}
+
+.header-cta-btn {
+  background: var(--navy);
+  color: #ffffff !important;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 12.5px;
+  font-weight: 600;
+  transition: background 0.2s;
+  display: inline-block;
+}
+
+.header-cta-btn:hover {
+  background: var(--copper) !important;
+}
+
+/* Mobile Drawer */
+.header-mobile-menu {
+  display: none;
+}
+
+.header-mobile-menu summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 8px 12px;
+  background: var(--bg-soft);
+  border: 1px solid var(--border-warm);
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--navy);
+}
+
+.header-mobile-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.header-mobile-menu nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border-bottom: 2px solid var(--navy);
+  padding: 20px 6%;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.header-mobile-menu nav a {
+  padding: 8px 0;
+  border-bottom: 1px solid #f0e6dc;
+  font-size: 14.5px;
+  font-weight: 500;
+  color: var(--navy);
+}
+
+/* ==========================================================================
+   3. Canonical Footer (.site-footer.wosc-footer)
+   ========================================================================== */
+.site-footer.wosc-footer {
+  background: var(--navy);
+  color: #f8f5ef;
+  padding: 0 6%;
+  margin-top: 60px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+}
+
+.wosc-footer a {
+  color: #c9d8e6;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.wosc-footer a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 40px;
+  padding: 60px 0 45px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  align-items: center;
+}
+
+.footer-top .footer-kicker {
+  font: 700 11px/1.4 sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--copper-gold);
+  margin-bottom: 8px;
+}
+
+.footer-top h2 {
+  font: 44px/1.12 Georgia, serif;
+  color: #ffffff;
+  margin: 0;
+}
+
+.footer-news {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  padding: 24px;
+}
+
+.footer-news h3 {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.footer-news p {
+  font-size: 13.5px;
+  color: #b7cbdd;
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+.footer-news a {
+  display: inline-block;
+  background: var(--copper);
+  color: #ffffff !important;
+  font-weight: 600;
+  font-size: 12.5px;
+  padding: 8px 16px;
+  border-radius: 3px;
+  text-decoration: none !important;
+}
+
+.footer-news a:hover {
+  background: #a37c5f !important;
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1.1fr 1fr;
+  gap: 40px;
+  padding: 50px 0 45px;
+}
+
+.footer-brand .footer-wordmark {
+  font: bold 26px/1 Georgia, serif;
+  color: #ffffff;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.footer-brand .footer-wordmark span {
+  display: block;
+  font: 600 11px/1.4 sans-serif;
+  letter-spacing: 1px;
+  color: var(--copper-gold);
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.footer-brand p {
+  color: #b7cbdd;
+  font-size: 13.5px;
+  line-height: 1.6;
+  margin: 12px 0 16px;
+}
+
+.footer-brand .footer-location {
+  font-size: 12.5px;
+  color: #8da4ba;
+}
+
+.footer-brand .footer-talk {
+  display: inline-block;
+  margin-top: 8px;
+  font-weight: 700;
+  color: var(--copper-gold);
+}
+
+.footer-main nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-main nav h3 {
+  font: 600 12.5px/1.4 sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #ffffff;
+  margin: 0 0 18px;
+}
+
+.footer-main nav a {
+  font-size: 13.5px;
+  margin-bottom: 10px;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 24px 0 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 12.5px;
+  color: #8da4ba;
+}
+
+.footer-bottom nav {
+  display: flex;
+  gap: 20px;
+}
+
+/* ==========================================================================
+   4. Reusable Premium Primitives (Buttons, Cards, Inputs, Tables)
+   ========================================================================== */
+.btn, .cta {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 4px;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s ease;
+  line-height: 1;
+}
+
+.btn-primary, .cta.primary {
+  background: var(--navy);
+  color: #ffffff !important;
+  border: 1.5px solid var(--navy);
+}
+
+.btn-primary:hover, .cta.primary:hover {
+  background: var(--copper) !important;
+  border-color: var(--copper) !important;
+}
+
+.btn-secondary, .cta.secondary {
+  background: transparent;
+  color: var(--navy) !important;
+  border: 1.5px solid #947a67;
+}
+
+.btn-secondary:hover, .cta.secondary:hover {
+  background: var(--navy) !important;
+  color: #ffffff !important;
+  border-color: var(--navy) !important;
+}
+
+.btn-copper {
+  background: var(--copper);
+  color: #ffffff !important;
+  border: 1.5px solid var(--copper);
+}
+
+.btn-copper:hover {
+  background: var(--ink-brown) !important;
+  border-color: var(--ink-brown) !important;
+}
+
+/* Unified Planning Note Component (Notes Pages) */
+.planning-page {
+  max-width: 1100px;
+  margin: auto;
+  padding: 50px 24px 80px;
+}
+
+.planning-page h1 {
+  font-size: clamp(36px, 4.2vw, 54px);
+  margin-bottom: 12px;
+  color: var(--navy);
+}
+
+.planning-page > p {
+  font-size: 16px;
+  color: var(--ink-muted);
+  max-width: 720px;
+  margin-bottom: 30px;
+}
+
+.planning-note {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-warm);
+  border-radius: 6px;
+  margin-top: 30px;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+
+.note-panel {
+  padding: 35px;
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 28px;
+  background: var(--bg-elevated);
+}
+
+.note-logo {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--border-warm);
+}
+
+.note-label {
+  font: 700 10.5px Arial, sans-serif;
+  letter-spacing: 1.5px;
+  color: var(--copper);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.note-panel h2 {
+  font-size: 28px;
+  color: var(--navy);
+  margin: 0 0 16px;
+}
+
+.note-panel h3 {
+  font-size: 20px;
+  color: var(--ink-brown);
+  margin: 24px 0 10px;
+}
+
+.note-panel p, .note-panel li {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--ink-muted);
+}
+
+.note-panel ul, .note-panel ol {
+  padding-left: 20px;
+  margin-bottom: 16px;
+}
+
+.note-panel li {
+  margin-bottom: 6px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .header-main-nav {
+    display: none;
+  }
+  .header-mobile-menu {
+    display: block;
+  }
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .top-utility-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
+  .footer-main {
+    grid-template-columns: 1fr;
+  }
+  .note-panel {
+    grid-template-columns: 1fr;
+    padding: 24px;
+  }
+}
