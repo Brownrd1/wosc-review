@@ -13,8 +13,8 @@
       --espresso: #403026;
       --espresso-dark: #2c2018;
       --cream-bg: #fbf8f3;
-      --cream-card: #f5eee6;
-      --cream-subtle: #ede2d5;
+      --cream-card: #fbf9f5;
+      --cream-subtle: #f5eee6;
       --copper: #8b684e;
       --copper-light: #c29a77;
       --text-muted: #6a5a4f;
@@ -53,7 +53,7 @@
     .switcher-btn:hover { background: #f0e6dc; }
 
     /* Header */
-    header {
+    .legacy-unused-header {
       padding: 18px 6%;
       display: flex;
       align-items: center;
@@ -76,9 +76,9 @@
       background: var(--cream-card);
       border-radius: 3px;
     }
-    nav { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; font-size: 13.5px; font-weight: 500; }
-    nav a:hover { color: var(--copper); }
-    nav a.active { color: var(--navy); font-weight: 700; border-bottom: 2px solid var(--navy); padding-bottom: 2px; }
+    .legacy-unused-nav { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; font-size: 13.5px; font-weight: 500; }
+    .legacy-unused-nav a:hover { color: var(--copper); }
+    .legacy-unused-nav a.active { color: var(--navy); font-weight: 700; border-bottom: 2px solid var(--navy); padding-bottom: 2px; }
     .cart-btn {
       background: var(--cream-card);
       border: 1px solid var(--border-warm);
@@ -384,7 +384,7 @@
       display: none;
     }
 
-    footer { background: var(--navy); color: #ffffff; padding: 60px 6% 30px; font-size: 14px; margin-top: 60px; }
+    .legacy-unused-footer { background: var(--navy); color: #ffffff; padding: 60px 6% 30px; font-size: 14px; margin-top: 60px; }
     .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 40px; margin-bottom: 40px; }
     .footer-col h4 { font-family: Georgia, serif; font-size: 17px; margin-bottom: 16px; color: #ffffff; }
     .footer-col a { display: block; color: #b7cbdd; margin-bottom: 10px; font-size: 13.5px; }
@@ -401,11 +401,6 @@
 <body>
 
   <!-- Switcher -->
-  <div class="store-switcher">
-    <span>Looking for retail whole beans, coffee pods, or home coffee pantry?</span>
-    <a class="switcher-btn" href="wosc-shop-concept.html">Switch to Retail Coffee Shop →</a>
-  </div>
-
   
 <header class="site-header refined-header">
   <a class="header-logo" href="wosc-homepage-concept.html" aria-label="WOSC homepage">
@@ -432,6 +427,11 @@
     </nav>
   </details>
 </header>
+
+  <div class="store-switcher">
+    <span>Looking for retail whole beans, coffee pods, or home coffee pantry?</span>
+    <a class="switcher-btn" href="wosc-shop-concept.html">Switch to Retail Coffee Shop →</a>
+  </div>
 
   <main class="wrap">
     <section class="machine-hero">
