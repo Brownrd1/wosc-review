@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="robots" content="noindex,nofollow,noarchive">
-  <title>Shop All Speciality Coffee & Equipment | WOSC Cape Town</title>
+  <title>Retail Coffee Shop | World of Speciality Coffee Cape Town</title>
   <style>
     :root {
       --navy: #142b45;
@@ -65,23 +65,37 @@
       color: var(--navy);
     }
 
-    /* Top Banner Notice */
-    .review-bar {
-      background: #382a21;
-      color: #fff;
-      padding: 8px 20px;
-      text-align: center;
-      font: 11.5px Arial, sans-serif;
-      letter-spacing: .5px;
+    /* Store Switcher Banner */
+    .store-switcher {
+      background: #142b45;
+      color: #ffffff;
+      padding: 10px 20px;
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
     }
+    .store-switcher span { opacity: 0.9; }
+    .switcher-btn {
+      background: #ffffff;
+      color: var(--navy);
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 4px;
+      font-size: 12px;
+      transition: background 0.2s;
+    }
+    .switcher-btn:hover { background: #f0e6dc; }
 
     /* Layout */
     .wrap { max-width: 1280px; margin: auto; padding: 0 24px; }
     .section { padding: 40px 0 80px; }
 
-    /* Shop Intro Hero */
+    /* Shop Intro */
     .shop-intro {
-      padding: 50px 0 35px;
+      padding: 45px 0 30px;
       border-bottom: 1px solid var(--border-warm);
     }
     .kicker {
@@ -100,7 +114,7 @@
     .intro-lead {
       font-size: 16px;
       color: var(--text-muted);
-      max-width: 760px;
+      max-width: 780px;
       line-height: 1.5;
     }
     .member-banner-box {
@@ -143,15 +157,8 @@
       gap: 6px;
       transition: all 0.2s;
     }
-    .cat-btn:hover {
-      border-color: var(--navy);
-      background: #faf6f1;
-    }
-    .cat-btn.active {
-      background: var(--navy);
-      color: #ffffff;
-      border-color: var(--navy);
-    }
+    .cat-btn:hover { border-color: var(--navy); background: #faf6f1; }
+    .cat-btn.active { background: var(--navy); color: #ffffff; border-color: var(--navy); }
     .cat-btn .badge {
       font-size: 11px;
       opacity: 0.85;
@@ -159,12 +166,9 @@
       background: rgba(0,0,0,0.06);
       border-radius: 10px;
     }
-    .cat-btn.active .badge {
-      background: rgba(255,255,255,0.25);
-      color: #fff;
-    }
+    .cat-btn.active .badge { background: rgba(255,255,255,0.25); color: #fff; }
 
-    /* Controls Bar: Search & Sort */
+    /* Controls Bar */
     .controls-bar {
       display: flex;
       justify-content: space-between;
@@ -220,7 +224,6 @@
       gap: 24px;
     }
 
-    /* Product Card */
     .shop-product-card {
       background: #ffffff;
       border: 1px solid var(--border-warm);
@@ -251,9 +254,7 @@
       object-fit: contain;
       transition: transform 0.3s;
     }
-    .shop-product-card:hover .card-img-wrap img {
-      transform: scale(1.04);
-    }
+    .shop-product-card:hover .card-img-wrap img { transform: scale(1.04); }
     .card-tag {
       position: absolute;
       top: 12px;
@@ -326,7 +327,6 @@
     }
     .btn-card:hover { background: var(--copper); }
 
-    /* No Results Message */
     .no-results {
       grid-column: 1 / -1;
       padding: 60px 20px;
@@ -336,10 +336,7 @@
       border-radius: 6px;
       display: none;
     }
-    .no-results h3 { font-size: 20px; margin-bottom: 8px; color: var(--navy); }
-    .no-results p { font-size: 14px; color: var(--text-muted); }
 
-    /* Footer */
     footer { background: var(--navy); color: #ffffff; padding: 60px 6% 30px; font-size: 14px; margin-top: 60px; }
     .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 40px; margin-bottom: 40px; }
     .footer-col h4 { font-family: Georgia, serif; font-size: 17px; margin-bottom: 16px; color: #ffffff; }
@@ -349,27 +346,28 @@
 
     @media (max-width: 900px) {
       .controls-bar { flex-direction: column; align-items: stretch; }
-      .search-wrap { max-width: 100%; }
       .footer-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
-  <div class="review-bar">
-    PRIVATE CONCEPT REVIEW · 51 Real Products Synchronized with WOSC Odoo Store · Exact ZAR Prices
+  <!-- Top Switcher -->
+  <div class="store-switcher">
+    <span>Looking for commercial espresso stations, batch brewers, or machine spare parts?</span>
+    <a class="switcher-btn" href="wosc-machine-shop-concept.html">Switch to Commercial Equipment & Parts Hub →</a>
   </div>
 
   <!-- Header -->
   <header>
     <div class="logo-wrap">
       <a class="logo" href="wosc-homepage-concept.html">WOSC</a>
-      <span class="logo-badge">Store</span>
+      <span class="logo-badge">Retail Store</span>
     </div>
     <nav>
       <a href="wosc-homepage-concept.html">Home</a>
       <a href="wosc-shop-concept.html" class="active">Shop</a>
-      <a href="wosc-machine-shop-concept.html">Machines</a>
+      <a href="wosc-machine-shop-concept.html">Commercial Machines & Parts</a>
       <a href="wosc-our-roasts-notes.html">Our Roasts</a>
       <a href="wosc-cafe-launch.html">Start a Café</a>
       <a href="wosc-learning.html">eLearning</a>
@@ -381,53 +379,44 @@
   </header>
 
   <main class="wrap">
-    <!-- Intro -->
     <section class="shop-intro">
-      <span class="kicker">The WOSC Shop · Cape Town Roastery & Equipment</span>
-      <h1>Make Every Cup Your Kind of Coffee.</h1>
+      <span class="kicker">Retail Coffee & Pantry Collection · Cape Town Roastery</span>
+      <h1>Speciality Coffee for Your Daily Ritual.</h1>
       <p class="intro-lead">
-        Browse our full catalogue of locally profiled roasted beans, Nespresso-compatible compostable pods, commercial Italian espresso machinery, barista precision gear, and café pantry essentials.
+        Explore our curated selection of signature Cape Town roasted beans, Nespresso-compatible compostable pods, gourmet café pantry treats, and essential home brewing gear.
       </p>
       <div class="member-banner-box">
-        <span>★ <strong>Supplier Member Pricing:</strong> Active members save 5% (Retail) to 10% (Wholesale) on beans, pantry supplies, and commercial machines.</span>
+        <span>★ <strong>Supplier Member Savings:</strong> Active members save 5% (Retail) to 10% (Wholesale) on all beans and pantry orders.</span>
         <a href="wosc-membership.html">View Membership Tiers ↗</a>
       </div>
     </section>
 
-    <!-- Category Filter Pills -->
     <section class="section">
       <div class="category-bar">
         <button class="cat-btn active" data-category="all">
-          All Products <span class="badge">51</span>
+          All Retail Products <span class="badge">29</span>
         </button>
         <button class="cat-btn" data-category="coffee">
-          Roasted Beans <span class="badge">12</span>
+          Roasted Beans <span class="badge">10</span>
         </button>
         <button class="cat-btn" data-category="pods">
           Coffee Pods <span class="badge">4</span>
         </button>
-        <button class="cat-btn" data-category="machines">
-          Commercial Machines <span class="badge">6</span>
-        </button>
-        <button class="cat-btn" data-category="tools">
-          Barista Tools <span class="badge">13</span>
-        </button>
         <button class="cat-btn" data-category="cafe">
-          Café Pantry & Syrups <span class="badge">13</span>
+          Café Pantry & Hot Chocs <span class="badge">9</span>
         </button>
-        <button class="cat-btn" data-category="flasks">
-          Flasks & Airpots <span class="badge">3</span>
+        <button class="cat-btn" data-category="brewing">
+          Home Brewers & Flasks <span class="badge">6</span>
         </button>
       </div>
 
-      <!-- Controls: Search & Sort -->
       <div class="controls-bar">
         <div class="search-wrap">
-          <input type="text" id="shop-search" class="search-input" placeholder="Search by name, roast, blend, or machine..." autocomplete="off">
+          <input type="text" id="shop-search" class="search-input" placeholder="Search by roast, origin, pod variety, or flavour...">
           <button id="search-clear" style="background:none;border:none;color:var(--text-muted);cursor:pointer;font-size:12px;">Clear</button>
         </div>
         <div class="sort-wrap">
-          <span class="count-text" id="product-count-display">Showing 51 products</span>
+          <span class="count-text" id="product-count-display">Showing 29 products</span>
           <label for="shop-sort" style="margin-left:14px;">Sort by:</label>
           <select id="shop-sort" class="sort-select">
             <option value="featured">Featured / Default</option>
@@ -438,87 +427,14 @@
         </div>
       </div>
 
-      <!-- Products Grid -->
       <div id="shop-product-grid" class="shop-grid">
-<article class="shop-product-card" data-category="tools" data-id="lebrew-burrs" data-price="2363.0">
-      <div class="card-img-wrap">
-        <img src="assets/c8dafccb36373d12d6d0.svg" alt="LEBREW BURRS" loading="lazy" onerror="this.src='assets/9e535c2fbbc8e87ee833.png'">
-        <span class="card-tag">BARISTA TOOL</span>
-      </div>
-      <div class="card-body">
-        <span class="card-cat-label">TOOLS</span>
-        <h3 class="card-title">LEBREW BURRS</h3>
-        <p class="card-desc">Precision barista equipment designed for consistent daily espresso service.</p>
-        <div class="card-pricing">
-          <div class="price-regular">R2 363.00</div>
-          <div class="price-member">Member: R2 126.70 <small>(10% off)</small></div>
-        </div>
-        <div class="card-action">
-          <a class="btn-card" href="wosc-retail-product-concept.html?product=lebrew-burrs">View Details ↗</a>
-        </div>
-      </div>
-    </article>
-<article class="shop-product-card" data-category="coffee" data-id="lebrew-roast-see-next" data-price="16158.0">
-      <div class="card-img-wrap">
-        <img src="assets/c7c62cb0a8840c4de788.png" alt="LEBREW ROAST SEE NEXT" loading="lazy" onerror="this.src='assets/9e535c2fbbc8e87ee833.png'">
-        <span class="card-tag">LOCAL ROAST</span>
-      </div>
-      <div class="card-body">
-        <span class="card-cat-label">COFFEE</span>
-        <h3 class="card-title">LEBREW ROAST SEE NEXT</h3>
-        <p class="card-desc">Specialty grade beans roasted to profile in Cape Town. Available whole bean or ground.</p>
-        <div class="card-pricing">
-          <div class="price-regular">R16 158.00</div>
-          <div class="price-member">Member: R14 542.20 <small>(10% off)</small></div>
-        </div>
-        <div class="card-action">
-          <a class="btn-card" href="wosc-retail-product-concept.html?product=lebrew-roast-see-next">View Details ↗</a>
-        </div>
-      </div>
-    </article>
-<article class="shop-product-card" data-category="coffee" data-id="lebrew-roast-see-fusion" data-price="14952.0">
-      <div class="card-img-wrap">
-        <img src="assets/c7c62cb0a8840c4de788.png" alt="LEBREW ROAST SEE FUSION" loading="lazy" onerror="this.src='assets/9e535c2fbbc8e87ee833.png'">
-        <span class="card-tag">LOCAL ROAST</span>
-      </div>
-      <div class="card-body">
-        <span class="card-cat-label">COFFEE</span>
-        <h3 class="card-title">LEBREW ROAST SEE FUSION</h3>
-        <p class="card-desc">Specialty grade beans roasted to profile in Cape Town. Available whole bean or ground.</p>
-        <div class="card-pricing">
-          <div class="price-regular">R14 952.00</div>
-          <div class="price-member">Member: R13 456.80 <small>(10% off)</small></div>
-        </div>
-        <div class="card-action">
-          <a class="btn-card" href="wosc-retail-product-concept.html?product=lebrew-roast-see-fusion">View Details ↗</a>
-        </div>
-      </div>
-    </article>
-<article class="shop-product-card" data-category="machines" data-id="lebrew-brewmaster-thermo" data-price="2364.0">
-      <div class="card-img-wrap">
-        <img src="assets/2f96aff6faa88ff044e0.avif" alt="LEBREW BREWMASTER THERMO" loading="lazy" onerror="this.src='assets/9e535c2fbbc8e87ee833.png'">
-        <span class="card-tag">BREWING</span>
-      </div>
-      <div class="card-body">
-        <span class="card-cat-label">MACHINES</span>
-        <h3 class="card-title">LEBREW BREWMASTER THERMO</h3>
-        <p class="card-desc">Commercial-grade performance, proven reliability and local technical backup.</p>
-        <div class="card-pricing">
-          <div class="price-regular">R2 364.00</div>
-          <div class="price-member">Member: R2 127.60 <small>(10% off)</small></div>
-        </div>
-        <div class="card-action">
-          <a class="btn-card" href="wosc-machine-product-concept.html?product=lebrew-brewmaster-thermo">View Details ↗</a>
-        </div>
-      </div>
-    </article>
 <article class="shop-product-card" data-category="flasks" data-id="lizzard-flasks" data-price="463.0">
       <div class="card-img-wrap">
         <img src="assets/237da2571dfb2914693f.jpg" alt="LIZZARD FLASKS" loading="lazy" onerror="this.src='assets/9e535c2fbbc8e87ee833.png'">
         <span class="card-tag">DRINKWARE</span>
       </div>
       <div class="card-body">
-        <span class="card-cat-label">FLASKS</span>
+        <span class="card-cat-label">FLASKS · RETAIL</span>
         <h3 class="card-title">LIZZARD FLASKS</h3>
         <p class="card-desc">Thermal insulation and professional airpot dispensing for venues and daily commutes.</p>
         <div class="card-pricing">
@@ -526,7 +442,7 @@
           <div class="price-member">Member: R416.70 <small>(10% off)</small></div>
         </div>
         <div class="card-action">
-          <a class="btn-card" href="wosc-retail-product-concept.html?product=lizzard-flasks">View Details ↗</a>
+          <a class="btn-card" href="wosc-retail-product-concept.html?product=lizzard-flasks">View Coffee / Gear ↗</a>
         </div>
       </div>
     </article>
@@ -536,7 +452,7 @@
         <span class="card-tag">PANTRY & CARE</span>
       </div>
       <div class="card-body">
-        <span class="card-cat-label">CAFE</span>
+        <span class="card-cat-label">CAFE · RETAIL</span>
         <h3 class="card-title">INSTABEAN POWDER BLENDS 1KG</h3>
         <p class="card-desc">Wholesale beverage powders, alternative dairy, sugar service and certified equipment detergents.</p>
         <div class="card-pricing">
@@ -544,7 +460,7 @@
           <div class="price-member">Member: R108.00 <small>(10% off)</small></div>
         </div>
         <div class="card-action">
-          <a class="btn-card" href="wosc-retail-product-concept.html?product=instabean-powder-blends-1kg">View Details ↗</a>
+          <a class="btn-card" href="wosc-retail-product-concept.html?product=instabean-powder-blends-1kg">View Coffee / Gear ↗</a>
         </div>
       </div>
     </article>
@@ -554,7 +470,7 @@
         <span class="card-tag">BARISTA TOOL</span>
       </div>
       <div class="card-body">
-        <span class="card-cat-label">TOOLS</span>
+        <span class="card-cat-label">TOOLS · RETAIL</span>
         <h3 class="card-title">MILK PITCHER</h3>
         <p class="card-desc">Precision barista equipment designed for consistent daily espresso service.</p>
         <div class="card-pricing">
@@ -562,7 +478,7 @@
           <div class="price-member">Member: R135.00 <small>(10% off)</small></div>
         </div>
         <div class="card-action">
-          <a class="btn-card" href="wosc-retail-product-concept.html?product=milk-pitcher">View Details ↗</a>
+          <a class="btn-card" href="wosc-retail-product-concept.html?product=milk-pitcher">View Coffee / Gear ↗</a>
         </div>
       </div>
     </article>
@@ -572,7 +488,7 @@
         <span class="card-tag">BREWING</span>
       </div>
       <div class="card-body">
-        <span class="card-cat-label">MACHINES</span>
+        <span class="card-cat-label">MACHINES · RETAIL</span>
         <h3 class="card-title">Coffee Plunger</h3>
         <p class="card-desc">Commercial-grade performance, proven reliability and local technical backup.</p>
         <div class="card-pricing">
@@ -580,7 +496,7 @@
           <div class="price-member">Member: R162.00 <small>(10% off)</small></div>
         </div>
         <div class="card-action">
-          <a class="btn-card" href="wosc-machine-product-concept.html?product=coffee-plunger">View Details ↗</a>
+          <a class="btn-card" href="wosc-retail-product-concept.html?product=coffee-plunger">View Coffee / Gear ↗</a>
         </div>
       </div>
     </article>
@@ -590,7 +506,7 @@
         <span class="card-tag">PANTRY & CARE</span>
       </div>
       <div class="card-body">
-        <span class="card-cat-label">CAFE</span>
+        <span class="card-cat-label">CAFE · RETAIL</span>
         <h3 class="card-title">Spicy Chai</h3>
         <p class="card-desc">Wholesale beverage powders, alternative dairy, sugar service and certified equipment detergents.</p>
         <div class="card-pricing">
@@ -598,7 +514,7 @@
           <div class="price-member">Member: R59.40 <small>(10% off)</small></div>
         </div>
         <div class="card-action">
-          <a class="btn-card" href="wosc-retail-product-concept.html?product=spicy-chai">View Details ↗</a>
+          <a class="btn-card" href="wosc-retail-product-concept.html?product=spicy-chai">View Coffee / Gear ↗</a>
         </div>
       </div>
     </article>
@@ -608,7 +524,7 @@
         <span class="card-tag">PANTRY & CARE</span>
       </div>
       <div class="card-body">
-        <span class="card-cat-label">CAFE</span>
+        <span class="card-cat-label">CAFE · RETAIL</span>
         <h3 class="card-title">HOT CHOC POWDERS</h3>
         <p class="card-desc">Wholesale beverage powders, alternative dairy, sugar service and certified equipment detergents.</p>
         <div class="card-pricing">
@@ -616,7 +532,7 @@
           <div class="price-member">Member: R101.70 <small>(10% off)</small></div>
         </div>
         <div class="card-action">
-          <a class="btn-card" href="wosc-retail-product-concept.html?product=hot-choc-powders">View Details ↗</a>
+          <a class="btn-card" href="wosc-retail-product-concept.html?product=hot-choc-powders">View Coffee / Gear ↗</a>
         </div>
       </div>
     </article>
@@ -626,7 +542,7 @@
         <span class="card-tag">PANTRY & CARE</span>
       </div>
       <div class="card-body">
-        <span class="card-cat-label">CAFE</span>
+        <span class="card-cat-label">CAFE · RETAIL</span>
         <h3 class="card-title">COFFEE FREEZO</h3>
         <p class="card-desc">Wholesale beverage powders, alternative dairy, sugar service and certified equipment detergents.</p>
         <div class="card-pricing">
@@ -634,7 +550,7 @@
           <div class="price-member">Member: R85.50 <small>(10% off)</small></div>
         </div>
         <div class="card-action">
-          <a class="btn-card" href="wosc-retail-product-concept.html?product=coffee-freezo">View Details ↗</a>
+          <a class="btn-card" href="wosc-retail-product-concept.html?product=coffee-freezo">View Coffee / Gear ↗</a>
         </div>
       </div>
     </article>
@@ -644,7 +560,7 @@
         <span class="card-tag">LOCAL ROAST</span>
       </div>
       <div class="card-body">
-        <span class="card-cat-label">COFFEE</span>
+        <span class="card-cat-label">COFFEE · RETAIL</span>
         <h3 class="card-title">Vreugde Coffee</h3>
         <p class="card-desc">Specialty grade beans roasted to profile in Cape Town. Available whole bean or ground.</p>
         <div class="card-pricing">
@@ -652,7 +568,7 @@
           <div class="price-member">Member: R106.20 <small>(10% off)</small></div>
         </div>
         <div class="card-action">
-          <a class="btn-card" href="wosc-retail-product-concept.html?product=vreugde-coffee">View Details ↗</a>
+          <a class="btn-card" href="wosc-retail-product-concept.html?product=vreugde-coffee">View Coffee / Gear ↗</a>
         </div>
       </div>
     </article>
@@ -662,7 +578,7 @@
         <span class="card-tag">PODS</span>
       </div>
       <div class="card-body">
-        <span class="card-cat-label">PODS</span>
+        <span class="card-cat-label">PODS · RETAIL</span>
         <h3 class="card-title">Pods Mixed Variety</h3>
         <p class="card-desc">10 Nespresso-compatible capsules filled with freshly roasted WOSC specialty coffee.</p>
         <div class="card-pricing">
@@ -670,7 +586,7 @@
           <div class="price-member">Member: R151.20 <small>(10% off)</small></div>
         </div>
         <div class="card-action">
-          <a class="btn-card" href="wosc-retail-product-concept.html?product=pods-mixed-variety">View Details ↗</a>
+          <a class="btn-card" href="wosc-retail-product-concept.html?product=pods-mixed-variety">View Coffee / Gear ↗</a>
         </div>
       </div>
     </article>
@@ -680,7 +596,7 @@
         <span class="card-tag">PODS</span>
       </div>
       <div class="card-body">
-        <span class="card-cat-label">PODS</span>
+        <span class="card-cat-label">PODS · RETAIL</span>
         <h3 class="card-title">Pods Imani</h3>
         <p class="card-desc">10 Nespresso-compatible capsules filled with freshly roasted WOSC specialty coffee.</p>
         <div class="card-pricing">
@@ -688,7 +604,7 @@
           <div class="price-member">Member: R151.20 <small>(10% off)</small></div>
         </div>
         <div class="card-action">
-          <a class="btn-card" href="wosc-retail-product-concept.html?product=pods-imani">View Details ↗</a>
+          <a class="btn-card" href="wosc-retail-product-concept.html?product=pods-imani">View Coffee / Gear ↗</a>
         </div>
       </div>
     </article>
@@ -698,7 +614,7 @@
         <span class="card-tag">PODS</span>
       </div>
       <div class="card-body">
-        <span class="card-cat-label">PODS</span>
+        <span class="card-cat-label">PODS · RETAIL</span>
         <h3 class="card-title">Pods Decaf</h3>
         <p class="card-desc">10 Nespresso-compatible capsules filled with freshly roasted WOSC specialty coffee.</p>
         <div class="card-pricing">
@@ -706,7 +622,7 @@
           <div class="price-member">Member: R161.10 <small>(10% off)</small></div>
         </div>
         <div class="card-action">
-          <a class="btn-card" href="wosc-retail-product-concept.html?product=pods-decaf">View Details ↗</a>
+          <a class="btn-card" href="wosc-retail-product-concept.html?product=pods-decaf">View Coffee / Gear ↗</a>
         </div>
       </div>
     </article>
@@ -716,7 +632,7 @@
         <span class="card-tag">PODS</span>
       </div>
       <div class="card-body">
-        <span class="card-cat-label">PODS</span>
+        <span class="card-cat-label">PODS · RETAIL</span>
         <h3 class="card-title">Pods Colombia</h3>
         <p class="card-desc">10 Nespresso-compatible capsules filled with freshly roasted WOSC specialty coffee.</p>
         <div class="card-pricing">
@@ -724,7 +640,7 @@
           <div class="price-member">Member: R151.20 <small>(10% off)</small></div>
         </div>
         <div class="card-action">
-          <a class="btn-card" href="wosc-retail-product-concept.html?product=pods-colombia">View Details ↗</a>
+          <a class="btn-card" href="wosc-retail-product-concept.html?product=pods-colombia">View Coffee / Gear ↗</a>
         </div>
       </div>
     </article>
@@ -734,7 +650,7 @@
         <span class="card-tag">LOCAL ROAST</span>
       </div>
       <div class="card-body">
-        <span class="card-cat-label">COFFEE</span>
+        <span class="card-cat-label">COFFEE · RETAIL</span>
         <h3 class="card-title">Mi Amor Coffee</h3>
         <p class="card-desc">Specialty grade beans roasted to profile in Cape Town. Available whole bean or ground.</p>
         <div class="card-pricing">
@@ -742,7 +658,7 @@
           <div class="price-member">Member: R130.50 <small>(10% off)</small></div>
         </div>
         <div class="card-action">
-          <a class="btn-card" href="wosc-retail-product-concept.html?product=mi-amor-coffee">View Details ↗</a>
+          <a class="btn-card" href="wosc-retail-product-concept.html?product=mi-amor-coffee">View Coffee / Gear ↗</a>
         </div>
       </div>
     </article>
@@ -752,7 +668,7 @@
         <span class="card-tag">LOCAL ROAST</span>
       </div>
       <div class="card-body">
-        <span class="card-cat-label">COFFEE</span>
+        <span class="card-cat-label">COFFEE · RETAIL</span>
         <h3 class="card-title">Imani Coffee</h3>
         <p class="card-desc">Specialty grade beans roasted to profile in Cape Town. Available whole bean or ground.</p>
         <div class="card-pricing">
@@ -760,7 +676,7 @@
           <div class="price-member">Member: R106.20 <small>(10% off)</small></div>
         </div>
         <div class="card-action">
-          <a class="btn-card" href="wosc-retail-product-concept.html?product=imani-coffee">View Details ↗</a>
+          <a class="btn-card" href="wosc-retail-product-concept.html?product=imani-coffee">View Coffee / Gear ↗</a>
         </div>
       </div>
     </article>
@@ -770,7 +686,7 @@
         <span class="card-tag">LOCAL ROAST</span>
       </div>
       <div class="card-body">
-        <span class="card-cat-label">COFFEE</span>
+        <span class="card-cat-label">COFFEE · RETAIL</span>
         <h3 class="card-title">Gracia Coffee</h3>
         <p class="card-desc">Specialty grade beans roasted to profile in Cape Town. Available whole bean or ground.</p>
         <div class="card-pricing">
@@ -778,7 +694,7 @@
           <div class="price-member">Member: R106.20 <small>(10% off)</small></div>
         </div>
         <div class="card-action">
-          <a class="btn-card" href="wosc-retail-product-concept.html?product=gracia-coffee">View Details ↗</a>
+          <a class="btn-card" href="wosc-retail-product-concept.html?product=gracia-coffee">View Coffee / Gear ↗</a>
         </div>
       </div>
     </article>
@@ -788,7 +704,7 @@
         <span class="card-tag">SINGLE ORIGIN</span>
       </div>
       <div class="card-body">
-        <span class="card-cat-label">COFFEE</span>
+        <span class="card-cat-label">COFFEE · RETAIL</span>
         <h3 class="card-title">DELUXE GOURMET COFFEE</h3>
         <p class="card-desc">Specialty grade beans roasted to profile in Cape Town. Available whole bean or ground.</p>
         <div class="card-pricing">
@@ -796,7 +712,7 @@
           <div class="price-member">Member: R81.00 <small>(10% off)</small></div>
         </div>
         <div class="card-action">
-          <a class="btn-card" href="wosc-retail-product-concept.html?product=deluxe-gourmet-coffee">View Details ↗</a>
+          <a class="btn-card" href="wosc-retail-product-concept.html?product=deluxe-gourmet-coffee">View Coffee / Gear ↗</a>
         </div>
       </div>
     </article>
@@ -806,7 +722,7 @@
         <span class="card-tag">PANTRY & CARE</span>
       </div>
       <div class="card-body">
-        <span class="card-cat-label">CAFE</span>
+        <span class="card-cat-label">CAFE · RETAIL</span>
         <h3 class="card-title">DECAF ETHIOPIA SUGARCANE COFFEE</h3>
         <p class="card-desc">Wholesale beverage powders, alternative dairy, sugar service and certified equipment detergents.</p>
         <div class="card-pricing">
@@ -814,7 +730,7 @@
           <div class="price-member">Member: R117.00 <small>(10% off)</small></div>
         </div>
         <div class="card-action">
-          <a class="btn-card" href="wosc-retail-product-concept.html?product=decaf-ethiopia-sugarcane-coffee">View Details ↗</a>
+          <a class="btn-card" href="wosc-retail-product-concept.html?product=decaf-ethiopia-sugarcane-coffee">View Coffee / Gear ↗</a>
         </div>
       </div>
     </article>
@@ -824,7 +740,7 @@
         <span class="card-tag">SINGLE ORIGIN</span>
       </div>
       <div class="card-body">
-        <span class="card-cat-label">COFFEE</span>
+        <span class="card-cat-label">COFFEE · RETAIL</span>
         <h3 class="card-title">DECAF COLOMBIA COFFEE</h3>
         <p class="card-desc">Specialty grade beans roasted to profile in Cape Town. Available whole bean or ground.</p>
         <div class="card-pricing">
@@ -832,7 +748,7 @@
           <div class="price-member">Member: R126.90 <small>(10% off)</small></div>
         </div>
         <div class="card-action">
-          <a class="btn-card" href="wosc-retail-product-concept.html?product=decaf-colombia-coffee">View Details ↗</a>
+          <a class="btn-card" href="wosc-retail-product-concept.html?product=decaf-colombia-coffee">View Coffee / Gear ↗</a>
         </div>
       </div>
     </article>
@@ -842,7 +758,7 @@
         <span class="card-tag">PANTRY & CARE</span>
       </div>
       <div class="card-body">
-        <span class="card-cat-label">CAFE</span>
+        <span class="card-cat-label">CAFE · RETAIL</span>
         <h3 class="card-title">ALTERNATIVE MILK (VEGAN) 1LT</h3>
         <p class="card-desc">Wholesale beverage powders, alternative dairy, sugar service and certified equipment detergents.</p>
         <div class="card-pricing">
@@ -850,61 +766,7 @@
           <div class="price-member">Member: R33.30 <small>(10% off)</small></div>
         </div>
         <div class="card-action">
-          <a class="btn-card" href="wosc-retail-product-concept.html?product=alternative-milk-vegan-1lt">View Details ↗</a>
-        </div>
-      </div>
-    </article>
-<article class="shop-product-card" data-category="flasks" data-id="vacuum-pump-flask-2-2lt-s-steel" data-price="847.0">
-      <div class="card-img-wrap">
-        <img src="assets/237da2571dfb2914693f.jpg" alt="VACUUM PUMP FLASK 2.2LT S/STEEL" loading="lazy" onerror="this.src='assets/9e535c2fbbc8e87ee833.png'">
-        <span class="card-tag">DRINKWARE</span>
-      </div>
-      <div class="card-body">
-        <span class="card-cat-label">FLASKS</span>
-        <h3 class="card-title">VACUUM PUMP FLASK 2.2LT S/STEEL</h3>
-        <p class="card-desc">Thermal insulation and professional airpot dispensing for venues and daily commutes.</p>
-        <div class="card-pricing">
-          <div class="price-regular">R847.00</div>
-          <div class="price-member">Member: R762.30 <small>(10% off)</small></div>
-        </div>
-        <div class="card-action">
-          <a class="btn-card" href="wosc-retail-product-concept.html?product=vacuum-pump-flask-2-2lt-s-steel">View Details ↗</a>
-        </div>
-      </div>
-    </article>
-<article class="shop-product-card" data-category="flasks" data-id="vacuum-pump-flask-3-5lt-s-steel" data-price="981.0">
-      <div class="card-img-wrap">
-        <img src="assets/237da2571dfb2914693f.jpg" alt="VACUUM PUMP FLASK 3.5LT S/STEEL" loading="lazy" onerror="this.src='assets/9e535c2fbbc8e87ee833.png'">
-        <span class="card-tag">DRINKWARE</span>
-      </div>
-      <div class="card-body">
-        <span class="card-cat-label">FLASKS</span>
-        <h3 class="card-title">VACUUM PUMP FLASK 3.5LT S/STEEL</h3>
-        <p class="card-desc">Thermal insulation and professional airpot dispensing for venues and daily commutes.</p>
-        <div class="card-pricing">
-          <div class="price-regular">R981.00</div>
-          <div class="price-member">Member: R882.90 <small>(10% off)</small></div>
-        </div>
-        <div class="card-action">
-          <a class="btn-card" href="wosc-retail-product-concept.html?product=vacuum-pump-flask-3-5lt-s-steel">View Details ↗</a>
-        </div>
-      </div>
-    </article>
-<article class="shop-product-card" data-category="tools" data-id="stainless-steel-blind-filter" data-price="56.0">
-      <div class="card-img-wrap">
-        <img src="assets/005d890fd06a3dedd20b.png" alt="STAINLESS STEEL BLIND FILTER" loading="lazy" onerror="this.src='assets/9e535c2fbbc8e87ee833.png'">
-        <span class="card-tag">BARISTA TOOL</span>
-      </div>
-      <div class="card-body">
-        <span class="card-cat-label">TOOLS</span>
-        <h3 class="card-title">STAINLESS STEEL BLIND FILTER</h3>
-        <p class="card-desc">Precision barista equipment designed for consistent daily espresso service.</p>
-        <div class="card-pricing">
-          <div class="price-regular">R56.00</div>
-          <div class="price-member">Member: R50.40 <small>(10% off)</small></div>
-        </div>
-        <div class="card-action">
-          <a class="btn-card" href="wosc-retail-product-concept.html?product=stainless-steel-blind-filter">View Details ↗</a>
+          <a class="btn-card" href="wosc-retail-product-concept.html?product=alternative-milk-vegan-1lt">View Coffee / Gear ↗</a>
         </div>
       </div>
     </article>
@@ -914,7 +776,7 @@
         <span class="card-tag">BARISTA TOOL</span>
       </div>
       <div class="card-body">
-        <span class="card-cat-label">TOOLS</span>
+        <span class="card-cat-label">TOOLS · RETAIL</span>
         <h3 class="card-title">MEASURE S/S ESPRESSO 90MM</h3>
         <p class="card-desc">Precision barista equipment designed for consistent daily espresso service.</p>
         <div class="card-pricing">
@@ -922,7 +784,7 @@
           <div class="price-member">Member: R76.50 <small>(10% off)</small></div>
         </div>
         <div class="card-action">
-          <a class="btn-card" href="wosc-retail-product-concept.html?product=measure-s-s-espresso-90mm">View Details ↗</a>
+          <a class="btn-card" href="wosc-retail-product-concept.html?product=measure-s-s-espresso-90mm">View Coffee / Gear ↗</a>
         </div>
       </div>
     </article>
@@ -932,7 +794,7 @@
         <span class="card-tag">PANTRY & CARE</span>
       </div>
       <div class="card-body">
-        <span class="card-cat-label">CAFE</span>
+        <span class="card-cat-label">CAFE · RETAIL</span>
         <h3 class="card-title">INSTANT FOAMER 250G</h3>
         <p class="card-desc">Wholesale beverage powders, alternative dairy, sugar service and certified equipment detergents.</p>
         <div class="card-pricing">
@@ -940,7 +802,7 @@
           <div class="price-member">Member: R159.47 <small>(10% off)</small></div>
         </div>
         <div class="card-action">
-          <a class="btn-card" href="wosc-retail-product-concept.html?product=instant-foamer-250g">View Details ↗</a>
+          <a class="btn-card" href="wosc-retail-product-concept.html?product=instant-foamer-250g">View Coffee / Gear ↗</a>
         </div>
       </div>
     </article>
@@ -950,7 +812,7 @@
         <span class="card-tag">SINGLE ORIGIN</span>
       </div>
       <div class="card-body">
-        <span class="card-cat-label">COFFEE</span>
+        <span class="card-cat-label">COFFEE · RETAIL</span>
         <h3 class="card-title">GUATEMALA WASHED COFFEE</h3>
         <p class="card-desc">Specialty grade beans roasted to profile in Cape Town. Available whole bean or ground.</p>
         <div class="card-pricing">
@@ -958,7 +820,7 @@
           <div class="price-member">Member: R122.40 <small>(10% off)</small></div>
         </div>
         <div class="card-action">
-          <a class="btn-card" href="wosc-retail-product-concept.html?product=guatemala-washed-coffee">View Details ↗</a>
+          <a class="btn-card" href="wosc-retail-product-concept.html?product=guatemala-washed-coffee">View Coffee / Gear ↗</a>
         </div>
       </div>
     </article>
@@ -968,7 +830,7 @@
         <span class="card-tag">SINGLE ORIGIN</span>
       </div>
       <div class="card-body">
-        <span class="card-cat-label">COFFEE</span>
+        <span class="card-cat-label">COFFEE · RETAIL</span>
         <h3 class="card-title">GUATEMALA NATURAL 250GR</h3>
         <p class="card-desc">Specialty grade beans roasted to profile in Cape Town. Available whole bean or ground.</p>
         <div class="card-pricing">
@@ -976,61 +838,7 @@
           <div class="price-member">Member: R147.91 <small>(10% off)</small></div>
         </div>
         <div class="card-action">
-          <a class="btn-card" href="wosc-retail-product-concept.html?product=guatemala-natural-250gr">View Details ↗</a>
-        </div>
-      </div>
-    </article>
-<article class="shop-product-card" data-category="cafe" data-id="sweetener-sachet-ba-1000" data-price="216.25">
-      <div class="card-img-wrap">
-        <img src="assets/005d890fd06a3dedd20b.png" alt="SWEETENER SACHET BA (1000)" loading="lazy" onerror="this.src='assets/9e535c2fbbc8e87ee833.png'">
-        <span class="card-tag">PANTRY & CARE</span>
-      </div>
-      <div class="card-body">
-        <span class="card-cat-label">CAFE</span>
-        <h3 class="card-title">SWEETENER SACHET BA (1000)</h3>
-        <p class="card-desc">Wholesale beverage powders, alternative dairy, sugar service and certified equipment detergents.</p>
-        <div class="card-pricing">
-          <div class="price-regular">R216.25</div>
-          <div class="price-member">Member: R194.62 <small>(10% off)</small></div>
-        </div>
-        <div class="card-action">
-          <a class="btn-card" href="wosc-retail-product-concept.html?product=sweetener-sachet-ba-1000">View Details ↗</a>
-        </div>
-      </div>
-    </article>
-<article class="shop-product-card" data-category="cafe" data-id="sugar-tubes-white-1000" data-price="199.85">
-      <div class="card-img-wrap">
-        <img src="assets/005d890fd06a3dedd20b.png" alt="SUGAR TUBES WHITE 1000" loading="lazy" onerror="this.src='assets/9e535c2fbbc8e87ee833.png'">
-        <span class="card-tag">PANTRY & CARE</span>
-      </div>
-      <div class="card-body">
-        <span class="card-cat-label">CAFE</span>
-        <h3 class="card-title">SUGAR TUBES WHITE 1000</h3>
-        <p class="card-desc">Wholesale beverage powders, alternative dairy, sugar service and certified equipment detergents.</p>
-        <div class="card-pricing">
-          <div class="price-regular">R199.85</div>
-          <div class="price-member">Member: R179.87 <small>(10% off)</small></div>
-        </div>
-        <div class="card-action">
-          <a class="btn-card" href="wosc-retail-product-concept.html?product=sugar-tubes-white-1000">View Details ↗</a>
-        </div>
-      </div>
-    </article>
-<article class="shop-product-card" data-category="cafe" data-id="sugar-tubes-brown-1000" data-price="199.85">
-      <div class="card-img-wrap">
-        <img src="assets/005d890fd06a3dedd20b.png" alt="SUGAR TUBES BROWN 1000" loading="lazy" onerror="this.src='assets/9e535c2fbbc8e87ee833.png'">
-        <span class="card-tag">PANTRY & CARE</span>
-      </div>
-      <div class="card-body">
-        <span class="card-cat-label">CAFE</span>
-        <h3 class="card-title">SUGAR TUBES BROWN 1000</h3>
-        <p class="card-desc">Wholesale beverage powders, alternative dairy, sugar service and certified equipment detergents.</p>
-        <div class="card-pricing">
-          <div class="price-regular">R199.85</div>
-          <div class="price-member">Member: R179.87 <small>(10% off)</small></div>
-        </div>
-        <div class="card-action">
-          <a class="btn-card" href="wosc-retail-product-concept.html?product=sugar-tubes-brown-1000">View Details ↗</a>
+          <a class="btn-card" href="wosc-retail-product-concept.html?product=guatemala-natural-250gr">View Coffee / Gear ↗</a>
         </div>
       </div>
     </article>
@@ -1040,7 +848,7 @@
         <span class="card-tag">PANTRY & CARE</span>
       </div>
       <div class="card-body">
-        <span class="card-cat-label">CAFE</span>
+        <span class="card-cat-label">CAFE · RETAIL</span>
         <h3 class="card-title">HONEY CRAFT - SQUEEZ 1KG</h3>
         <p class="card-desc">Wholesale beverage powders, alternative dairy, sugar service and certified equipment detergents.</p>
         <div class="card-pricing">
@@ -1048,133 +856,7 @@
           <div class="price-member">Member: R98.64 <small>(10% off)</small></div>
         </div>
         <div class="card-action">
-          <a class="btn-card" href="wosc-retail-product-concept.html?product=honey-craft-squeez-1kg">View Details ↗</a>
-        </div>
-      </div>
-    </article>
-<article class="shop-product-card" data-category="machines" data-id="wega-rover" data-price="72170.0">
-      <div class="card-img-wrap">
-        <img src="assets/7b71d8846d9e681b76a7.jpg" alt="WEGA ROVER" loading="lazy" onerror="this.src='assets/9e535c2fbbc8e87ee833.png'">
-        <span class="card-tag">COMMERCIAL SETUP</span>
-      </div>
-      <div class="card-body">
-        <span class="card-cat-label">MACHINES</span>
-        <h3 class="card-title">WEGA ROVER</h3>
-        <p class="card-desc">Commercial-grade performance, proven reliability and local technical backup.</p>
-        <div class="card-pricing">
-          <div class="price-regular">R72 170.00</div>
-          <div class="price-member">Member: R64 953.00 <small>(10% off)</small></div>
-        </div>
-        <div class="card-action">
-          <a class="btn-card" href="wosc-machine-product-concept.html?product=wega-rover">View Details ↗</a>
-        </div>
-      </div>
-    </article>
-<article class="shop-product-card" data-category="machines" data-id="mythos-iris-machine" data-price="19750.0">
-      <div class="card-img-wrap">
-        <img src="assets/953cbfc128a0e8426d88.avif" alt="MYTHOS IRIS MACHINE" loading="lazy" onerror="this.src='assets/9e535c2fbbc8e87ee833.png'">
-        <span class="card-tag">COMMERCIAL SETUP</span>
-      </div>
-      <div class="card-body">
-        <span class="card-cat-label">MACHINES</span>
-        <h3 class="card-title">MYTHOS IRIS MACHINE</h3>
-        <p class="card-desc">Commercial-grade performance, proven reliability and local technical backup.</p>
-        <div class="card-pricing">
-          <div class="price-regular">R19 750.00</div>
-          <div class="price-member">Member: R17 775.00 <small>(10% off)</small></div>
-        </div>
-        <div class="card-action">
-          <a class="btn-card" href="wosc-machine-product-concept.html?product=mythos-iris-machine">View Details ↗</a>
-        </div>
-      </div>
-    </article>
-<article class="shop-product-card" data-category="machines" data-id="flojet-dispensing-system" data-price="4478.0">
-      <div class="card-img-wrap">
-        <img src="assets/d9884900712eb0c00130.png" alt="FLOJET DISPENSING SYSTEM" loading="lazy" onerror="this.src='assets/9e535c2fbbc8e87ee833.png'">
-        <span class="card-tag">COMMERCIAL SETUP</span>
-      </div>
-      <div class="card-body">
-        <span class="card-cat-label">MACHINES</span>
-        <h3 class="card-title">FLOJET DISPENSING SYSTEM</h3>
-        <p class="card-desc">Commercial-grade performance, proven reliability and local technical backup.</p>
-        <div class="card-pricing">
-          <div class="price-regular">R4 478.00</div>
-          <div class="price-member">Member: R4 030.20 <small>(10% off)</small></div>
-        </div>
-        <div class="card-action">
-          <a class="btn-card" href="wosc-machine-product-concept.html?product=flojet-dispensing-system">View Details ↗</a>
-        </div>
-      </div>
-    </article>
-<article class="shop-product-card" data-category="tools" data-id="espresso-puk-screen" data-price="141.0">
-      <div class="card-img-wrap">
-        <img src="assets/7b71d8846d9e681b76a7.jpg" alt="ESPRESSO PUK SCREEN" loading="lazy" onerror="this.src='assets/9e535c2fbbc8e87ee833.png'">
-        <span class="card-tag">BARISTA TOOL</span>
-      </div>
-      <div class="card-body">
-        <span class="card-cat-label">TOOLS</span>
-        <h3 class="card-title">ESPRESSO PUK SCREEN</h3>
-        <p class="card-desc">Precision barista equipment designed for consistent daily espresso service.</p>
-        <div class="card-pricing">
-          <div class="price-regular">R141.00</div>
-          <div class="price-member">Member: R126.90 <small>(10% off)</small></div>
-        </div>
-        <div class="card-action">
-          <a class="btn-card" href="wosc-retail-product-concept.html?product=espresso-puk-screen">View Details ↗</a>
-        </div>
-      </div>
-    </article>
-<article class="shop-product-card" data-category="tools" data-id="dosing-ring" data-price="168.0">
-      <div class="card-img-wrap">
-        <img src="assets/005d890fd06a3dedd20b.png" alt="DOSING RING" loading="lazy" onerror="this.src='assets/9e535c2fbbc8e87ee833.png'">
-        <span class="card-tag">BARISTA TOOL</span>
-      </div>
-      <div class="card-body">
-        <span class="card-cat-label">TOOLS</span>
-        <h3 class="card-title">DOSING RING</h3>
-        <p class="card-desc">Precision barista equipment designed for consistent daily espresso service.</p>
-        <div class="card-pricing">
-          <div class="price-regular">R168.00</div>
-          <div class="price-member">Member: R151.20 <small>(10% off)</small></div>
-        </div>
-        <div class="card-action">
-          <a class="btn-card" href="wosc-retail-product-concept.html?product=dosing-ring">View Details ↗</a>
-        </div>
-      </div>
-    </article>
-<article class="shop-product-card" data-category="tools" data-id="coffee-filters-1-pk-of-250-each" data-price="150.0">
-      <div class="card-img-wrap">
-        <img src="assets/9e535c2fbbc8e87ee833.png" alt="COFFEE FILTERS 1 PK OF 250 each" loading="lazy" onerror="this.src='assets/9e535c2fbbc8e87ee833.png'">
-        <span class="card-tag">BARISTA TOOL</span>
-      </div>
-      <div class="card-body">
-        <span class="card-cat-label">TOOLS</span>
-        <h3 class="card-title">COFFEE FILTERS 1 PK OF 250 each</h3>
-        <p class="card-desc">Precision barista equipment designed for consistent daily espresso service.</p>
-        <div class="card-pricing">
-          <div class="price-regular">R150.00</div>
-          <div class="price-member">Member: R135.00 <small>(10% off)</small></div>
-        </div>
-        <div class="card-action">
-          <a class="btn-card" href="wosc-retail-product-concept.html?product=coffee-filters-1-pk-of-250-each">View Details ↗</a>
-        </div>
-      </div>
-    </article>
-<article class="shop-product-card" data-category="tools" data-id="brush-grouphead-each" data-price="99.0">
-      <div class="card-img-wrap">
-        <img src="assets/005d890fd06a3dedd20b.png" alt="BRUSH GROUPHEAD each" loading="lazy" onerror="this.src='assets/9e535c2fbbc8e87ee833.png'">
-        <span class="card-tag">BARISTA TOOL</span>
-      </div>
-      <div class="card-body">
-        <span class="card-cat-label">TOOLS</span>
-        <h3 class="card-title">BRUSH GROUPHEAD each</h3>
-        <p class="card-desc">Precision barista equipment designed for consistent daily espresso service.</p>
-        <div class="card-pricing">
-          <div class="price-regular">R99.00</div>
-          <div class="price-member">Member: R89.10 <small>(10% off)</small></div>
-        </div>
-        <div class="card-action">
-          <a class="btn-card" href="wosc-retail-product-concept.html?product=brush-grouphead-each">View Details ↗</a>
+          <a class="btn-card" href="wosc-retail-product-concept.html?product=honey-craft-squeez-1kg">View Coffee / Gear ↗</a>
         </div>
       </div>
     </article>
@@ -1184,7 +866,7 @@
         <span class="card-tag">BARISTA TOOL</span>
       </div>
       <div class="card-body">
-        <span class="card-cat-label">TOOLS</span>
+        <span class="card-cat-label">TOOLS · RETAIL</span>
         <h3 class="card-title">BREW COFFEE TIMER SCALE LITHIUM</h3>
         <p class="card-desc">Precision barista equipment designed for consistent daily espresso service.</p>
         <div class="card-pricing">
@@ -1192,7 +874,7 @@
           <div class="price-member">Member: R727.20 <small>(10% off)</small></div>
         </div>
         <div class="card-action">
-          <a class="btn-card" href="wosc-retail-product-concept.html?product=brew-coffee-timer-scale-lithium">View Details ↗</a>
+          <a class="btn-card" href="wosc-retail-product-concept.html?product=brew-coffee-timer-scale-lithium">View Coffee / Gear ↗</a>
         </div>
       </div>
     </article>
@@ -1202,7 +884,7 @@
         <span class="card-tag">BREWING</span>
       </div>
       <div class="card-body">
-        <span class="card-cat-label">MACHINES</span>
+        <span class="card-cat-label">MACHINES · RETAIL</span>
         <h3 class="card-title">AEROPRESS</h3>
         <p class="card-desc">Commercial-grade performance, proven reliability and local technical backup.</p>
         <div class="card-pricing">
@@ -1210,25 +892,7 @@
           <div class="price-member">Member: R934.20 <small>(10% off)</small></div>
         </div>
         <div class="card-action">
-          <a class="btn-card" href="wosc-machine-product-concept.html?product=aeropress">View Details ↗</a>
-        </div>
-      </div>
-    </article>
-<article class="shop-product-card" data-category="tools" data-id="tamper-matts" data-price="298.7">
-      <div class="card-img-wrap">
-        <img src="assets/c8dafccb36373d12d6d0.svg" alt="TAMPER MATTS" loading="lazy" onerror="this.src='assets/9e535c2fbbc8e87ee833.png'">
-        <span class="card-tag">BARISTA TOOL</span>
-      </div>
-      <div class="card-body">
-        <span class="card-cat-label">TOOLS</span>
-        <h3 class="card-title">TAMPER MATTS</h3>
-        <p class="card-desc">Precision barista equipment designed for consistent daily espresso service.</p>
-        <div class="card-pricing">
-          <div class="price-regular">R298.70</div>
-          <div class="price-member">Member: R268.83 <small>(10% off)</small></div>
-        </div>
-        <div class="card-action">
-          <a class="btn-card" href="wosc-retail-product-concept.html?product=tamper-matts">View Details ↗</a>
+          <a class="btn-card" href="wosc-retail-product-concept.html?product=aeropress">View Coffee / Gear ↗</a>
         </div>
       </div>
     </article>
@@ -1238,7 +902,7 @@
         <span class="card-tag">PANTRY & CARE</span>
       </div>
       <div class="card-body">
-        <span class="card-cat-label">CAFE</span>
+        <span class="card-cat-label">CAFE · RETAIL</span>
         <h3 class="card-title">ROOIBOS TEA</h3>
         <p class="card-desc">Wholesale beverage powders, alternative dairy, sugar service and certified equipment detergents.</p>
         <div class="card-pricing">
@@ -1246,7 +910,7 @@
           <div class="price-member">Member: R290.70 <small>(10% off)</small></div>
         </div>
         <div class="card-action">
-          <a class="btn-card" href="wosc-retail-product-concept.html?product=rooibos-tea">View Details ↗</a>
+          <a class="btn-card" href="wosc-retail-product-concept.html?product=rooibos-tea">View Coffee / Gear ↗</a>
         </div>
       </div>
     </article>
@@ -1256,7 +920,7 @@
         <span class="card-tag">SINGLE ORIGIN</span>
       </div>
       <div class="card-body">
-        <span class="card-cat-label">COFFEE</span>
+        <span class="card-cat-label">COFFEE · RETAIL</span>
         <h3 class="card-title">DECAF ETHIOPIA SWISS WATER COFFEE</h3>
         <p class="card-desc">Specialty grade beans roasted to profile in Cape Town. Available whole bean or ground.</p>
         <div class="card-pricing">
@@ -1264,61 +928,7 @@
           <div class="price-member">Member: R161.10 <small>(10% off)</small></div>
         </div>
         <div class="card-action">
-          <a class="btn-card" href="wosc-retail-product-concept.html?product=decaf-ethiopia-swiss-water-coffee">View Details ↗</a>
-        </div>
-      </div>
-    </article>
-<article class="shop-product-card" data-category="tools" data-id="coffee-distributor" data-price="975.0">
-      <div class="card-img-wrap">
-        <img src="assets/4134009dd23eeec015da.svg" alt="COFFEE DISTRIBUTOR" loading="lazy" onerror="this.src='assets/9e535c2fbbc8e87ee833.png'">
-        <span class="card-tag">BARISTA TOOL</span>
-      </div>
-      <div class="card-body">
-        <span class="card-cat-label">TOOLS</span>
-        <h3 class="card-title">COFFEE DISTRIBUTOR</h3>
-        <p class="card-desc">Precision barista equipment designed for consistent daily espresso service.</p>
-        <div class="card-pricing">
-          <div class="price-regular">R975.00</div>
-          <div class="price-member">Member: R877.50 <small>(10% off)</small></div>
-        </div>
-        <div class="card-action">
-          <a class="btn-card" href="wosc-retail-product-concept.html?product=coffee-distributor">View Details ↗</a>
-        </div>
-      </div>
-    </article>
-<article class="shop-product-card" data-category="tools" data-id="tamper" data-price="459.0">
-      <div class="card-img-wrap">
-        <img src="assets/c8dafccb36373d12d6d0.svg" alt="TAMPER" loading="lazy" onerror="this.src='assets/9e535c2fbbc8e87ee833.png'">
-        <span class="card-tag">BARISTA TOOL</span>
-      </div>
-      <div class="card-body">
-        <span class="card-cat-label">TOOLS</span>
-        <h3 class="card-title">TAMPER</h3>
-        <p class="card-desc">Precision barista equipment designed for consistent daily espresso service.</p>
-        <div class="card-pricing">
-          <div class="price-regular">R459.00</div>
-          <div class="price-member">Member: R413.10 <small>(10% off)</small></div>
-        </div>
-        <div class="card-action">
-          <a class="btn-card" href="wosc-retail-product-concept.html?product=tamper">View Details ↗</a>
-        </div>
-      </div>
-    </article>
-<article class="shop-product-card" data-category="tools" data-id="macaron-tamper-distributor" data-price="775.0">
-      <div class="card-img-wrap">
-        <img src="assets/c8dafccb36373d12d6d0.svg" alt="MACARON TAMPER DISTRIBUTOR" loading="lazy" onerror="this.src='assets/9e535c2fbbc8e87ee833.png'">
-        <span class="card-tag">BARISTA TOOL</span>
-      </div>
-      <div class="card-body">
-        <span class="card-cat-label">TOOLS</span>
-        <h3 class="card-title">MACARON TAMPER DISTRIBUTOR</h3>
-        <p class="card-desc">Precision barista equipment designed for consistent daily espresso service.</p>
-        <div class="card-pricing">
-          <div class="price-regular">R775.00</div>
-          <div class="price-member">Member: R697.50 <small>(10% off)</small></div>
-        </div>
-        <div class="card-action">
-          <a class="btn-card" href="wosc-retail-product-concept.html?product=macaron-tamper-distributor">View Details ↗</a>
+          <a class="btn-card" href="wosc-retail-product-concept.html?product=decaf-ethiopia-swiss-water-coffee">View Coffee / Gear ↗</a>
         </div>
       </div>
     </article>
@@ -1328,7 +938,7 @@
         <span class="card-tag">SINGLE ORIGIN</span>
       </div>
       <div class="card-body">
-        <span class="card-cat-label">COFFEE</span>
+        <span class="card-cat-label">COFFEE · RETAIL</span>
         <h3 class="card-title">Guatemala Natural Finca 250GR</h3>
         <p class="card-desc">Specialty grade beans roasted to profile in Cape Town. Available whole bean or ground.</p>
         <div class="card-pricing">
@@ -1336,40 +946,20 @@
           <div class="price-member">Member: R147.91 <small>(10% off)</small></div>
         </div>
         <div class="card-action">
-          <a class="btn-card" href="wosc-retail-product-concept.html?product=guatemala-natural-finca-250gr">View Details ↗</a>
-        </div>
-      </div>
-    </article>
-<article class="shop-product-card" data-category="cafe" data-id="caffenu-detergents" data-price="213.0">
-      <div class="card-img-wrap">
-        <img src="assets/b4d2e515136e6370a233.svg" alt="CAFFENU DETERGENTS" loading="lazy" onerror="this.src='assets/9e535c2fbbc8e87ee833.png'">
-        <span class="card-tag">PANTRY & CARE</span>
-      </div>
-      <div class="card-body">
-        <span class="card-cat-label">CAFE</span>
-        <h3 class="card-title">CAFFENU DETERGENTS</h3>
-        <p class="card-desc">Wholesale beverage powders, alternative dairy, sugar service and certified equipment detergents.</p>
-        <div class="card-pricing">
-          <div class="price-regular">R213.00</div>
-          <div class="price-member">Member: R191.70 <small>(10% off)</small></div>
-        </div>
-        <div class="card-action">
-          <a class="btn-card" href="wosc-retail-product-concept.html?product=caffenu-detergents">View Details ↗</a>
+          <a class="btn-card" href="wosc-retail-product-concept.html?product=guatemala-natural-finca-250gr">View Coffee / Gear ↗</a>
         </div>
       </div>
     </article>
       </div>
 
-      <!-- No Results State -->
       <div id="no-results-box" class="no-results">
-        <h3>No matching products found</h3>
-        <p>Try searching for a different keyword or select another category above.</p>
+        <h3>No matching retail products found</h3>
+        <p>Try searching another roast or view all retail coffees above.</p>
         <button class="cat-btn" style="margin-top:16px;" onclick="resetFilters()">View All Products</button>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
   <footer>
     <div class="wrap">
       <div class="footer-grid">
@@ -1389,14 +979,14 @@
         <div class="footer-col">
           <h4>Shop & Equipment</h4>
           <a href="wosc-shop-concept.html">Speciality Roasts & Pods</a>
-          <a href="wosc-machine-shop-concept.html">Commercial Espresso Machines</a>
-          <a href="wosc-shop-concept.html?category=tools">Barista Tools & Scales</a>
+          <a href="wosc-machine-shop-concept.html">Commercial Espresso Machines & Parts</a>
+          <a href="wosc-membership.html">Supplier Membership</a>
           <a href="wosc-business.html">Wholesale Supply</a>
         </div>
         <div class="footer-col">
           <h4>Cape Town Showroom</h4>
           <p style="color: #b7cbdd; font-size: 13px; line-height: 1.5;">
-            Visit our working showroom and roastery to test commercial machines and discuss your launch.
+            Visit our Marine Drive showroom to test commercial equipment and sample roasts.
           </p>
           <a class="btn-card" style="margin-top: 14px; padding: 10px 18px; font-size: 12px; display:inline-block; width:auto;" href="wosc-contact-notes.html">Book Showroom Visit</a>
         </div>
@@ -1412,7 +1002,6 @@
     </div>
   </footer>
 
-  <!-- Clean, Validated Client-Side Script -->
   <script>
     (function () {
       const grid = document.getElementById('shop-product-grid');
@@ -1426,19 +1015,6 @@
 
       let currentCategory = 'all';
 
-      // Check URL search params for initial category (e.g. ?category=machines)
-      const urlParams = new URLSearchParams(window.location.search);
-      const paramCat = urlParams.get('category');
-      if (paramCat) {
-        currentCategory = paramCat;
-        buttons.forEach(b => {
-          if (b.dataset.category === paramCat) {
-            buttons.forEach(btn => btn.classList.remove('active'));
-            b.classList.add('active');
-          }
-        });
-      }
-
       function filterAndSort() {
         const query = searchInput.value.trim().toLowerCase();
         let visibleCount = 0;
@@ -1446,7 +1022,16 @@
         cards.forEach(card => {
           const cat = card.dataset.category;
           const text = card.textContent.toLowerCase();
-          const matchesCat = (currentCategory === 'all' || cat === currentCategory);
+          
+          let matchesCat = false;
+          if (currentCategory === 'all') {
+            matchesCat = true;
+          } else if (currentCategory === 'brewing') {
+            matchesCat = ['machines', 'tools', 'flasks'].includes(cat);
+          } else {
+            matchesCat = (cat === currentCategory);
+          }
+
           const matchesQuery = (!query || text.includes(query));
 
           if (matchesCat && matchesQuery) {
@@ -1457,7 +1042,6 @@
           }
         });
 
-        // Sort visible cards
         const sortMode = sortSelect.value;
         const visibleCards = cards.filter(c => c.style.display !== 'none');
 
@@ -1473,10 +1057,8 @@
           });
         }
 
-        // Re-append sorted cards in order
         visibleCards.forEach(c => grid.appendChild(c));
 
-        // Update count & no-results banner
         countDisplay.textContent = 'Showing ' + visibleCount + ' product' + (visibleCount === 1 ? '' : 's');
         if (visibleCount === 0) {
           noResults.style.display = 'block';
@@ -1485,7 +1067,6 @@
         }
       }
 
-      // Category click events
       buttons.forEach(btn => {
         btn.addEventListener('click', function () {
           buttons.forEach(b => b.classList.remove('active'));
@@ -1495,7 +1076,6 @@
         });
       });
 
-      // Search & Sort input events
       searchInput.addEventListener('input', filterAndSort);
       sortSelect.addEventListener('change', filterAndSort);
       clearBtn.addEventListener('click', function () {
@@ -1513,7 +1093,6 @@
         filterAndSort();
       };
 
-      // Initial filter run
       filterAndSort();
     })();
   </script>

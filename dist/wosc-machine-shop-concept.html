@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="robots" content="noindex,nofollow,noarchive">
-  <title>Commercial Coffee Machines & Brewing Equipment | WOSC Cape Town</title>
+  <title>Commercial Equipment & Machine Compatibility Hub | WOSC Cape Town</title>
   <style>
     :root {
       --navy: #142b45;
@@ -27,6 +27,30 @@
       font: 15px/1.6 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     }
     a { color: inherit; text-decoration: none; }
+
+    /* Store Switcher */
+    .store-switcher {
+      background: #2a3c50;
+      color: #ffffff;
+      padding: 10px 20px;
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .store-switcher span { opacity: 0.9; }
+    .switcher-btn {
+      background: #ffffff;
+      color: var(--navy);
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 4px;
+      font-size: 12px;
+      transition: background 0.2s;
+    }
+    .switcher-btn:hover { background: #f0e6dc; }
 
     /* Header */
     header {
@@ -65,21 +89,12 @@
       color: var(--navy);
     }
 
-    .review-bar {
-      background: #382a21;
-      color: #fff;
-      padding: 8px 20px;
-      text-align: center;
-      font: 11.5px Arial, sans-serif;
-      letter-spacing: .5px;
-    }
-
     .wrap { max-width: 1280px; margin: auto; padding: 0 24px; }
-    .section { padding: 40px 0 80px; }
+    .section { padding: 30px 0 80px; }
 
-    /* Hero */
+    /* Machine Hero */
     .machine-hero {
-      padding: 50px 0 35px;
+      padding: 45px 0 30px;
       border-bottom: 1px solid var(--border-warm);
     }
     .kicker {
@@ -98,26 +113,57 @@
     .intro-lead {
       font-size: 16px;
       color: var(--text-muted);
-      max-width: 780px;
+      max-width: 820px;
       line-height: 1.5;
     }
-    .member-banner-box {
-      margin-top: 18px;
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      background: #f7f1e9;
-      border: 1px solid var(--border-warm);
-      border-left: 4px solid var(--copper);
-      padding: 10px 18px;
-      border-radius: 4px;
-      font-size: 13.5px;
-      color: var(--espresso);
+
+    /* Machine Ecosystem Compatibility Bar */
+    .machine-compat-filter-box {
+      background: #ffffff;
+      border: 2px solid var(--copper);
+      border-radius: 8px;
+      padding: 22px 26px;
+      margin: 28px 0 24px;
+      box-shadow: 0 4px 16px rgba(20,43,69,0.05);
     }
-    .member-banner-box a {
+    .filter-box-title {
+      font-size: 14px;
       font-weight: 700;
       color: var(--navy);
-      text-decoration: underline;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .compat-buttons {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .compat-btn {
+      background: var(--cream-card);
+      border: 1px solid var(--border-warm);
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--espresso);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+    .compat-btn:hover {
+      border-color: var(--navy);
+      background: #faf6f1;
+    }
+    .compat-btn.active {
+      background: var(--navy);
+      color: #ffffff;
+      border-color: var(--navy);
     }
 
     /* Category Filter Pills */
@@ -125,14 +171,14 @@
       display: flex;
       gap: 10px;
       flex-wrap: wrap;
-      margin: 28px 0 20px;
+      margin: 20px 0 20px;
     }
     .cat-btn {
       background: #ffffff;
       border: 1px solid var(--border-warm);
-      padding: 10px 18px;
-      border-radius: 30px;
-      font-size: 13px;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 12.5px;
       font-weight: 600;
       color: var(--espresso);
       cursor: pointer;
@@ -141,8 +187,8 @@
       gap: 6px;
       transition: all 0.2s;
     }
-    .cat-btn:hover { border-color: var(--navy); background: #faf6f1; }
-    .cat-btn.active { background: var(--navy); color: #ffffff; border-color: var(--navy); }
+    .cat-btn:hover { border-color: var(--navy); }
+    .cat-btn.active { background: var(--copper); color: #ffffff; border-color: var(--copper); }
     .cat-btn .badge {
       font-size: 11px;
       opacity: 0.85;
@@ -152,7 +198,7 @@
     }
     .cat-btn.active .badge { background: rgba(255,255,255,0.25); color: #fff; }
 
-    /* Controls Bar: Search & Sort */
+    /* Controls Bar */
     .controls-bar {
       display: flex;
       justify-content: space-between;
@@ -201,14 +247,13 @@
     }
     .count-text { font-size: 13px; color: var(--text-muted); font-weight: 500; }
 
-    /* Product Grid */
+    /* Grid */
     .machine-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
       gap: 24px;
     }
 
-    /* Card */
     .machine-card {
       background: #ffffff;
       border: 1px solid var(--border-warm);
@@ -258,7 +303,7 @@
       flex-grow: 1;
     }
     .card-cat-label {
-      font: 700 10.5px Arial;
+      font: 700 10px Arial;
       letter-spacing: 1.5px;
       color: var(--copper);
       margin-bottom: 6px;
@@ -276,8 +321,25 @@
       font-size: 13px;
       color: var(--text-muted);
       line-height: 1.5;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
       flex-grow: 1;
+    }
+    .compat-badge {
+      background: #eef7f0;
+      color: #176534;
+      border: 1px solid #cce8d4;
+      padding: 6px 10px;
+      border-radius: 4px;
+      font-size: 11.5px;
+      font-weight: 600;
+      margin-bottom: 14px;
+      line-height: 1.4;
+    }
+    .compat-badge.is-machine {
+      background: #f7f0e7;
+      color: var(--navy);
+      border-color: #eeddc9;
+      font-weight: 700;
     }
     .card-pricing {
       border-top: 1px solid #f0e6dc;
@@ -337,20 +399,22 @@
 </head>
 <body>
 
-  <div class="review-bar">
-    COMMERCIAL EQUIPMENT LINEUP · Real WOSC Machinery & Hardware from Odoo Catalog
+  <!-- Switcher -->
+  <div class="store-switcher">
+    <span>Looking for retail whole beans, coffee pods, or home coffee pantry?</span>
+    <a class="switcher-btn" href="wosc-shop-concept.html">Switch to Retail Coffee Shop →</a>
   </div>
 
   <!-- Header -->
   <header>
     <div class="logo-wrap">
       <a class="logo" href="wosc-homepage-concept.html">WOSC</a>
-      <span class="logo-badge">Machines</span>
+      <span class="logo-badge">Commercial & Parts</span>
     </div>
     <nav>
       <a href="wosc-homepage-concept.html">Home</a>
-      <a href="wosc-shop-concept.html">Shop</a>
-      <a href="wosc-machine-shop-concept.html" class="active">Machines</a>
+      <a href="wosc-shop-concept.html">Retail Shop</a>
+      <a href="wosc-machine-shop-concept.html" class="active">Commercial Machines & Parts</a>
       <a href="wosc-our-roasts-notes.html">Our Roasts</a>
       <a href="wosc-cafe-launch.html">Start a Café</a>
       <a href="wosc-learning.html">eLearning</a>
@@ -363,32 +427,53 @@
 
   <main class="wrap">
     <section class="machine-hero">
-      <span class="kicker">Commercial Espresso & Brewing Stations</span>
-      <h1>Commercial Machines & Brewing Equipment.</h1>
+      <span class="kicker">Commercial Espresso Stations, Roasters & Machine Parts</span>
+      <h1>Commercial Equipment & Parts Hub.</h1>
       <p class="intro-lead">
-        From Italian-engineered commercial multi-group espresso workstations (Wega Rover) to on-demand precision grinders (Mythos Iris), Flojet mobile bottled water systems, batch brewers, and barista calibration tools.
+        Dedicated B2B catalog for café owners, technicians, and hospitality operators. Explore Italian multi-group espresso workstations, commercial batch brewers, roasters, water pumps, and verified machine-specific replacement parts.
       </p>
-      <div class="member-banner-box">
-        <span>★ <strong>Supplier Member Savings:</strong> Save 10% on commercial equipment — Save up to R7,217 on the Wega Rover.</span>
-        <a href="wosc-membership.html">View Membership Benefits ↗</a>
-      </div>
     </section>
 
+    <!-- Machine Compatibility Ecosystem Filter -->
+    <div class="machine-compat-filter-box">
+      <div class="filter-box-title">
+        ⚙ Filter by Machine Ecosystem / Compatibility:
+      </div>
+      <div class="compat-buttons">
+        <button class="compat-btn active" data-ecosystem="all">
+          Show All Hardware (22)
+        </button>
+        <button class="compat-btn" data-ecosystem="lebrew">
+          Lebrew Brewmaster System & Parts (5)
+        </button>
+        <button class="compat-btn" data-ecosystem="wega">
+          Wega Rover 58mm Station & Parts (12)
+        </button>
+        <button class="compat-btn" data-ecosystem="mythos">
+          Mythos Iris Grinder & Parts (4)
+        </button>
+      </div>
+    </div>
+
     <section class="section">
+      <!-- Category Tabs -->
       <div class="category-bar">
-        <button class="cat-btn active" data-category="all">All Equipment <span class="badge">19</span></button>
-        <button class="cat-btn" data-category="Commercial">Commercial Espresso <span class="badge">2</span></button>
-        <button class="cat-btn" data-category="Brewing">Brewing & Water Systems <span class="badge">4</span></button>
-        <button class="cat-btn" data-category="Accessories">Barista Tools & Parts <span class="badge">13</span></button>
+        <button class="cat-btn active" data-subcat="all">All Hardware <span class="badge">22</span></button>
+        <button class="cat-btn" data-subcat="espresso">Espresso & Grinders <span class="badge">2</span></button>
+        <button class="cat-btn" data-subcat="batch-roast">Batch Brew & Roastery <span class="badge">3</span></button>
+        <button class="cat-btn" data-subcat="parts-tools">Parts, Filters & Maintenance <span class="badge">11</span></button>
+        <button class="cat-btn" data-subcat="water-airpots">Water Systems & Airpots <span class="badge">3</span></button>
+        <button class="cat-btn" data-subcat="bulk-pantry">Café Bulk Consumables <span class="badge">3</span></button>
       </div>
 
+      <!-- Controls Bar -->
       <div class="controls-bar">
         <div class="search-wrap">
-          <input type="text" id="machine-search" class="search-input" placeholder="Search machines, grinders, pumps, or tools...">
+          <input type="text" id="machine-search" class="search-input" placeholder="Search by model, part name, burrs, filters, or fittings...">
           <button id="search-clear" style="background:none;border:none;color:var(--text-muted);cursor:pointer;font-size:12px;">Clear</button>
         </div>
         <div class="sort-wrap">
-          <span class="count-text" id="machine-count-display">Showing 19 items</span>
+          <span class="count-text" id="machine-count-display">Showing 22 items</span>
           <label for="machine-sort" style="margin-left:14px;">Sort by:</label>
           <select id="machine-sort" class="sort-select">
             <option value="featured">Featured / Default</option>
@@ -400,354 +485,430 @@
       </div>
 
       <div id="machine-product-grid" class="machine-grid">
-<article class="machine-card" data-category="Accessories" data-id="lebrew-burrs" data-price="2363.0">
+<article class="machine-card compat-lebrew" data-subcat="parts-tools" data-id="lebrew-burrs" data-price="2363.0">
       <div class="card-img-wrap">
         <img src="assets/c8dafccb36373d12d6d0.svg" alt="LEBREW BURRS" loading="lazy" onerror="this.src='assets/7b71d8846d9e681b76a7.jpg'">
-        <span class="card-tag">BARISTA TOOL</span>
+        <span class="card-tag">PARTS-TOOLS</span>
       </div>
       <div class="card-body">
-        <span class="card-cat-label">ACCESSORIES · COMMERCIAL HARDWARE</span>
+        <span class="card-cat-label">PARTS, FILTERS & MAINTENANCE</span>
         <h3 class="card-title">LEBREW BURRS</h3>
         <p class="card-desc">Precision barista equipment designed for consistent daily espresso service.</p>
+        <div class="compat-badge">✓ Compatible with: LEBREW BREWMASTER THERMO</div>
         <div class="card-pricing">
           <div class="price-regular">R2 363.00</div>
           <div class="price-member">Member: R2 126.70 <small>(10% off)</small></div>
         </div>
         <div class="card-action">
-          <a class="btn-card" href="wosc-machine-product-concept.html?product=lebrew-burrs">Explore Equipment ↗</a>
+          <a class="btn-card" href="wosc-machine-product-concept.html?product=lebrew-burrs">View Hardware & Specs ↗</a>
         </div>
       </div>
     </article>
-<article class="machine-card" data-category="Brewing" data-id="lebrew-brewmaster-thermo" data-price="2364.0">
+<article class="machine-card " data-subcat="batch-roast" data-id="lebrew-roast-see-next" data-price="16158.0">
       <div class="card-img-wrap">
-        <img src="assets/2f96aff6faa88ff044e0.avif" alt="LEBREW BREWMASTER THERMO" loading="lazy" onerror="this.src='assets/7b71d8846d9e681b76a7.jpg'">
-        <span class="card-tag">BREWING</span>
+        <img src="assets/c7c62cb0a8840c4de788.png" alt="LEBREW ROAST SEE NEXT" loading="lazy" onerror="this.src='assets/7b71d8846d9e681b76a7.jpg'">
+        <span class="card-tag">BATCH-ROAST</span>
       </div>
       <div class="card-body">
-        <span class="card-cat-label">BREWING · COMMERCIAL HARDWARE</span>
+        <span class="card-cat-label">BATCH BREW & ROASTERY</span>
+        <h3 class="card-title">LEBREW ROAST SEE NEXT</h3>
+        <p class="card-desc">Specialty grade beans roasted to profile in Cape Town. Available whole bean or ground.</p>
+        
+        <div class="card-pricing">
+          <div class="price-regular">R16 158.00</div>
+          <div class="price-member">Member: R14 542.20 <small>(10% off)</small></div>
+        </div>
+        <div class="card-action">
+          <a class="btn-card" href="wosc-machine-product-concept.html?product=lebrew-roast-see-next">View Hardware & Specs ↗</a>
+        </div>
+      </div>
+    </article>
+<article class="machine-card " data-subcat="batch-roast" data-id="lebrew-roast-see-fusion" data-price="14952.0">
+      <div class="card-img-wrap">
+        <img src="assets/c7c62cb0a8840c4de788.png" alt="LEBREW ROAST SEE FUSION" loading="lazy" onerror="this.src='assets/7b71d8846d9e681b76a7.jpg'">
+        <span class="card-tag">BATCH-ROAST</span>
+      </div>
+      <div class="card-body">
+        <span class="card-cat-label">BATCH BREW & ROASTERY</span>
+        <h3 class="card-title">LEBREW ROAST SEE FUSION</h3>
+        <p class="card-desc">Specialty grade beans roasted to profile in Cape Town. Available whole bean or ground.</p>
+        
+        <div class="card-pricing">
+          <div class="price-regular">R14 952.00</div>
+          <div class="price-member">Member: R13 456.80 <small>(10% off)</small></div>
+        </div>
+        <div class="card-action">
+          <a class="btn-card" href="wosc-machine-product-concept.html?product=lebrew-roast-see-fusion">View Hardware & Specs ↗</a>
+        </div>
+      </div>
+    </article>
+<article class="machine-card compat-lebrew" data-subcat="batch-roast" data-id="lebrew-brewmaster-thermo" data-price="2364.0">
+      <div class="card-img-wrap">
+        <img src="assets/2f96aff6faa88ff044e0.avif" alt="LEBREW BREWMASTER THERMO" loading="lazy" onerror="this.src='assets/7b71d8846d9e681b76a7.jpg'">
+        <span class="card-tag">BATCH-ROAST</span>
+      </div>
+      <div class="card-body">
+        <span class="card-cat-label">BATCH BREW & ROASTERY</span>
         <h3 class="card-title">LEBREW BREWMASTER THERMO</h3>
         <p class="card-desc">Commercial-grade performance, proven reliability and local technical backup.</p>
+        <div class="compat-badge is-machine">★ Machine Host · 5 Verified Ecosystem Parts</div>
         <div class="card-pricing">
           <div class="price-regular">R2 364.00</div>
           <div class="price-member">Member: R2 127.60 <small>(10% off)</small></div>
         </div>
         <div class="card-action">
-          <a class="btn-card" href="wosc-machine-product-concept.html?product=lebrew-brewmaster-thermo">Explore Equipment ↗</a>
+          <a class="btn-card" href="wosc-machine-product-concept.html?product=lebrew-brewmaster-thermo">View Hardware & Specs ↗</a>
         </div>
       </div>
     </article>
-<article class="machine-card" data-category="Accessories" data-id="milk-pitcher" data-price="150.0">
+<article class="machine-card compat-lebrew" data-subcat="water-airpots" data-id="vacuum-pump-flask-2-2lt-s-steel" data-price="847.0">
       <div class="card-img-wrap">
-        <img src="assets/b887d333c1ad01646a8b.avif" alt="MILK PITCHER" loading="lazy" onerror="this.src='assets/7b71d8846d9e681b76a7.jpg'">
-        <span class="card-tag">BARISTA TOOL</span>
+        <img src="assets/237da2571dfb2914693f.jpg" alt="VACUUM PUMP FLASK 2.2LT S/STEEL" loading="lazy" onerror="this.src='assets/7b71d8846d9e681b76a7.jpg'">
+        <span class="card-tag">WATER-AIRPOTS</span>
       </div>
       <div class="card-body">
-        <span class="card-cat-label">ACCESSORIES · COMMERCIAL HARDWARE</span>
-        <h3 class="card-title">MILK PITCHER</h3>
-        <p class="card-desc">Precision barista equipment designed for consistent daily espresso service.</p>
+        <span class="card-cat-label">WATER SYSTEMS & AIRPOTS</span>
+        <h3 class="card-title">VACUUM PUMP FLASK 2.2LT S/STEEL</h3>
+        <p class="card-desc">Thermal insulation and professional airpot dispensing for venues and daily commutes.</p>
+        <div class="compat-badge">✓ Compatible with: LEBREW BREWMASTER THERMO</div>
         <div class="card-pricing">
-          <div class="price-regular">R150.00</div>
-          <div class="price-member">Member: R135.00 <small>(10% off)</small></div>
+          <div class="price-regular">R847.00</div>
+          <div class="price-member">Member: R762.30 <small>(10% off)</small></div>
         </div>
         <div class="card-action">
-          <a class="btn-card" href="wosc-machine-product-concept.html?product=milk-pitcher">Explore Equipment ↗</a>
+          <a class="btn-card" href="wosc-machine-product-concept.html?product=vacuum-pump-flask-2-2lt-s-steel">View Hardware & Specs ↗</a>
         </div>
       </div>
     </article>
-<article class="machine-card" data-category="Brewing" data-id="coffee-plunger" data-price="180.0">
+<article class="machine-card compat-lebrew" data-subcat="water-airpots" data-id="vacuum-pump-flask-3-5lt-s-steel" data-price="981.0">
       <div class="card-img-wrap">
-        <img src="assets/3cb92ce9acb83f14d893.avif" alt="Coffee Plunger" loading="lazy" onerror="this.src='assets/7b71d8846d9e681b76a7.jpg'">
-        <span class="card-tag">BREWING</span>
+        <img src="assets/237da2571dfb2914693f.jpg" alt="VACUUM PUMP FLASK 3.5LT S/STEEL" loading="lazy" onerror="this.src='assets/7b71d8846d9e681b76a7.jpg'">
+        <span class="card-tag">WATER-AIRPOTS</span>
       </div>
       <div class="card-body">
-        <span class="card-cat-label">BREWING · COMMERCIAL HARDWARE</span>
-        <h3 class="card-title">Coffee Plunger</h3>
-        <p class="card-desc">Commercial-grade performance, proven reliability and local technical backup.</p>
+        <span class="card-cat-label">WATER SYSTEMS & AIRPOTS</span>
+        <h3 class="card-title">VACUUM PUMP FLASK 3.5LT S/STEEL</h3>
+        <p class="card-desc">Thermal insulation and professional airpot dispensing for venues and daily commutes.</p>
+        <div class="compat-badge">✓ Compatible with: LEBREW BREWMASTER THERMO</div>
         <div class="card-pricing">
-          <div class="price-regular">R180.00</div>
-          <div class="price-member">Member: R162.00 <small>(10% off)</small></div>
+          <div class="price-regular">R981.00</div>
+          <div class="price-member">Member: R882.90 <small>(10% off)</small></div>
         </div>
         <div class="card-action">
-          <a class="btn-card" href="wosc-machine-product-concept.html?product=coffee-plunger">Explore Equipment ↗</a>
+          <a class="btn-card" href="wosc-machine-product-concept.html?product=vacuum-pump-flask-3-5lt-s-steel">View Hardware & Specs ↗</a>
         </div>
       </div>
     </article>
-<article class="machine-card" data-category="Accessories" data-id="stainless-steel-blind-filter" data-price="56.0">
+<article class="machine-card compat-wega" data-subcat="parts-tools" data-id="stainless-steel-blind-filter" data-price="56.0">
       <div class="card-img-wrap">
         <img src="assets/005d890fd06a3dedd20b.png" alt="STAINLESS STEEL BLIND FILTER" loading="lazy" onerror="this.src='assets/7b71d8846d9e681b76a7.jpg'">
-        <span class="card-tag">BARISTA TOOL</span>
+        <span class="card-tag">PARTS-TOOLS</span>
       </div>
       <div class="card-body">
-        <span class="card-cat-label">ACCESSORIES · COMMERCIAL HARDWARE</span>
+        <span class="card-cat-label">PARTS, FILTERS & MAINTENANCE</span>
         <h3 class="card-title">STAINLESS STEEL BLIND FILTER</h3>
         <p class="card-desc">Precision barista equipment designed for consistent daily espresso service.</p>
+        <div class="compat-badge">✓ Compatible with: WEGA ROVER 2-GROUP</div>
         <div class="card-pricing">
           <div class="price-regular">R56.00</div>
           <div class="price-member">Member: R50.40 <small>(10% off)</small></div>
         </div>
         <div class="card-action">
-          <a class="btn-card" href="wosc-machine-product-concept.html?product=stainless-steel-blind-filter">Explore Equipment ↗</a>
+          <a class="btn-card" href="wosc-machine-product-concept.html?product=stainless-steel-blind-filter">View Hardware & Specs ↗</a>
         </div>
       </div>
     </article>
-<article class="machine-card" data-category="Accessories" data-id="measure-s-s-espresso-90mm" data-price="85.0">
+<article class="machine-card " data-subcat="bulk-pantry" data-id="sweetener-sachet-ba-1000" data-price="216.25">
       <div class="card-img-wrap">
-        <img src="assets/7b71d8846d9e681b76a7.jpg" alt="MEASURE S/S ESPRESSO 90MM" loading="lazy" onerror="this.src='assets/7b71d8846d9e681b76a7.jpg'">
-        <span class="card-tag">BARISTA TOOL</span>
+        <img src="assets/005d890fd06a3dedd20b.png" alt="SWEETENER SACHET BA (1000)" loading="lazy" onerror="this.src='assets/7b71d8846d9e681b76a7.jpg'">
+        <span class="card-tag">BULK-PANTRY</span>
       </div>
       <div class="card-body">
-        <span class="card-cat-label">ACCESSORIES · COMMERCIAL HARDWARE</span>
-        <h3 class="card-title">MEASURE S/S ESPRESSO 90MM</h3>
-        <p class="card-desc">Precision barista equipment designed for consistent daily espresso service.</p>
+        <span class="card-cat-label">CAFÉ BULK CONSUMABLES</span>
+        <h3 class="card-title">SWEETENER SACHET BA (1000)</h3>
+        <p class="card-desc">Wholesale beverage powders, alternative dairy, sugar service and certified equipment detergents.</p>
+        
         <div class="card-pricing">
-          <div class="price-regular">R85.00</div>
-          <div class="price-member">Member: R76.50 <small>(10% off)</small></div>
+          <div class="price-regular">R216.25</div>
+          <div class="price-member">Member: R194.62 <small>(10% off)</small></div>
         </div>
         <div class="card-action">
-          <a class="btn-card" href="wosc-machine-product-concept.html?product=measure-s-s-espresso-90mm">Explore Equipment ↗</a>
+          <a class="btn-card" href="wosc-machine-product-concept.html?product=sweetener-sachet-ba-1000">View Hardware & Specs ↗</a>
         </div>
       </div>
     </article>
-<article class="machine-card" data-category="Commercial" data-id="wega-rover" data-price="72170.0">
+<article class="machine-card " data-subcat="bulk-pantry" data-id="sugar-tubes-white-1000" data-price="199.85">
       <div class="card-img-wrap">
-        <img src="assets/7b71d8846d9e681b76a7.jpg" alt="WEGA ROVER" loading="lazy" onerror="this.src='assets/7b71d8846d9e681b76a7.jpg'">
-        <span class="card-tag">COMMERCIAL SETUP</span>
+        <img src="assets/005d890fd06a3dedd20b.png" alt="SUGAR TUBES WHITE 1000" loading="lazy" onerror="this.src='assets/7b71d8846d9e681b76a7.jpg'">
+        <span class="card-tag">BULK-PANTRY</span>
       </div>
       <div class="card-body">
-        <span class="card-cat-label">COMMERCIAL · COMMERCIAL HARDWARE</span>
+        <span class="card-cat-label">CAFÉ BULK CONSUMABLES</span>
+        <h3 class="card-title">SUGAR TUBES WHITE 1000</h3>
+        <p class="card-desc">Wholesale beverage powders, alternative dairy, sugar service and certified equipment detergents.</p>
+        
+        <div class="card-pricing">
+          <div class="price-regular">R199.85</div>
+          <div class="price-member">Member: R179.87 <small>(10% off)</small></div>
+        </div>
+        <div class="card-action">
+          <a class="btn-card" href="wosc-machine-product-concept.html?product=sugar-tubes-white-1000">View Hardware & Specs ↗</a>
+        </div>
+      </div>
+    </article>
+<article class="machine-card " data-subcat="bulk-pantry" data-id="sugar-tubes-brown-1000" data-price="199.85">
+      <div class="card-img-wrap">
+        <img src="assets/005d890fd06a3dedd20b.png" alt="SUGAR TUBES BROWN 1000" loading="lazy" onerror="this.src='assets/7b71d8846d9e681b76a7.jpg'">
+        <span class="card-tag">BULK-PANTRY</span>
+      </div>
+      <div class="card-body">
+        <span class="card-cat-label">CAFÉ BULK CONSUMABLES</span>
+        <h3 class="card-title">SUGAR TUBES BROWN 1000</h3>
+        <p class="card-desc">Wholesale beverage powders, alternative dairy, sugar service and certified equipment detergents.</p>
+        
+        <div class="card-pricing">
+          <div class="price-regular">R199.85</div>
+          <div class="price-member">Member: R179.87 <small>(10% off)</small></div>
+        </div>
+        <div class="card-action">
+          <a class="btn-card" href="wosc-machine-product-concept.html?product=sugar-tubes-brown-1000">View Hardware & Specs ↗</a>
+        </div>
+      </div>
+    </article>
+<article class="machine-card compat-wega" data-subcat="espresso" data-id="wega-rover" data-price="72170.0">
+      <div class="card-img-wrap">
+        <img src="assets/7b71d8846d9e681b76a7.jpg" alt="WEGA ROVER" loading="lazy" onerror="this.src='assets/7b71d8846d9e681b76a7.jpg'">
+        <span class="card-tag">ESPRESSO</span>
+      </div>
+      <div class="card-body">
+        <span class="card-cat-label">COMMERCIAL ESPRESSO & GRINDER</span>
         <h3 class="card-title">WEGA ROVER</h3>
         <p class="card-desc">Commercial-grade performance, proven reliability and local technical backup.</p>
+        <div class="compat-badge is-machine">★ Machine Host · 12 Verified 58mm Parts</div>
         <div class="card-pricing">
           <div class="price-regular">R72 170.00</div>
           <div class="price-member">Member: R64 953.00 <small>(10% off)</small></div>
         </div>
         <div class="card-action">
-          <a class="btn-card" href="wosc-machine-product-concept.html?product=wega-rover">Explore Equipment ↗</a>
+          <a class="btn-card" href="wosc-machine-product-concept.html?product=wega-rover">View Hardware & Specs ↗</a>
         </div>
       </div>
     </article>
-<article class="machine-card" data-category="Commercial" data-id="mythos-iris-machine" data-price="19750.0">
+<article class="machine-card compat-mythos" data-subcat="espresso" data-id="mythos-iris-machine" data-price="19750.0">
       <div class="card-img-wrap">
         <img src="assets/953cbfc128a0e8426d88.avif" alt="MYTHOS IRIS MACHINE" loading="lazy" onerror="this.src='assets/7b71d8846d9e681b76a7.jpg'">
-        <span class="card-tag">COMMERCIAL SETUP</span>
+        <span class="card-tag">ESPRESSO</span>
       </div>
       <div class="card-body">
-        <span class="card-cat-label">COMMERCIAL · COMMERCIAL HARDWARE</span>
+        <span class="card-cat-label">COMMERCIAL ESPRESSO & GRINDER</span>
         <h3 class="card-title">MYTHOS IRIS MACHINE</h3>
         <p class="card-desc">Commercial-grade performance, proven reliability and local technical backup.</p>
+        <div class="compat-badge is-machine">★ Grinder Host · 4 Verified Station Parts</div>
         <div class="card-pricing">
           <div class="price-regular">R19 750.00</div>
           <div class="price-member">Member: R17 775.00 <small>(10% off)</small></div>
         </div>
         <div class="card-action">
-          <a class="btn-card" href="wosc-machine-product-concept.html?product=mythos-iris-machine">Explore Equipment ↗</a>
+          <a class="btn-card" href="wosc-machine-product-concept.html?product=mythos-iris-machine">View Hardware & Specs ↗</a>
         </div>
       </div>
     </article>
-<article class="machine-card" data-category="Brewing" data-id="flojet-dispensing-system" data-price="4478.0">
+<article class="machine-card compat-wega" data-subcat="water-airpots" data-id="flojet-dispensing-system" data-price="4478.0">
       <div class="card-img-wrap">
         <img src="assets/d9884900712eb0c00130.png" alt="FLOJET DISPENSING SYSTEM" loading="lazy" onerror="this.src='assets/7b71d8846d9e681b76a7.jpg'">
-        <span class="card-tag">COMMERCIAL SETUP</span>
+        <span class="card-tag">WATER-AIRPOTS</span>
       </div>
       <div class="card-body">
-        <span class="card-cat-label">BREWING · COMMERCIAL HARDWARE</span>
+        <span class="card-cat-label">WATER SYSTEMS & AIRPOTS</span>
         <h3 class="card-title">FLOJET DISPENSING SYSTEM</h3>
         <p class="card-desc">Commercial-grade performance, proven reliability and local technical backup.</p>
+        <div class="compat-badge">✓ Compatible with: WEGA ROVER 2-GROUP</div>
         <div class="card-pricing">
           <div class="price-regular">R4 478.00</div>
           <div class="price-member">Member: R4 030.20 <small>(10% off)</small></div>
         </div>
         <div class="card-action">
-          <a class="btn-card" href="wosc-machine-product-concept.html?product=flojet-dispensing-system">Explore Equipment ↗</a>
+          <a class="btn-card" href="wosc-machine-product-concept.html?product=flojet-dispensing-system">View Hardware & Specs ↗</a>
         </div>
       </div>
     </article>
-<article class="machine-card" data-category="Accessories" data-id="espresso-puk-screen" data-price="141.0">
+<article class="machine-card compat-wega" data-subcat="parts-tools" data-id="espresso-puk-screen" data-price="141.0">
       <div class="card-img-wrap">
         <img src="assets/7b71d8846d9e681b76a7.jpg" alt="ESPRESSO PUK SCREEN" loading="lazy" onerror="this.src='assets/7b71d8846d9e681b76a7.jpg'">
-        <span class="card-tag">BARISTA TOOL</span>
+        <span class="card-tag">PARTS-TOOLS</span>
       </div>
       <div class="card-body">
-        <span class="card-cat-label">ACCESSORIES · COMMERCIAL HARDWARE</span>
+        <span class="card-cat-label">PARTS, FILTERS & MAINTENANCE</span>
         <h3 class="card-title">ESPRESSO PUK SCREEN</h3>
         <p class="card-desc">Precision barista equipment designed for consistent daily espresso service.</p>
+        <div class="compat-badge">✓ Compatible with: WEGA ROVER 2-GROUP</div>
         <div class="card-pricing">
           <div class="price-regular">R141.00</div>
           <div class="price-member">Member: R126.90 <small>(10% off)</small></div>
         </div>
         <div class="card-action">
-          <a class="btn-card" href="wosc-machine-product-concept.html?product=espresso-puk-screen">Explore Equipment ↗</a>
+          <a class="btn-card" href="wosc-machine-product-concept.html?product=espresso-puk-screen">View Hardware & Specs ↗</a>
         </div>
       </div>
     </article>
-<article class="machine-card" data-category="Accessories" data-id="dosing-ring" data-price="168.0">
+<article class="machine-card compat-wega compat-mythos" data-subcat="parts-tools" data-id="dosing-ring" data-price="168.0">
       <div class="card-img-wrap">
         <img src="assets/005d890fd06a3dedd20b.png" alt="DOSING RING" loading="lazy" onerror="this.src='assets/7b71d8846d9e681b76a7.jpg'">
-        <span class="card-tag">BARISTA TOOL</span>
+        <span class="card-tag">PARTS-TOOLS</span>
       </div>
       <div class="card-body">
-        <span class="card-cat-label">ACCESSORIES · COMMERCIAL HARDWARE</span>
+        <span class="card-cat-label">PARTS, FILTERS & MAINTENANCE</span>
         <h3 class="card-title">DOSING RING</h3>
         <p class="card-desc">Precision barista equipment designed for consistent daily espresso service.</p>
+        <div class="compat-badge">✓ Compatible with: WEGA ROVER 2-GROUP · MYTHOS IRIS GRINDER</div>
         <div class="card-pricing">
           <div class="price-regular">R168.00</div>
           <div class="price-member">Member: R151.20 <small>(10% off)</small></div>
         </div>
         <div class="card-action">
-          <a class="btn-card" href="wosc-machine-product-concept.html?product=dosing-ring">Explore Equipment ↗</a>
+          <a class="btn-card" href="wosc-machine-product-concept.html?product=dosing-ring">View Hardware & Specs ↗</a>
         </div>
       </div>
     </article>
-<article class="machine-card" data-category="Accessories" data-id="coffee-filters-1-pk-of-250-each" data-price="150.0">
+<article class="machine-card compat-lebrew" data-subcat="parts-tools" data-id="coffee-filters-1-pk-of-250-each" data-price="150.0">
       <div class="card-img-wrap">
         <img src="assets/9e535c2fbbc8e87ee833.png" alt="COFFEE FILTERS 1 PK OF 250 each" loading="lazy" onerror="this.src='assets/7b71d8846d9e681b76a7.jpg'">
-        <span class="card-tag">BARISTA TOOL</span>
+        <span class="card-tag">PARTS-TOOLS</span>
       </div>
       <div class="card-body">
-        <span class="card-cat-label">ACCESSORIES · COMMERCIAL HARDWARE</span>
+        <span class="card-cat-label">PARTS, FILTERS & MAINTENANCE</span>
         <h3 class="card-title">COFFEE FILTERS 1 PK OF 250 each</h3>
         <p class="card-desc">Precision barista equipment designed for consistent daily espresso service.</p>
+        <div class="compat-badge">✓ Compatible with: LEBREW BREWMASTER THERMO</div>
         <div class="card-pricing">
           <div class="price-regular">R150.00</div>
           <div class="price-member">Member: R135.00 <small>(10% off)</small></div>
         </div>
         <div class="card-action">
-          <a class="btn-card" href="wosc-machine-product-concept.html?product=coffee-filters-1-pk-of-250-each">Explore Equipment ↗</a>
+          <a class="btn-card" href="wosc-machine-product-concept.html?product=coffee-filters-1-pk-of-250-each">View Hardware & Specs ↗</a>
         </div>
       </div>
     </article>
-<article class="machine-card" data-category="Accessories" data-id="brush-grouphead-each" data-price="99.0">
+<article class="machine-card compat-wega" data-subcat="parts-tools" data-id="brush-grouphead-each" data-price="99.0">
       <div class="card-img-wrap">
         <img src="assets/005d890fd06a3dedd20b.png" alt="BRUSH GROUPHEAD each" loading="lazy" onerror="this.src='assets/7b71d8846d9e681b76a7.jpg'">
-        <span class="card-tag">BARISTA TOOL</span>
+        <span class="card-tag">PARTS-TOOLS</span>
       </div>
       <div class="card-body">
-        <span class="card-cat-label">ACCESSORIES · COMMERCIAL HARDWARE</span>
+        <span class="card-cat-label">PARTS, FILTERS & MAINTENANCE</span>
         <h3 class="card-title">BRUSH GROUPHEAD each</h3>
         <p class="card-desc">Precision barista equipment designed for consistent daily espresso service.</p>
+        <div class="compat-badge">✓ Compatible with: WEGA ROVER 2-GROUP</div>
         <div class="card-pricing">
           <div class="price-regular">R99.00</div>
           <div class="price-member">Member: R89.10 <small>(10% off)</small></div>
         </div>
         <div class="card-action">
-          <a class="btn-card" href="wosc-machine-product-concept.html?product=brush-grouphead-each">Explore Equipment ↗</a>
+          <a class="btn-card" href="wosc-machine-product-concept.html?product=brush-grouphead-each">View Hardware & Specs ↗</a>
         </div>
       </div>
     </article>
-<article class="machine-card" data-category="Accessories" data-id="brew-coffee-timer-scale-lithium" data-price="808.0">
-      <div class="card-img-wrap">
-        <img src="assets/3cb92ce9acb83f14d893.avif" alt="BREW COFFEE TIMER SCALE LITHIUM" loading="lazy" onerror="this.src='assets/7b71d8846d9e681b76a7.jpg'">
-        <span class="card-tag">BARISTA TOOL</span>
-      </div>
-      <div class="card-body">
-        <span class="card-cat-label">ACCESSORIES · COMMERCIAL HARDWARE</span>
-        <h3 class="card-title">BREW COFFEE TIMER SCALE LITHIUM</h3>
-        <p class="card-desc">Precision barista equipment designed for consistent daily espresso service.</p>
-        <div class="card-pricing">
-          <div class="price-regular">R808.00</div>
-          <div class="price-member">Member: R727.20 <small>(10% off)</small></div>
-        </div>
-        <div class="card-action">
-          <a class="btn-card" href="wosc-machine-product-concept.html?product=brew-coffee-timer-scale-lithium">Explore Equipment ↗</a>
-        </div>
-      </div>
-    </article>
-<article class="machine-card" data-category="Brewing" data-id="aeropress" data-price="1038.0">
-      <div class="card-img-wrap">
-        <img src="assets/3c1f0a05c2abb09f2f0f.avif" alt="AEROPRESS" loading="lazy" onerror="this.src='assets/7b71d8846d9e681b76a7.jpg'">
-        <span class="card-tag">BREWING</span>
-      </div>
-      <div class="card-body">
-        <span class="card-cat-label">BREWING · COMMERCIAL HARDWARE</span>
-        <h3 class="card-title">AEROPRESS</h3>
-        <p class="card-desc">Commercial-grade performance, proven reliability and local technical backup.</p>
-        <div class="card-pricing">
-          <div class="price-regular">R1 038.00</div>
-          <div class="price-member">Member: R934.20 <small>(10% off)</small></div>
-        </div>
-        <div class="card-action">
-          <a class="btn-card" href="wosc-machine-product-concept.html?product=aeropress">Explore Equipment ↗</a>
-        </div>
-      </div>
-    </article>
-<article class="machine-card" data-category="Accessories" data-id="tamper-matts" data-price="298.7">
+<article class="machine-card compat-wega compat-mythos" data-subcat="parts-tools" data-id="tamper-matts" data-price="298.7">
       <div class="card-img-wrap">
         <img src="assets/c8dafccb36373d12d6d0.svg" alt="TAMPER MATTS" loading="lazy" onerror="this.src='assets/7b71d8846d9e681b76a7.jpg'">
-        <span class="card-tag">BARISTA TOOL</span>
+        <span class="card-tag">PARTS-TOOLS</span>
       </div>
       <div class="card-body">
-        <span class="card-cat-label">ACCESSORIES · COMMERCIAL HARDWARE</span>
+        <span class="card-cat-label">PARTS, FILTERS & MAINTENANCE</span>
         <h3 class="card-title">TAMPER MATTS</h3>
         <p class="card-desc">Precision barista equipment designed for consistent daily espresso service.</p>
+        <div class="compat-badge">✓ Compatible with: WEGA ROVER 2-GROUP · MYTHOS IRIS GRINDER</div>
         <div class="card-pricing">
           <div class="price-regular">R298.70</div>
           <div class="price-member">Member: R268.83 <small>(10% off)</small></div>
         </div>
         <div class="card-action">
-          <a class="btn-card" href="wosc-machine-product-concept.html?product=tamper-matts">Explore Equipment ↗</a>
+          <a class="btn-card" href="wosc-machine-product-concept.html?product=tamper-matts">View Hardware & Specs ↗</a>
         </div>
       </div>
     </article>
-<article class="machine-card" data-category="Accessories" data-id="coffee-distributor" data-price="975.0">
+<article class="machine-card compat-wega" data-subcat="parts-tools" data-id="coffee-distributor" data-price="975.0">
       <div class="card-img-wrap">
         <img src="assets/4134009dd23eeec015da.svg" alt="COFFEE DISTRIBUTOR" loading="lazy" onerror="this.src='assets/7b71d8846d9e681b76a7.jpg'">
-        <span class="card-tag">BARISTA TOOL</span>
+        <span class="card-tag">PARTS-TOOLS</span>
       </div>
       <div class="card-body">
-        <span class="card-cat-label">ACCESSORIES · COMMERCIAL HARDWARE</span>
+        <span class="card-cat-label">PARTS, FILTERS & MAINTENANCE</span>
         <h3 class="card-title">COFFEE DISTRIBUTOR</h3>
         <p class="card-desc">Precision barista equipment designed for consistent daily espresso service.</p>
+        <div class="compat-badge">✓ Compatible with: WEGA ROVER 2-GROUP</div>
         <div class="card-pricing">
           <div class="price-regular">R975.00</div>
           <div class="price-member">Member: R877.50 <small>(10% off)</small></div>
         </div>
         <div class="card-action">
-          <a class="btn-card" href="wosc-machine-product-concept.html?product=coffee-distributor">Explore Equipment ↗</a>
+          <a class="btn-card" href="wosc-machine-product-concept.html?product=coffee-distributor">View Hardware & Specs ↗</a>
         </div>
       </div>
     </article>
-<article class="machine-card" data-category="Accessories" data-id="tamper" data-price="459.0">
+<article class="machine-card compat-wega" data-subcat="parts-tools" data-id="tamper" data-price="459.0">
       <div class="card-img-wrap">
         <img src="assets/c8dafccb36373d12d6d0.svg" alt="TAMPER" loading="lazy" onerror="this.src='assets/7b71d8846d9e681b76a7.jpg'">
-        <span class="card-tag">BARISTA TOOL</span>
+        <span class="card-tag">PARTS-TOOLS</span>
       </div>
       <div class="card-body">
-        <span class="card-cat-label">ACCESSORIES · COMMERCIAL HARDWARE</span>
+        <span class="card-cat-label">PARTS, FILTERS & MAINTENANCE</span>
         <h3 class="card-title">TAMPER</h3>
         <p class="card-desc">Precision barista equipment designed for consistent daily espresso service.</p>
+        <div class="compat-badge">✓ Compatible with: WEGA ROVER 2-GROUP</div>
         <div class="card-pricing">
           <div class="price-regular">R459.00</div>
           <div class="price-member">Member: R413.10 <small>(10% off)</small></div>
         </div>
         <div class="card-action">
-          <a class="btn-card" href="wosc-machine-product-concept.html?product=tamper">Explore Equipment ↗</a>
+          <a class="btn-card" href="wosc-machine-product-concept.html?product=tamper">View Hardware & Specs ↗</a>
         </div>
       </div>
     </article>
-<article class="machine-card" data-category="Accessories" data-id="macaron-tamper-distributor" data-price="775.0">
+<article class="machine-card compat-wega" data-subcat="parts-tools" data-id="macaron-tamper-distributor" data-price="775.0">
       <div class="card-img-wrap">
         <img src="assets/c8dafccb36373d12d6d0.svg" alt="MACARON TAMPER DISTRIBUTOR" loading="lazy" onerror="this.src='assets/7b71d8846d9e681b76a7.jpg'">
-        <span class="card-tag">BARISTA TOOL</span>
+        <span class="card-tag">PARTS-TOOLS</span>
       </div>
       <div class="card-body">
-        <span class="card-cat-label">ACCESSORIES · COMMERCIAL HARDWARE</span>
+        <span class="card-cat-label">PARTS, FILTERS & MAINTENANCE</span>
         <h3 class="card-title">MACARON TAMPER DISTRIBUTOR</h3>
         <p class="card-desc">Precision barista equipment designed for consistent daily espresso service.</p>
+        <div class="compat-badge">✓ Compatible with: WEGA ROVER 2-GROUP</div>
         <div class="card-pricing">
           <div class="price-regular">R775.00</div>
           <div class="price-member">Member: R697.50 <small>(10% off)</small></div>
         </div>
         <div class="card-action">
-          <a class="btn-card" href="wosc-machine-product-concept.html?product=macaron-tamper-distributor">Explore Equipment ↗</a>
+          <a class="btn-card" href="wosc-machine-product-concept.html?product=macaron-tamper-distributor">View Hardware & Specs ↗</a>
+        </div>
+      </div>
+    </article>
+<article class="machine-card compat-lebrew compat-wega compat-mythos" data-subcat="parts-tools" data-id="caffenu-detergents" data-price="213.0">
+      <div class="card-img-wrap">
+        <img src="assets/b4d2e515136e6370a233.svg" alt="CAFFENU DETERGENTS" loading="lazy" onerror="this.src='assets/7b71d8846d9e681b76a7.jpg'">
+        <span class="card-tag">PARTS-TOOLS</span>
+      </div>
+      <div class="card-body">
+        <span class="card-cat-label">PARTS, FILTERS & MAINTENANCE</span>
+        <h3 class="card-title">CAFFENU DETERGENTS</h3>
+        <p class="card-desc">Wholesale beverage powders, alternative dairy, sugar service and certified equipment detergents.</p>
+        <div class="compat-badge">✓ Compatible with: LEBREW BREWMASTER THERMO · WEGA ROVER 2-GROUP · MYTHOS IRIS GRINDER</div>
+        <div class="card-pricing">
+          <div class="price-regular">R213.00</div>
+          <div class="price-member">Member: R191.70 <small>(10% off)</small></div>
+        </div>
+        <div class="card-action">
+          <a class="btn-card" href="wosc-machine-product-concept.html?product=caffenu-detergents">View Hardware & Specs ↗</a>
         </div>
       </div>
     </article>
       </div>
 
       <div id="no-results-box" class="no-results">
-        <h3>No matching equipment found</h3>
-        <p>Try searching another keyword or view all equipment above.</p>
-        <button class="cat-btn" style="margin-top:16px;" onclick="resetFilters()">View All Equipment</button>
+        <h3>No matching commercial hardware found</h3>
+        <p>Try searching another term or reset your machine filter above.</p>
+        <button class="compat-btn" style="margin-top:16px;" onclick="resetFilters()">View All Hardware</button>
       </div>
     </section>
   </main>
@@ -771,14 +932,14 @@
         <div class="footer-col">
           <h4>Shop & Equipment</h4>
           <a href="wosc-shop-concept.html">Speciality Roasts & Pods</a>
-          <a href="wosc-machine-shop-concept.html">Commercial Espresso Machines</a>
-          <a href="wosc-shop-concept.html?category=tools">Barista Tools & Scales</a>
+          <a href="wosc-machine-shop-concept.html">Commercial Espresso Machines & Parts</a>
+          <a href="wosc-membership.html">Supplier Membership (10% off)</a>
           <a href="wosc-business.html">Wholesale Supply</a>
         </div>
         <div class="footer-col">
           <h4>Cape Town Showroom</h4>
           <p style="color: #b7cbdd; font-size: 13px; line-height: 1.5;">
-            Visit our working showroom and roastery to test commercial machines and discuss your launch.
+            Visit our Marine Drive showroom to test commercial equipment and sample roasts.
           </p>
           <a class="btn-card" style="margin-top: 14px; padding: 10px 18px; font-size: 12px; display:inline-block; width:auto;" href="wosc-contact-notes.html">Book Showroom Visit</a>
         </div>
@@ -798,26 +959,53 @@
     (function () {
       const grid = document.getElementById('machine-product-grid');
       const cards = Array.from(grid.getElementsByClassName('machine-card'));
-      const buttons = document.querySelectorAll('.cat-btn');
+      const compatButtons = document.querySelectorAll('.compat-btn');
+      const subcatButtons = document.querySelectorAll('.cat-btn');
       const searchInput = document.getElementById('machine-search');
       const sortSelect = document.getElementById('machine-sort');
       const clearBtn = document.getElementById('search-clear');
       const countDisplay = document.getElementById('machine-count-display');
       const noResults = document.getElementById('no-results-box');
 
-      let currentCategory = 'all';
+      let currentEcosystem = 'all';
+      let currentSubcat = 'all';
+
+      // Check URL search params for initial filter
+      const urlParams = new URLSearchParams(window.location.search);
+      const machineParam = urlParams.get('machine');
+      if (machineParam) {
+        currentEcosystem = machineParam;
+        compatButtons.forEach(b => {
+          if (b.dataset.ecosystem === machineParam) {
+            compatButtons.forEach(btn => btn.classList.remove('active'));
+            b.classList.add('active');
+          }
+        });
+      }
 
       function filterAndSort() {
         const query = searchInput.value.trim().toLowerCase();
         let visibleCount = 0;
 
         cards.forEach(card => {
-          const cat = card.dataset.category;
+          const subcat = card.dataset.subcat;
           const text = card.textContent.toLowerCase();
-          const matchesCat = (currentCategory === 'all' || cat === currentCategory);
+          
+          // Ecosystem check
+          let matchesEco = true;
+          if (currentEcosystem === 'lebrew') {
+            matchesEco = card.classList.contains('compat-lebrew');
+          } else if (currentEcosystem === 'wega') {
+            matchesEco = card.classList.contains('compat-wega');
+          } else if (currentEcosystem === 'mythos') {
+            matchesEco = card.classList.contains('compat-mythos');
+          }
+
+          // Subcat check
+          const matchesSubcat = (currentSubcat === 'all' || subcat === currentSubcat);
           const matchesQuery = (!query || text.includes(query));
 
-          if (matchesCat && matchesQuery) {
+          if (matchesEco && matchesSubcat && matchesQuery) {
             card.style.display = 'flex';
             visibleCount++;
           } else {
@@ -850,11 +1038,27 @@
         }
       }
 
-      buttons.forEach(btn => {
+      // Machine Ecosystem buttons
+      compatButtons.forEach(btn => {
         btn.addEventListener('click', function () {
-          buttons.forEach(b => b.classList.remove('active'));
+          compatButtons.forEach(b => b.classList.remove('active'));
           this.classList.add('active');
-          currentCategory = this.dataset.category;
+          currentEcosystem = this.dataset.ecosystem;
+          // Reset subcat to all when switching machine ecosystem
+          subcatButtons.forEach(b => b.classList.remove('active'));
+          const allSub = document.querySelector('.cat-btn[data-subcat="all"]');
+          if (allSub) allSub.classList.add('active');
+          currentSubcat = 'all';
+          filterAndSort();
+        });
+      });
+
+      // Subcategory tabs
+      subcatButtons.forEach(btn => {
+        btn.addEventListener('click', function () {
+          subcatButtons.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          currentSubcat = this.dataset.subcat;
           filterAndSort();
         });
       });
@@ -867,12 +1071,16 @@
       });
 
       window.resetFilters = function () {
-        currentCategory = 'all';
+        currentEcosystem = 'all';
+        currentSubcat = 'all';
         searchInput.value = '';
         sortSelect.value = 'featured';
-        buttons.forEach(b => b.classList.remove('active'));
-        const allBtn = document.querySelector('.cat-btn[data-category="all"]');
-        if (allBtn) allBtn.classList.add('active');
+        compatButtons.forEach(b => b.classList.remove('active'));
+        const allCompat = document.querySelector('.compat-btn[data-ecosystem="all"]');
+        if (allCompat) allCompat.classList.add('active');
+        subcatButtons.forEach(b => b.classList.remove('active'));
+        const allSub = document.querySelector('.cat-btn[data-subcat="all"]');
+        if (allSub) allSub.classList.add('active');
         filterAndSort();
       };
 
